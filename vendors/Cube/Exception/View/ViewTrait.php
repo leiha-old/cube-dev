@@ -8,16 +8,16 @@
 
 namespace Cube\Exception\View;
 
-use Cube\Cube\CubeException;
+use Cube\Exception\Exception;
 
 trait ViewTrait
 {
     /**
-     * @var CubeException
+     * @var Exception
      */
     protected $exception;
 
-    public function __construct(CubeException $exception)
+    public function __construct(Exception $exception)
     {
         $this->exception = $exception;
     }

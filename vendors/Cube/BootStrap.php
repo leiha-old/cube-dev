@@ -24,7 +24,9 @@ class BootStrap
         Exception  ::____init();
         $autoLoader = AutoLoader::single()->add('Application', $includePath);
 
-        Wizaaard::extractClasses();
+        Wizard::single()
+            ->extractClasses()
+        ;
 
 
 

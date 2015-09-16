@@ -1,6 +1,6 @@
 <?php
 /**
- * Class WizardSample
+ * Class WizardBehaviorStatic
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
@@ -8,9 +8,11 @@
 
 namespace Cube\Wizard;
 
-class WizardSample
-{
-    use WizardBehavior;
-    use WizardBehaviorStatic;
+use Cube\Core\Instance\Single\SingleBehavior;
 
+trait WizardBehaviorStatic
+{
+    use SingleBehavior {
+
+    }
 }

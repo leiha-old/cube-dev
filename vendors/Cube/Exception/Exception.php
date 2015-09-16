@@ -4,8 +4,9 @@ namespace Cube\Exception;
 
 use Cube\Collection\Collection;
 use Cube\Dna\Biologist\Biologist;
+use Cube\Exception\View\ViewHtml;
 
-abstract class Exception
+class Exception
     extends    \Exception
     implements ExceptionInterface
 {
@@ -18,10 +19,14 @@ abstract class Exception
     }
 
     /**
-     * @param Exception $exception
+     * @param \Exception $exception
      */
-    public static function ____handler(Exception $exception)
+    public static function ____handler(\Exception $exception)
     {
+        if(!($exception instanceof Exception)) {
+            $exception = new static($exception->getMessage());
+        }
+
         print($exception->render());
         exit;
     }
@@ -39,7 +44,11 @@ abstract class Exception
     /**
      * @return string
      */
-    abstract public function render();
+    public function render()
+    {
+        $render = new ViewHtml($this);
+        return $render->render();
+    }
 
     /**
      * @param string $msg
@@ -82,10 +91,10 @@ abstract class Exception
                 $function = '\\'.$trace['class'].'::'.$function;
             }
 
-                if(isset($trace['args'])) {
-                    $reflector = Biologist::reflect($type, $function);
-                    $trace['args'] = $reflector->getParametersExtended($trace['args']);
-                }
+            if(isset($trace['args'])) {
+                $reflector = Biologist::reflect($type, $function);
+                $trace['args'] = $reflector->getParametersExtended($trace['args']);
+            }
 
             if($autoload
                 && 'spl_autoload_call' == $function)

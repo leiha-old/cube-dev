@@ -11,5 +11,6 @@ namespace Cube\Wizard;
 class Wizard
 {
     use WizardBehavior;
+    use WizardBehaviorStatic;
 
 }

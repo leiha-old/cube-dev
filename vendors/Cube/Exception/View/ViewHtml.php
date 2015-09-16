@@ -211,10 +211,10 @@ class ViewHtml
             ;
         }
 
-        $style = "text-align:center;width: 9%;color:darkolivegreen;font-weight:bold;padding: 10px 5px;";
+        $style = "color:darkolivegreen;font-weight:bold;padding: 10px 5px;";
         return "
             <tr>
-                <td rowspan=$rowspan style=\"$style;\">
+                <td rowspan=$rowspan style=\"width:10%;text-align:center;\">
                     $counter
                 </td>
                 <td style=\"$style\">$function</td>
@@ -231,12 +231,16 @@ class ViewHtml
 
         $body = '';
         foreach($args as $name => $arg){
-//            $body .= "
-//                <tr>
-//                    <th>$name</th>
-//                    <td><pre>".(isset($arg['value']) ? print_r($arg['value'], true) : '')."</pre></td>
-//                </tr>"
-//            ;
+            $body .= "
+                <tr>
+                    <th>$name</th>
+                    <td>
+                        <pre style=\"padding:0;margin:0;font-family: inherit;font-size: 11px\">"
+                            .(isset($arg['value']) ? print_r($arg['value'], true) : '')
+                        ."</pre>
+                    </td>
+                </tr>"
+            ;
         }
 
         return

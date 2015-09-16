@@ -54,7 +54,7 @@ trait ReflectionTrait
     public static function reflectFunction($function)
     {
         try {
-            return new ReflectionClass($function);
+            return new ReflectionFunction($function);
         } catch(\Exception $e) {
             throw new ReflectionException($e->getMessage());
         }

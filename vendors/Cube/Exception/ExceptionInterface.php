@@ -16,7 +16,7 @@ interface ExceptionInterface
     public static function ____init($handler = 'Cube\Exception\Exception::____handler');
 
     /**
-     * @param Exception $exception
+     * @param \Exception $exception
      */
-    public static function ____handler(Exception $exception);
+    public static function ____handler(\Exception $exception);
 }

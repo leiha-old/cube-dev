@@ -14,8 +14,8 @@ use Cube\Core\Instance\InstanceBehavior;
 trait SingleBehavior
 {
     use InstanceBehavior {
-        instance   as private;
-        instanceTo as private;
+        instance   as protected;
+        instanceTo as protected;
     }
 
     /**

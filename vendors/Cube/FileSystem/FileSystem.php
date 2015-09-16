@@ -8,6 +8,7 @@
 
 namespace Cube\FileSystem;
 
+use Cube\Core\Configurator\Configurable\ConfigurableBehavior;
 use Cube\Core\Configurator\Configurable\ConfigurableConfigurator;
 use Cube\Core\Instance\Single\SingleBehavior;
 use Cube\Dna\Gene\GeneConfiguratorInterface;
@@ -18,7 +19,11 @@ class FileSystem
 {
     const DIRECTORY_ID_CACHE = 'cache';
 
-    use FileSystemTrait;
+    use ConfigurableBehavior;
+
+    use FileSystemBehavior;
+    use FileSystemBehaviorStatic;
+
     use GeneBehavior;
     use SingleBehavior;
 
