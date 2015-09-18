@@ -10,6 +10,8 @@ namespace Cube\Collection;
 
 trait CollectionBehavior
 {
+    use CollectionBehaviorStatic;
+
     /**
      * @var array
      */
@@ -17,9 +19,11 @@ trait CollectionBehavior
 
     /**
      * @param array $items
+     * @return $this
      */
-    public function __construct(array $items = array()) {
+    public function ____init(array $items = array()) {
         $this->_items = $items;
+        return $this;
     }
 
     /**
@@ -56,15 +60,11 @@ trait CollectionBehavior
     {
         $is = isset($this->_items[$itemKey]);
         if(!$is) {
-            if($silent) {
-                return null;
-            } else {
-                throw new CollectionException(
-                    'Entry [ :itemKey: ] not present ! '
-                    .'If you want to skip this message, put [ true ] on the second argument of get method',
-                    compact('itemKey')
-                );
-            }
+            $this->exception(
+                CollectionException::ITEM_404,
+                compact('itemKey'),
+                $silent
+            );
         }
 
         $ret = &$this->_items[$itemKey];
@@ -84,13 +84,11 @@ trait CollectionBehavior
                 use ($silent)
             {
                 if (!$exist) {
-                    if (!$silent) {
-                        throw new CollectionException(
-                            'Entry [ item:railProgression: ] not present ! '
-                            . 'If you want to skip this message, put [ true ] on the second argument of get method',
-                            compact('railProgression')
-                        );
-                    }
+                    $this->exception(
+                        CollectionException::RAIL_404,
+                        compact('railProgression'),
+                        $silent
+                    );
                 }
                 else if ($isEnd) {
                     return $item;
@@ -111,10 +109,10 @@ trait CollectionBehavior
     {
         if(!$force && isset($this->_items[$itemKey]))
         {
-            throw new CollectionException(
-                'Entry [ :itemKey: ] already present, adding impossible !'
-                .'If you want to skip this message, put [ true ] on the third argument of set method',
-                compact('itemKey')
+            $this->exception(
+                CollectionException::ITEM_DUPLICATE,
+                compact('itemKey'),
+                $force
             );
         }
         $this->_items[$itemKey] = $value;
@@ -135,25 +133,22 @@ trait CollectionBehavior
                 use ($force, &$value)
             {
                 if (!$exist) {
-                    if (!$force) {
-                        throw new CollectionException(
-                            'Entry [ item:railProgression: ] not present ! '
-                            . 'If you want force this action, put [ true ] on the third argument of set method',
-                            compact('railProgression')
-                        );
-                    }
+                    $this->exception(
+                        CollectionException::RAIL_404,
+                        compact('railProgression'),
+                        $force
+                    );
+
                     $item[$key] = array();
                     if ($isEnd) {
                         $item[$key] = &$value;
                     }
                 } else {
-                    if (!$force) {
-                        throw new CollectionException(
-                            'Entry [ item:railProgression: ] already present, adding impossible !'
-                            . 'If you want force this action, put [ true ] on the third argument of set method',
-                            compact('railProgression')
-                        );
-                    }
+                    $this->exception(
+                        CollectionException::RAIL_DUPLICATE,
+                        compact('railProgression'),
+                        $force
+                    );
 
                     if ($isEnd) {
                         $item = &$value;
@@ -186,7 +181,7 @@ trait CollectionBehavior
         $itemKey, \Closure $cbForEachItem, $silent = true, $reverseMode = false
     ) {
         if($array = &$this->get($itemKey, $silent)) {
-            Collection::iterateArray($array, $cbForEachItem, $reverseMode);
+            $this->iterateArray($array, $cbForEachItem, $reverseMode);
         }
         return $this;
     }
@@ -202,7 +197,7 @@ trait CollectionBehavior
         $rail, \Closure $cbForEachItem, $silent = false, $reverseMode = false
     ) {
         if($array = &$this->getRail($rail, $silent)) {
-            Collection::iterateArray($array, $cbForEachItem, $reverseMode);
+            $this->iterateArray($array, $cbForEachItem, $reverseMode);
         }
         return $this;
     }
@@ -214,7 +209,7 @@ trait CollectionBehavior
      */
     public function &iterateOnRail(array $rail, \Closure $cbForEachItem)
     {
-        return Collection::iterateArrayOnRail($this->_items, $rail, $cbForEachItem);
+        return $this->iterateArrayOnRail($this->_items, $rail, $cbForEachItem);
     }
 
     /**
@@ -224,7 +219,7 @@ trait CollectionBehavior
      */
     public function iterateWithCounter(\Closure $cbForEachItem, $reverseMode = false)
     {
-        Collection::iterateArrayWithCounter($this->_items, $cbForEachItem, $reverseMode);
+        $this->iterateArrayWithCounter($this->_items, $cbForEachItem, $reverseMode);
         return $this;
     }
 

@@ -1,58 +1,31 @@
 <?php
-/**
- * Class FileSystem
- * @author Leiha Sellier <leiha.sellier@gmail.com>
- * @link   https://github.com/leiha
- * -
- */
 
 namespace Cube\FileSystem;
 
-use Cube\Core\Configurator\Configurable\ConfigurableBehavior;
-use Cube\Core\Configurator\Configurable\ConfigurableConfigurator;
-use Cube\Core\Instance\Single\SingleBehavior;
-use Cube\Dna\Gene\GeneConfiguratorInterface;
-use Cube\Dna\Gene\GeneBehavior;
+use Cube\Poo\Instance\InstanceTraitStatic;
 
 class FileSystem
-    implements FileSystemInterface
+    implements FileSystemConstants
 {
-    const DIRECTORY_ID_CACHE = 'cache';
+    use InstanceTraitStatic;
+    use FileSystemTraitStatic;
 
-    use ConfigurableBehavior;
-
-    use FileSystemBehavior;
-    use FileSystemBehaviorStatic;
-
-    use GeneBehavior;
-    use SingleBehavior;
+    private $includePaths;
 
     /**
-     * @param ConfigurableConfigurator $configurator
-     * @return mixed
+     * @param array $includePaths
      */
-    public static function ____configureConfigurable(ConfigurableConfigurator $configurator)
-    {
-        // TODO: Implement ____configureConfigurable() method.
+    public function ____init(array $includePaths) {
+        $this->includePaths = $includePaths;
     }
 
     /**
-     * @param FileSystemConfigurator $configurator
-     * @return mixed
+     * @param \Closure $cbForEachFile (\DirectoryIterator $item)
      */
-    public static function ____configureFileSystem(FileSystemConfigurator $configurator)
+    public function iterateIncludePaths(\Closure $cbForEachFile)
     {
-        // TODO: Implement ____configureFileSystem() method.
-    }
-
-    /**
-     * @param GeneConfiguratorInterface $configurator
-     * @return mixed
-     */
-    public static function ____configureGene(GeneConfiguratorInterface $configurator)
-    {
-        $configurator
-            ->setUniqueName('cube.fileSystem')
-        ;
+        foreach($this->includePaths as $includePath) {
+            $this->iterateOn($includePath, $cbForEachFile);
+        }
     }
 }

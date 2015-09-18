@@ -9,16 +9,16 @@
 namespace Cube\FileSystem;
 
 use Cube\Collection\CollectionBehavior;
-use Cube\Core\Instance\InstanceBehavior;
+use OLD\Cube\Core\Instance\InstanceBehavior;
+
 
 class FileSystemConfigurator
 {
-    use InstanceBehavior;
+    use InstanceBehavior
 
     use CollectionBehavior {
         get as protected;
         set as protected;
-        __construct as private __constructCollection;
     }
 
     /**
@@ -27,7 +27,7 @@ class FileSystemConfigurator
     private $includePaths;
 
     public function __construct(){
-        $this->__constructCollection(array(
+        $this->init(array(
             'includePaths' => array(),
             'directory'    => array(
                 FileSystem::DIRECTORY_ID_CACHE  => 'cache'

@@ -1,10 +1,13 @@
 <?php
 
-require '/studio/Cube/vendors/Cube/AutoLoader.php';
+require '../../vendors/Cube/Cube.php';
 
-/** @var \Application\Main $App */
-$App = Cube\BootStrap::init('Application\Main', realpath(__DIR__.'/..').'/');
+$Cube = Cube\Cube::single();
+$Cube->__construct(function(\Cube\Configurator\Configurator $configurator){
+    $configurator->
+});
 
-//print_r(Cube\Dna\Loader\Loader::single()->getAll());
+$Cube->initException();
+$Cube->initFileSystem();
 
-//$App->
+

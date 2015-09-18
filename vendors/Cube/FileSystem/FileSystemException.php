@@ -8,10 +8,10 @@
 
 namespace Cube\FileSystem;
 
-use Cube\Cube\CubeException;
+use Cube\Exception\Exception;
 
 class FileSystemException
-    extends CubeException
+    extends Exception
 {
 
 }
