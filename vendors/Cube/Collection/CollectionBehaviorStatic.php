@@ -74,23 +74,32 @@ trait CollectionBehaviorStatic
      * @param array &$items
      * @param array $rail Array with the tree of itemKeys
      * @param \Closure $cbForEachItem ($exist, $isEnd, (&)$item, $key, $railProgression)
+     * @param bool $silent
      * @return mixed
      */
-    public static function &iterateArrayOnRail(array &$items, array $rail, \Closure $cbForEachItem)
+    public static function &iterateArrayOnRail(array &$items, array $rail, \Closure $cbForEachItem, $silent = false)
     {
         $item[-1] = &$items;
+
         $railProgression = array();
         for($i = 0, $c = count($rail), $cc = $c - 1; $i < $c; $i++)
         {
             $isEnd  = $i == $cc;
             $railProgression[] = $key = $rail[$i];
-            if (isset($item[$i - 1][$key])) {
-                $item[$i] = &$item[$i - 1][$key];
-                $cbForEachItem(true, $isEnd, $item[$i], $key, $railProgression);
-            } else {
-                $cbForEachItem(false, $isEnd, $item[$i - 1], $key, $railProgression);
-                $item[$i] = &$item[$i - 1][$key];
+
+            $h = $i - 1;
+            if($item[$h] instanceof Collection) {
+                /** @var $item Collection[] */
+                $tmp = &$item[$h]->get($key, $silent);
             }
+            elseif (is_array($item[$h])) {
+                $tmp = &$item[$h];
+            }
+            elseif(!$isEnd) {
+                self::exception(Collection::ERROR_DATA_ERROR);
+            }
+
+            $item[$i] = &$cbForEachItem($item[$h], $isEnd, $key, $railProgression);
         }
         return $item[$i-1];
     }

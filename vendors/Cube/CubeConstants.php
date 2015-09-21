@@ -8,7 +8,7 @@
 
 namespace Cube;
 
-interface CubeConfiguratorConstants
+interface CubeConstants
 {
-    const MAPPING_EXCEPTION_DEFAULT = 'exception';
+    const MAPPING_EXCEPTION = 'Cube\Poo\Exception\Exception';
 }

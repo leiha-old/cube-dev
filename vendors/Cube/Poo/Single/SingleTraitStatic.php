@@ -27,14 +27,13 @@ trait SingleTraitStatic
     /**
      * @param string $className
      * @param array $args
-     * @param array $internalArgs
      * @return static
      */
-    public static function singleTo($className, array $args = array(), array $internalArgs = array())
+    public static function singleTo($className, array $args = array())
     {
         if(!static::$_single) {
             //static::$_single = new static();
-            static::$_single = static::instanceTo($className, $args, $internalArgs);
+            static::$_single = static::instanceTo($className, $args);
         }
         return static::$_single;
     }

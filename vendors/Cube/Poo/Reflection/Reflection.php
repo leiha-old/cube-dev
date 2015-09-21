@@ -8,9 +8,12 @@
 
 namespace Cube\Poo\Reflection;
 
+use Cube\Poo\Instance\InstanceTraitStatic;
+
 class Reflection
     extends \ReflectionClass
 {
+    use InstanceTraitStatic;
     use ReflectionStatic;
 
     /**

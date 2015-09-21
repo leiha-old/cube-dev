@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lia
- * Date: 18/09/15
- * Time: 11:20
- */
 
 namespace Cube\Collection;
 
 interface CollectionConstants
+    extends CollectionExceptionConstants
 {
     const SORT_REGULAR = SORT_REGULAR;
 

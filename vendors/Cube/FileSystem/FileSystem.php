@@ -15,7 +15,7 @@ class FileSystem
     /**
      * @param array $includePaths
      */
-    public function ____init(array $includePaths) {
+    public function __construct(array $includePaths) {
         $this->includePaths = $includePaths;
     }
 

@@ -101,8 +101,9 @@ abstract class ExceptionAbstract
             }
 
             if(isset($trace['args'])) {
-                $reflector = Reflection::reflect($type, $function);
-                $trace['args'] = $reflector->getParametersExtended($trace['args']);
+                if($reflector = Reflection::reflect($type, $function)) {
+                    $trace['args'] = $reflector->getParametersExtended($trace['args']);
+                }
             }
 
             if($autoload

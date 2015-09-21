@@ -19,17 +19,15 @@ trait CollectionBehavior
 
     /**
      * @param array $items
-     * @return $this
      */
-    public function ____init(array $items = array()) {
+    public function __construct(array $items = array()) {
         $this->_items = $items;
-        return $this;
     }
 
     /**
      * @return array
      */
-    public function getAll() {
+    public function &getAll() {
         return $this->_items;
     }
 
@@ -66,9 +64,7 @@ trait CollectionBehavior
                 $silent
             );
         }
-
-        $ret = &$this->_items[$itemKey];
-        return $ret;
+        return $this->_items[$itemKey];
     }
 
     /**
@@ -84,11 +80,7 @@ trait CollectionBehavior
                 use ($silent)
             {
                 if (!$exist) {
-                    $this->exception(
-                        CollectionException::RAIL_404,
-                        compact('railProgression'),
-                        $silent
-                    );
+                    $this->exception(Collection::ERROR_ITEM_404, compact('railProgression'), $silent);
                 }
                 else if ($isEnd) {
                     return $item;
@@ -102,21 +94,28 @@ trait CollectionBehavior
      * @param string $itemKey
      * @param mixed $value
      * @param bool $force
-     * @return $this
+     * @return mixed
      * @throws CollectionException
      */
-    public function set($itemKey, $value, $force = false)
+    public function &set($itemKey, $value, $force = false)
     {
-        if(!$force && isset($this->_items[$itemKey]))
-        {
-            $this->exception(
-                CollectionException::ITEM_DUPLICATE,
-                compact('itemKey'),
-                $force
-            );
+        return $this->setByRef($itemKey, $value, $force);
+    }
+
+    /**
+     * @param string $itemKey
+     * @param mixed $value
+     * @param bool $force
+     * @return mixed
+     * @throws CollectionException
+     */
+    public function &setByRef($itemKey, &$value, $force = true)
+    {
+        if(!$force && isset($this->_items[$itemKey])) {
+            $this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $force);
         }
-        $this->_items[$itemKey] = $value;
-        return $this;
+        $this->_items[$itemKey] = &$value;
+        return $this->_items[$itemKey];
     }
 
     /**
@@ -126,37 +125,34 @@ trait CollectionBehavior
      * @return mixed Return item found at the end of rail (you can add & for reference)
      * @throws CollectionException
      */
-    public function &setRail($rail, &$value, $force = true)
+    public function &setRail($rail, $value, $force = false)
     {
-        $ret = &$this->iterateOnRail($rail,
-            function ($exist, $isEnd, &$item, $key, $railProgression)
-                use ($force, &$value)
-            {
-                if (!$exist) {
-                    $this->exception(
-                        CollectionException::RAIL_404,
-                        compact('railProgression'),
-                        $force
-                    );
-
-                    $item[$key] = array();
-                    if ($isEnd) {
-                        $item[$key] = &$value;
-                    }
-                } else {
-                    $this->exception(
-                        CollectionException::RAIL_DUPLICATE,
-                        compact('railProgression'),
-                        $force
-                    );
-
-                    if ($isEnd) {
-                        $item = &$value;
+        $cbSetRail = function &(&$item, $isEnd, $key, $railProgression)
+            use ($force, &$value)
+        {
+            // If part (key) of rail is present
+            if (isset($item[$key])) {
+                if($isEnd) {
+                    // If part (key) of rail is present, it's the end of the while and it's forced
+                    // Otherwise Exception is fired
+                    if(!$this->exception(
+                        Collection::ERROR_RAIL_DUPLICATE, compact('railProgression'), $force
+                    )) {
+                        $item[$key] = $value;
                     }
                 }
             }
-        );
-        return $ret;
+            // If part (key) of rail is not present and is forced otherwise Exception is fired
+            elseif(!$this->exception(
+                Collection::ERROR_RAIL_404, compact('railProgression'), $force
+            )) {
+                // If is the end of rail put the value otherwise set a array for continue loop
+                $item[$key] = $isEnd ? $value : array();
+            }
+            return $item[$key];
+        };
+
+        return $this->iterateOnRail($rail, $cbSetRail);
     }
 
     /**
@@ -205,11 +201,12 @@ trait CollectionBehavior
     /**
      * @param array $rail Array with the tree of itemKeys
      * @param \Closure $cbForEachItem ($exist, $isEnd, (&)$item, $key, $railProgression)
+     * @param bool $silent
      * @return mixed Return item found at the end of rail (you can add & for reference)
      */
-    public function &iterateOnRail(array $rail, \Closure $cbForEachItem)
+    public function &iterateOnRail(array $rail, \Closure $cbForEachItem, $silent = true)
     {
-        return $this->iterateArrayOnRail($this->_items, $rail, $cbForEachItem);
+        return $this->iterateArrayOnRail($this->_items, $rail, $cbForEachItem, $silent);
     }
 
     /**

@@ -5,39 +5,27 @@ namespace Cube;
 include_once(__DIR__.'/FileSystem/AutoLoader/AutoLoader.php');
 
 use Cube\Collection\CollectionBehavior;
-use Cube\Configurator\Configurator;
 use Cube\FileSystem\AutoLoader\AutoLoader;
 use Cube\FileSystem\FileSystem;
 use Cube\Poo\Exception\Exception;
 use Cube\Poo\Single\SingleTraitStatic;
 
 class Cube
+    implements CubeConstants
 {
     use SingleTraitStatic;
     use CollectionBehavior;
 
     /**
-     * @var Configurator
+     * @var CubeConfigurator
      */
     private $configurator;
 
     /**
-     * @param \Closure|null $configurator
-     */
-    public function __construct(\Closure $configurator)
-    {
-        $className = get_called_class().'Configurator';
-
-        $this->configurator = new $className();
-
-        $configurator($this->configurator, $this);
-    }
-
-    /**
-     * @param Configurator $configurator
+     * @param CubeConfigurator $configurator
      * @return $this
      */
-    public function setConfigurator (Configurator $configurator)
+    public function ____construct(CubeConfigurator $configurator)
     {
         $this->configurator = $configurator;
         return $this;
@@ -49,10 +37,12 @@ class Cube
     public function initException ()
     {
         $handler = function(\Exception $exception){
+            //$eClass = $this->configurator->getMapping(Cube::MAPPING_EXCEPTION);
             if(!($exception instanceof Exception)) {
-                $exception = new Exception($exception->getMessage());
+                $e = new Exception($exception->getMessage());
+                $e->setFile($exception->getFile(), $exception->getLine());
+                $exception = $e;
             }
-
             print($exception->render());
             exit;
         };
@@ -72,5 +62,4 @@ class Cube
         $fs->iterateIncludePaths($cbForEachFile);
         return $this;
     }
-
 }

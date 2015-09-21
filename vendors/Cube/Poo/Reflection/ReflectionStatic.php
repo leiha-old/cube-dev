@@ -72,9 +72,9 @@ trait ReflectionStatic
     public static function reflectMethod($classMethod, $method = '')
     {
         try {
-            if($method) {
+            if( $method) {
                 return new MethodReflection($classMethod, $method);
-            } else {
+            } elseif(is_callable($classMethod)) {
                 return new MethodReflection($classMethod);
             }
         } catch(\Exception $e) {
