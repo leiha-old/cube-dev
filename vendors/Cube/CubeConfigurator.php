@@ -4,13 +4,23 @@ namespace Cube;
 
 use Cube\Collection\Collection;
 use Cube\Collection\CollectionBehavior;
-use Cube\Poo\Instance\InstanceTraitStatic;
+use Cube\Poo\Mapper\MapperConfigurator;
+use Cube\Poo\Mapper\MapperFacade;
 
 class CubeConfigurator
 {
-    use InstanceTraitStatic;
+    use MapperFacade;
     use CollectionBehavior {
         __construct as protected ____constructCollection;
+    }
+
+    /**
+     * @param MapperConfigurator $configurator
+     * @return mixed
+     */
+    public function ____configureBehavior(MapperConfigurator $configurator)
+    {
+        // TODO: Implement ____configureBehavior() method.
     }
 
     /**

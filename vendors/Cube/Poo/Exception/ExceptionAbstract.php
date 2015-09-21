@@ -77,7 +77,10 @@ abstract class ExceptionAbstract
     public function parser($msg, array $data)
     {
         $cb = function ($matches) use ($data) {
-            return $data[$matches[1]] ? $data[$matches[1]] : $matches[0];
+            return isset($data[$matches[1]])
+                ? $data[$matches[1]]
+                : $matches[0]
+                ;
         };
 
         return preg_replace_callback('#:([[:alnum:]]+):#', $cb, $msg);

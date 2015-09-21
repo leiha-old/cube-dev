@@ -1,14 +1,15 @@
 <?php
 
-use Cube\Cube;
+use Cube\FileSystem\AutoLoader\AutoLoader;
+use Cube\Poo\Mapper\Mapper;
 
 require '../../vendors/Cube/Cube.php';
 
-Cube::addConfigurator('Cube\Cube')
-    ->addMapping(Cube::MAPPING_EXCEPTION, 'AA')
-    ;
+AutoLoader::add('Application', realpath(__DIR__.'/../').'/');
 
-$Cube = Cube::single();
+Mapper::init()
+    ->initException()
+    ->initFileSystem()
+;
 
-$Cube->initException();
-$Cube->initFileSystem();
+Mapper::setConfiguratorTo('ee', 'AA');

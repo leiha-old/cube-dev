@@ -9,12 +9,9 @@
 namespace Cube\FileSystem;
 
 use Cube\Collection\CollectionBehavior;
-use OLD\Cube\Core\Instance\InstanceBehavior;
-
 
 class FileSystemConfigurator
 {
-    use InstanceBehavior
 
     use CollectionBehavior {
         get as protected;

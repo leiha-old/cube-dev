@@ -2,7 +2,8 @@
 
 namespace Cube\Collection;
 
-use Cube\Poo\Instance\InstanceTraitStatic;
+use Cube\Poo\Mapper\MapperConfigurator;
+use Cube\Poo\Mapper\MapperFacade;
 use Traversable;
 
 class Collection
@@ -10,7 +11,7 @@ class Collection
     implements CollectionConstants,
                \IteratorAggregate
 {
-    use InstanceTraitStatic;
+    use MapperFacade;
     use CollectionBehavior;
 
     /**
@@ -23,5 +24,14 @@ class Collection
     public function getIterator()
     {
         return $this->_items;
+    }
+
+    /**
+     * @param MapperConfigurator $configurator
+     * @return mixed
+     */
+    public function ____configureBehavior(MapperConfigurator $configurator)
+    {
+        // TODO: Implement ____configureBehavior() method.
     }
 }

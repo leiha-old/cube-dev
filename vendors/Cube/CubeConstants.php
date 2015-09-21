@@ -10,5 +10,5 @@ namespace Cube;
 
 interface CubeConstants
 {
-    const MAPPING_EXCEPTION = 'Cube\Poo\Exception\Exception';
+
 }

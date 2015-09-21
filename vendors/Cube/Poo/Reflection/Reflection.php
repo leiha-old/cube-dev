@@ -8,13 +8,23 @@
 
 namespace Cube\Poo\Reflection;
 
-use Cube\Poo\Instance\InstanceTraitStatic;
+use Cube\Poo\Mapper\MapperConfigurator;
+use Cube\Poo\Mapper\MapperFacade;
 
 class Reflection
     extends \ReflectionClass
 {
-    use InstanceTraitStatic;
+    use MapperFacade;
     use ReflectionStatic;
+
+    /**
+     * @param MapperConfigurator $configurator
+     * @return mixed
+     */
+    public function ____configureBehavior(MapperConfigurator $configurator)
+    {
+        // TODO: Implement ____configureBehavior() method.
+    }
 
     /**
      * @var Array

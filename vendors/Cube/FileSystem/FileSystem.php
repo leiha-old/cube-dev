@@ -2,13 +2,23 @@
 
 namespace Cube\FileSystem;
 
-use Cube\Poo\Instance\InstanceTraitStatic;
+use Cube\Poo\Mapper\MapperConfigurator;
+use Cube\Poo\Mapper\MapperFacade;
 
 class FileSystem
     implements FileSystemConstants
 {
-    use InstanceTraitStatic;
+    use MapperFacade;
     use FileSystemTraitStatic;
+
+    /**
+     * @param MapperConfigurator $configurator
+     * @return mixed
+     */
+    public function ____configureBehavior(MapperConfigurator $configurator)
+    {
+        // TODO: Implement ____configureBehavior() method.
+    }
 
     private $includePaths;
 

@@ -2,14 +2,14 @@
 
 namespace Cube\Poo\Single;
 
-use Cube\Poo\Instance\InstanceTraitStatic;
+use Cube\Poo\Mapper\MapperFacade;
 
 trait SingleTraitStatic
 {
-    use InstanceTraitStatic {
-        instance   as protected;
-        instanceTo as protected;
-    }
+//    use MapperFacade {
+//        instance   as protected;
+//        instanceTo as protected;
+//    }
 
     /**
      * @var static

@@ -57,12 +57,9 @@ trait CollectionBehavior
     public function &get($itemKey, $silent = false)
     {
         $is = isset($this->_items[$itemKey]);
-        if(!$is) {
-            $this->exception(
-                CollectionException::ITEM_404,
-                compact('itemKey'),
-                $silent
-            );
+        if(!$is && !$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $silent)) {
+            $ret = false;
+            return $ret;
         }
         return $this->_items[$itemKey];
     }
@@ -80,7 +77,7 @@ trait CollectionBehavior
                 use ($silent)
             {
                 if (!$exist) {
-                    $this->exception(Collection::ERROR_ITEM_404, compact('railProgression'), $silent);
+                    $this->exception(Collection::ERROR_RAIL_404, compact('railProgression'), $silent);
                 }
                 else if ($isEnd) {
                     return $item;
@@ -111,8 +108,10 @@ trait CollectionBehavior
      */
     public function &setByRef($itemKey, &$value, $force = true)
     {
-        if(!$force && isset($this->_items[$itemKey])) {
-            $this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $force);
+        if(isset($this->_items[$itemKey])) {
+            if(!$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $force)) {
+                return false;
+            }
         }
         $this->_items[$itemKey] = &$value;
         return $this->_items[$itemKey];

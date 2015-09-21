@@ -8,12 +8,12 @@
 
 namespace Cube\Collection;
 
-use Cube\Core\Instance\InstanceBehavior;
+use Cube\Core\Mapper\MapperBehavior;
 
 class CollectionSample
     implements CollectionInterface
 {
     use CollectionBehavior;
-    use InstanceBehavior;
+    use MapperBehavior;
 
 }

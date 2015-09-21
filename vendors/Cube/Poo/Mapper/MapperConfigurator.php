@@ -1,15 +1,14 @@
 <?php
 /**
- * Class InstanceCollection
+ * Class MapperConfigurator
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
  */
 
-namespace Cube\Poo\Instance;
+namespace Cube\Poo\Mapper;
 
-
-class InstanceCollection
+class MapperConfigurator
 {
 
 }

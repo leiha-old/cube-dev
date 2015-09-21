@@ -4,32 +4,26 @@ namespace Cube;
 
 include_once(__DIR__.'/FileSystem/AutoLoader/AutoLoader.php');
 
-use Cube\Collection\CollectionBehavior;
 use Cube\FileSystem\AutoLoader\AutoLoader;
 use Cube\FileSystem\FileSystem;
 use Cube\Poo\Exception\Exception;
-use Cube\Poo\Single\SingleTraitStatic;
+use Cube\Poo\Mapper\MapperConfigurator;
+use Cube\Poo\Mapper\MapperFacade;
 
 class Cube
     implements CubeConstants
 {
-    use SingleTraitStatic;
-    use CollectionBehavior;
+    use MapperFacade;
 
     /**
-     * @var CubeConfigurator
+     * @param MapperConfigurator $configurator
+     * @return mixed
      */
-    private $configurator;
-
-    /**
-     * @param CubeConfigurator $configurator
-     * @return $this
-     */
-    public function ____construct(CubeConfigurator $configurator)
+    public function ____configureBehavior(MapperConfigurator $configurator)
     {
-        $this->configurator = $configurator;
-        return $this;
+        // TODO: Implement ____configureBehavior() method.
     }
+
 
     /**
      * @return $this
@@ -39,7 +33,7 @@ class Cube
         $handler = function(\Exception $exception){
             //$eClass = $this->configurator->getMapping(Cube::MAPPING_EXCEPTION);
             if(!($exception instanceof Exception)) {
-                $e = new Exception($exception->getMessage());
+                $e = Exception::instance($exception->getMessage());
                 $e->setFile($exception->getFile(), $exception->getLine());
                 $exception = $e;
             }
