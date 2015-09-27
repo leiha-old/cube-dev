@@ -2,7 +2,7 @@
 
 namespace Cube\FileSystem;
 
-class FileSystem
+class FileSystemService
     implements FileSystemConstants
 {
 	use FileSystemServiceHelper;

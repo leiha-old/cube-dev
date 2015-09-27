@@ -8,20 +8,21 @@
 
 namespace Cube\Poo\Reflection;
 
-use Cube\Poo\Mapper\MapperConfigurator;
-use Cube\Poo\Mapper\MapperFacade;
+
+use Cube\Poo\Mapper\Mappable\MappableConfigurator;
+use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 class Reflection
     extends \ReflectionClass
 {
-    use MapperFacade;
+    use MappableHelper;
     use ReflectionStatic;
 
     /**
-     * @param MapperConfigurator $configurator
+     * @param MappableConfigurator $configurator
      * @return mixed
      */
-    public function ____configureBehavior(MapperConfigurator $configurator)
+    public function ____configureBehavior(MappableConfigurator $configurator)
     {
         // TODO: Implement ____configureBehavior() method.
     }

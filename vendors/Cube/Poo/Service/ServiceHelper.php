@@ -1,14 +1,14 @@
 <?php
 /**
- * Class MapperConfigurator
+ * Class ServiceHelper
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
  */
 
-namespace Cube\Poo\Mapper;
+namespace Cube\Poo\Service;
 
-class MapperConfigurator
+trait ServiceHelper
 {
 
 }

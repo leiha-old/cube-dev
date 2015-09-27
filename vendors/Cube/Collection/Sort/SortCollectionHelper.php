@@ -1,6 +1,6 @@
 <?php
 /**
- * Class SortableCollectionBehavior
+ * Class SortCollectionHelper
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
@@ -8,16 +8,16 @@
 
 namespace Cube\Collection;
 
-trait SortableCollectionBehavior
+trait SortCollectionHelper
 {
-    use CollectionBehavior;
+    use CollectionHelper;
 
     /**
      * @param $flags
      * @param bool $return
      * @return $this
      */
-    public function sortKeysByAsc($flags = Collection::SORT_REGULAR, $return = false)
+    public function sortKeysByAsc($flags = Collection::SORT_regular, $return = false)
     {
         return $this->_sortCollectionSortableBehavior('ksort', $flags, $return);
     }
@@ -27,7 +27,7 @@ trait SortableCollectionBehavior
      * @param bool $return
      * @return $this
      */
-    public function sortKeysByDesc($flags = Collection::SORT_REGULAR, $return = false)
+    public function sortKeysByDesc($flags = Collection::SORT_regular, $return = false)
     {
         return $this->_sortCollectionSortableBehavior('krsort', $flags, $return);
     }
@@ -37,7 +37,7 @@ trait SortableCollectionBehavior
      * @param bool $return
      * @return $this
      */
-    public function sortValuesByAsc($flags = Collection::SORT_REGULAR, $return = false)
+    public function sortValuesByAsc($flags = Collection::SORT_regular, $return = false)
     {
         return $this->_sortCollectionSortableBehavior('asort', $flags, $return);
     }
@@ -47,7 +47,7 @@ trait SortableCollectionBehavior
      * @param bool $return
      * @return $this
      */
-    public function sortValuesByDesc($flags = Collection::SORT_REGULAR, $return = false)
+    public function sortValuesByDesc($flags = Collection::SORT_regular, $return = false)
     {
         return $this->_sortCollectionSortableBehavior('arsort', $flags, $return);
     }

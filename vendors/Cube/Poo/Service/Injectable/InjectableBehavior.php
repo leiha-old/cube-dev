@@ -1,14 +1,14 @@
 <?php
 /**
- * Class CollectionInterface
+ * Class InjectableBehavior
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
  */
 
-namespace Cube\Collection;
+namespace Cube\Poo\Service\Injectable;
 
-interface CollectionInterface
+interface InjectableBehavior
 {
 
 }

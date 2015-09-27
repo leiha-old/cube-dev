@@ -1,27 +1,25 @@
 <?php
 /**
- * Class Mapper
+ * Class InjectableHelper
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
  */
 
-namespace Cube\Poo\Mapper;
+namespace Cube\Poo\Service\Injectable;
 
-use Cube\Collection\Collection;
 use Cube\Poo\Service\Service;
 use Cube\Poo\Single\SingleHelper;
 
-class Mapper
-    implements MapperConstants
+trait InjectableHelper
 {
 	use SingleHelper;
 
 	/**
-	 * @return MapperService
+	 * @return Service
 	 */
 	public static function single()
 	{
-		return SingleHelper::singleTo(get_called_class().'Service', func_get_args());
+		return static::singleTo(get_called_class().'Service', func_get_args());
 	}
 }

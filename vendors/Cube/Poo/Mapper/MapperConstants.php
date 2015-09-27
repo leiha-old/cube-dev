@@ -9,7 +9,6 @@
 namespace Cube\Poo\Mapper;
 
 interface MapperConstants
-    extends \Cache\Cube\Poo\Mapper\MapperConstants
 {
-    const CONFIGURATOR_DEFAULT = 'Cube\Poo\Mapper\MapperConfigurator';
+    const CONFIGURATOR_default = 'Cube\Poo\Mapper\Mappable\MappableConfigurator';
 }

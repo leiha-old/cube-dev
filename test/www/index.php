@@ -1,15 +1,49 @@
 <?php
 
-use Cube\FileSystem\AutoLoader\AutoLoader;
-use Cube\Poo\Mapper\Mapper;
+use Cube\Cube;
 
 require '../../vendors/Cube/Cube.php';
 
-AutoLoader::add('Application', realpath(__DIR__.'/../').'/');
+$cube = Cube::single(function(Cube $cube){
+	$cube
+		->autoLoader()
+			//->add('Application', realpath(__DIR__.'/../').'/')
+	;
+});
 
-Mapper::init()
-    ->initException()
-    ->initFileSystem()
+
+$classes = array();
+$cube
+	->fileSystem()
+		->iterateIncludePaths(function(\DirectoryIterator $item, $includePath) use (&$classes) {
+
+			$name = $item->getRealPath();
+
+			if(preg_match('/(.+\/(.[^\/]+)\/\2)\.php$/', $name, $matches)){
+				$class = str_replace('/', '\\', substr($matches[1], strlen($includePath)));
+
+				$parts = array('Service', 'dsdsqsqdd');
+
+				foreach($parts as $part) {
+					$classService = $class.$part;
+					if(\Cube\FileSystem\AutoLoader\AutoLoader::loadClass($classService)) {
+						$classes[$class][$part] = $classService;
+					}
+				}
+
+
+
+
+
+
+
+
+			}
+		})
 ;
 
-Mapper::setConfiguratorTo('ee', 'AA');
+$e = 'ee';
+
+//	->mapper()
+//		->setConfiguratorTo(Mapper::EXCEPTION, 'Cube\Collection\CollectionException')
+//	;

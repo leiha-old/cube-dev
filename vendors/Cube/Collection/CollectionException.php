@@ -11,8 +11,7 @@ namespace Cube\Collection;
 use Cube\Poo\Exception\Exception;
 
 class CollectionException
-    extends    Exception
-    implements CollectionExceptionConstants
+    extends Exception
 {
 
 

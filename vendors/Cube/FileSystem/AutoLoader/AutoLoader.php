@@ -79,16 +79,18 @@ class AutoLoader
      * @return bool
      * @throws AutoLoaderException
      */
-    static public function loadFile($path, $silent = false, $extension = '.php')
+    static public function loadFile($path, $silent = true, $extension = '.php')
     {
-        $is = is_file($file = $path . $extension);
-        if ($is) {
+	    $file = $path.$extension;
+	    if (file_exists($file)) {
             require_once($file);
         } elseif (!$silent) {
             // @Throw AutoLoaderException
-            throw new AutoLoaderException(AutoLoaderException::FILE_NOT_FOUND, compact('file'));
-        }
-        return $is;
+            throw new AutoLoaderException(AutoLoaderException::FILE_404, compact('file'));
+        } else {
+		    return false;
+	    }
+
     }
 
     /**
@@ -102,27 +104,46 @@ class AutoLoader
         return self::single();
     }
 
+	/**
+	 * @param string $className
+	 * @param bool $silent
+	 * @return bool
+	 * @throws AutoLoaderException
+	 */
+	public static function loadClass($className, $silent = true)
+	{
+		$includePaths = self::$includePaths;
+		$libs = array_keys($includePaths);
+		$path = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+
+		for ($i = 0, $c = count($libs); $i < $c; $i++) {
+			$_silent = $silent ? true : ($i != $c - 1);
+			if (self::loadFile($includePaths[$libs[$i]].$path, $_silent))
+			{
+				$is = class_exists     ($className, false)
+					|| interface_exists($className, false)
+					|| trait_exists    ($className, false)
+				;
+				if(!$is && !$silent) {
+					// @Throw AutoLoaderException
+					throw new AutoLoaderException(
+						AutoLoaderException::CLASS_404,
+						compact('className', 'includePaths')
+					);
+				}
+
+				return $is;
+			}
+		}
+		return false;
+	}
+
     /**
      * @param string $className
      * @throws AutoLoaderException
      */
     public static function autoload($className)
     {
-        $libs = array_keys(self::$includePaths);
-        $path = str_replace('\\', DIRECTORY_SEPARATOR, $className);
-
-        for ($i = 0, $c = count($libs); $i < $c; $i++) {
-            if (self::loadFile(self::$includePaths[$libs[$i]] . $path, ($i != $c - 1))) {
-                return;
-            }
-        }
-
-        $includePaths = function () {
-            return '<br/> [ Include Paths ]'
-            . '<br/><li>' . implode('</li><li>', self::$includePaths) . '</li><br/>';
-        };
-
-        // @Throw AutoLoaderException
-        throw new AutoLoaderException(AutoLoaderException::CLASS_NOT_FOUND, compact('className', 'includePaths'));
+        self::loadClass($className, false);
     }
 }

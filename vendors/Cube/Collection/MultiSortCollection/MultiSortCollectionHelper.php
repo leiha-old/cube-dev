@@ -1,20 +1,20 @@
 <?php
 /**
- * Class MultiSortableCollectionBehavior
+ * Class MultiSortCollectionHelper
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * @link   http://php.net/manual/fr/function.array-multisort.php
  * -
  */
 
-namespace Cube\Collection\MultiSortable;
+namespace Cube\Collection\MultiSortCollectionHelper;
 
 use Cube\Collection\Collection;
-use Cube\Collection\CollectionBehavior;
+use Cube\Collection\CollectionHelper;
 
-trait MultiSortableCollectionBehavior
+trait MultiSortCollectionHelper
 {
-    use CollectionBehavior;
+    use CollectionHelper;
 
     /**
      * @var array
@@ -27,7 +27,7 @@ trait MultiSortableCollectionBehavior
      * @param bool  $return
      * @return $this
      */
-    public function sortByAsc($column, $flags = Collection::SORT_REGULAR, $return = false)
+    public function sortByAsc($column, $flags = Collection::SORT_regular, $return = false)
     {
         return $this->_sortCollectionMultiSortBehavior(SORT_ASC, $column, $flags, $return);
     }
@@ -38,7 +38,7 @@ trait MultiSortableCollectionBehavior
      * @param bool  $return
      * @return $this
      */
-    public function sortByDesc($column, $flags = Collection::SORT_REGULAR, $return = false)
+    public function sortByDesc($column, $flags = Collection::SORT_regular, $return = false)
     {
         return $this->_sortCollectionMultiSortBehavior(SORT_DESC, $column, $flags, $return);
     }

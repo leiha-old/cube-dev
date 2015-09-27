@@ -2,21 +2,21 @@
 
 namespace Cube\Poo\Exception;
 
-use Cube\Poo\Mapper\MapperConfigurator;
-use Cube\Poo\Mapper\MapperFacade;
+use Cube\Poo\Mapper\Mappable\MappableBehavior;
+use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 class Exception
     extends ExceptionAbstract
     implements ExceptionConstants
 {
-    use MapperFacade;
+    use MappableHelper;
 
-    /**
-     * @param MapperConfigurator $configurator
-     * @return mixed
-     */
-    public function ____configureBehavior(MapperConfigurator $configurator)
-    {
-        // TODO: Implement ____configureBehavior() method.
-    }
+	/**
+	 * @param MappableBehavior $configurator
+	 * @return mixed
+	 */
+	public function ____configureBehavior(MappableBehavior $configurator)
+	{
+		// TODO: Implement ____configureBehavior() method.
+	}
 }

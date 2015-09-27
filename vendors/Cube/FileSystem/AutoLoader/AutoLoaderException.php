@@ -7,7 +7,7 @@ use Cube\Poo\Exception\Exception;
 class AutoLoaderException
     extends Exception
 {
-    const FILE_NOT_FOUND  = 'File [404] : [ :file: ]';
+    const FILE_404  = 'File [404] : [ :file: ]';
 
-    const CLASS_NOT_FOUND = 'Class [404] : [ :className: ] :includePaths:';
+    const CLASS_404 = 'Class [404] : [ :className: ] :includePaths:';
 }

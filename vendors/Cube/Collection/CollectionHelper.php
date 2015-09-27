@@ -1,6 +1,6 @@
 <?php
 /**
- * Class CollectionBehavior
+ * Class CollectionHelper
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
@@ -8,14 +8,26 @@
 
 namespace Cube\Collection;
 
-trait CollectionBehavior
+trait CollectionHelper
 {
-    use CollectionBehaviorStatic;
+	use CollectionServiceHelper;
 
     /**
      * @var array
      */
     protected $_items;
+
+	/**
+	 * Retrieve an external iterator
+	 * @link http://php.net/manual/en/iteratoraggregate.getiterator.php
+	 * @return \Traversable An instance of an object implementing <b>Iterator</b> or
+	 * <b>Traversable</b>
+	 * @since 5.0.0
+	 */
+	public function getIterator()
+	{
+		return $this->_items;
+	}
 
     /**
      * @param array $items
@@ -42,35 +54,45 @@ trait CollectionBehavior
      * @param int $flags
      * @return $this
      */
-    public function sort($flags = Collection::SORT_REGULAR)
+    public function sort($flags = Collection::SORT_regular)
     {
         $this->_items = sort($this->_items, $flags);
         return $this;
     }
 
     /**
-     * @param string $itemKey
+     * @param string|array $itemKey
      * @param bool $silent
      * @return mixed|null
      * @throws CollectionException
      */
     public function &get($itemKey, $silent = false)
     {
-        $is = isset($this->_items[$itemKey]);
-        if(!$is && !$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $silent)) {
-            $ret = false;
-            return $ret;
-        }
-        return $this->_items[$itemKey];
+		return $this-> { is_array($itemKey) ? 'getRail' : 'getItem' } ($itemKey, $silent);
     }
 
+	/**
+	 * @param string $itemKey
+	 * @param bool $silent
+	 * @return mixed|null
+	 * @throws CollectionException
+	 */
+	public function &getItem($itemKey, $silent = false) {
+		$is = isset($this->_items[$itemKey]);
+		if(!$is && !$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $silent)) {
+			$ret = false;
+			return $ret;
+		}
+		return $this->_items[$itemKey];
+	}
+
     /**
-     * @param string|array $rail
+     * @param array $rail
      * @param bool $silent
      * @return mixed Return item found at the end of rail (you can add & for reference)
      * @throws CollectionException
      */
-    public function &getRail($rail, $silent = true)
+    public function &getRail(array $rail, $silent = true)
     {
         $ret = &$this->iterateOnRail($rail,
             function ($exist, $isEnd, &$item, $key, $railProgression)
@@ -96,7 +118,7 @@ trait CollectionBehavior
      */
     public function &set($itemKey, $value, $force = false)
     {
-        return $this->setByRef($itemKey, $value, $force);
+        return $this->setRef($itemKey, $value, $force);
     }
 
     /**
@@ -106,7 +128,7 @@ trait CollectionBehavior
      * @return mixed
      * @throws CollectionException
      */
-    public function &setByRef($itemKey, &$value, $force = true)
+    public function &setRef($itemKey, &$value, $force = true)
     {
         if(isset($this->_items[$itemKey])) {
             if(!$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $force)) {
@@ -135,7 +157,7 @@ trait CollectionBehavior
                     // If part (key) of rail is present, it's the end of the while and it's forced
                     // Otherwise Exception is fired
                     if(!$this->exception(
-                        Collection::ERROR_RAIL_DUPLICATE, compact('railProgression'), $force
+                        Collection::ERROR_RAIL_duplicate, compact('railProgression'), $force
                     )) {
                         $item[$key] = $value;
                     }
@@ -161,7 +183,7 @@ trait CollectionBehavior
      */
     public function iterate(\Closure $cbForEachItem, $reverseMode = false)
     {
-        Collection::iterateArray($this->_items, $cbForEachItem, $reverseMode);
+        $this->iterateArray($this->_items, $cbForEachItem, $reverseMode);
         return $this;
     }
 

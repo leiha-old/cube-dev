@@ -41,10 +41,20 @@ trait ClosureReflectionTrait
                     $params[$name]['doc'] = $doc[$name];
                 }
 
-                $params[$name]['value'] = isset($values[$counter])
-                    ? $values[$counter]
-                    : ''
-                    ;
+	            $params[$name]['value'] = null;
+	            if(isset($values[$counter])){
+
+		            $value = $values[$counter];
+		            $type  = gettype($value);
+		            if('object' == $type) {
+			            $type = get_class($value);
+		            }
+
+		            $params[$name]['value'] = array(
+			            'content' => $value,
+			            'type'    => $type
+		            );
+	            }
             }
         );
 
