@@ -83,7 +83,7 @@ class AutoLoader
     {
 	    $file = $path.$extension;
 	    if (file_exists($file)) {
-            require_once($file);
+            return require_once($file);
         } elseif (!$silent) {
             // @Throw AutoLoaderException
             throw new AutoLoaderException(AutoLoaderException::FILE_404, compact('file'));

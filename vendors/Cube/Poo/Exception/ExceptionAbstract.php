@@ -76,7 +76,7 @@ abstract class ExceptionAbstract
 		if(count($trace['args'])) {
 			$args = array();
 			foreach($trace['args'] as $name => $arg) {
-				if($arg['value']) {
+				if(isset($arg['value'])) {
 					$content = '';
 					switch($arg['value']['type']){
 						case 'string':
@@ -149,44 +149,80 @@ abstract class ExceptionAbstract
         $autoload = false;
         $traces   = $this->getTrace();
 
-        $cbFilter = function(&$trace) use (&$autoload)
-        {
-	        if(strpos($trace['function'], '{closure}') > -1) {
-		        $values = array();
-				foreach($trace['args'] as $value) {
+	    /**
+	     * @param array $trace
+	     */
+	    $cbFilterClosure = function(array &$trace)
+	    {
+		    $values = array();
+		    foreach($trace['args'] as $value) {
+			    $type  = gettype($value);
+			    if('object' == $type) {
+				    $type = get_class($value);
+			    }
+			    $values[]['value'] = array('content' => $value, 'type' => $type);
+		    }
+		    $trace['args'] = $values;
+	    };
+
+	    /**
+	     * @param array   $trace
+	     * @param boolean $autoload
+	     */
+	    $cbFilterDefault = function (array &$trace, &$autoload)
+	    {
+		    $type     = 'function';
+		    $function = $trace['function'];
+		    if(isset($trace['class'])) {
+			    $type     = 'method';
+			    $function = '\\'.$trace['class'].'::'.$function;
+		    }
+
+		    $byPass = array('require_once');
+		    if(isset($trace['args']) && !in_array($function, $byPass)) {
+			    /** @var ClosureReflection $reflector */
+			    if($reflector = Reflection::reflect($type, $function)) {
+				    $trace['args'] = $reflector->getParametersExtended($trace['args']);
+			    }
+		    } else {
+			    $args = array();
+				foreach($trace['args'] as $name => $value) {
 					$type  = gettype($value);
 					if('object' == $type) {
 						$type = get_class($value);
 					}
 
-					$values[]['value'] = array('content' => $value, 'type' => $type);
+					$args[$name]['value'] = array(
+						'content' => $value,
+						'type'    => $type
+					);
 				}
-		        $trace['args'] = $values;
+			    $trace['args'] = $args;
+		    }
+
+		    if($autoload
+			    && 'spl_autoload_call' == $function)
+		    {
+			    $this->file = $trace['file'];
+			    $this->line = $trace['line'];
+			    #return false;
+		    }
+		    elseif('\Cube\FileSystem\AutoLoader\AutoLoader::autoload' == $function) {
+			    $autoload = true;
+		    }
+	    };
+
+	    /**
+	     * @param array $trace
+	     * @return bool
+	     */
+        $cbFilter = function(array &$trace)
+            use (&$autoload, $cbFilterClosure, $cbFilterDefault)
+        {
+	        if(strpos($trace['function'], '{closure}') > -1) {
+		        $cbFilterClosure($trace);
 	        } else {
-		        $type     = 'function';
-		        $function = $trace['function'];
-		        if(isset($trace['class'])) {
-			        $type     = 'method';
-			        $function = '\\'.$trace['class'].'::'.$function;
-		        }
-
-		        if(isset($trace['args'])) {
-			        /** @var ClosureReflection $reflector */
-			        if($reflector = Reflection::reflect($type, $function)) {
-				        $trace['args'] = $reflector->getParametersExtended($trace['args']);
-			        }
-		        }
-
-		        if($autoload
-			        && 'spl_autoload_call' == $function)
-		        {
-			        $this->file = $trace['file'];
-			        $this->line = $trace['line'];
-			        #return false;
-		        }
-		        elseif('Cube\AutoLoader::autoload' == $function) {
-			        $autoload = true;
-		        }
+		        $cbFilterDefault($trace, $autoload);
 	        }
             return true;
         };
