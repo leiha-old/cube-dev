@@ -1,6 +1,6 @@
 <?php
 /**
- * Class MultiSortCollectionHelper
+ * Class MultiSortHelper
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * @link   http://php.net/manual/fr/function.array-multisort.php
@@ -12,7 +12,7 @@ namespace Cube\Collection\MultiSortCollectionHelper;
 use Cube\Collection\Collection;
 use Cube\Collection\CollectionHelper;
 
-trait MultiSortCollectionHelper
+trait MultiSortHelper
 {
     use CollectionHelper;
 

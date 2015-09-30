@@ -2,15 +2,33 @@
 
 namespace Cube\FileSystem;
 
+use Cache\Cube\FileSystem\AutoLoader\AutoLoaderException;
 use Cube\FileSystem\AutoLoader\AutoLoader;
+use Cube\FileSystem\Parser\Parser;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 trait FileSystemServiceHelper
 {
     use MappableHelper;
 
+	/**
+	 * @var array
+	 */
     private $includePaths;
 
+	/**
+	 * @return Parser
+	 */
+	public function parser(){
+		return Parser::instance($this);
+	}
+
+	/**
+	 * @param string    $className
+	 * @param bool      $silent
+	 * @return bool
+	 * @throws AutoLoaderException
+	 */
 	public function isClass($className, $silent = true) {
 		return AutoLoader::loadClass($className, $silent);
 	}
