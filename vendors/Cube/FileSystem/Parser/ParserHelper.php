@@ -23,7 +23,12 @@ trait ParserHelper
 	 */
 	private $parts;
 
+	/**
+	 * @var FileSystem
+	 */
 	private $fileSystem;
+
+	private $locations = array('Cache\\', 'Override\\', '');
 
 	public function __construct(FileSystem $fileSystem)
 	{
@@ -41,7 +46,7 @@ trait ParserHelper
 			'Configurator'  => array(
 				'found'    => false,
 				'callback' => function ($className, $classConfigurator) {
-					Mapper::single()->setConfiguratorTo($className, $classConfigurator);
+					//Mapper::single()->setConfiguratorTo($className, $classConfigurator);
 				},
 			),
 			'Behavior'      => array(
@@ -74,14 +79,12 @@ trait ParserHelper
 		{
 			$name  = $item->getRealPath();
 			$class = str_replace(DIRECTORY_SEPARATOR, '\\', substr($name, strlen($includePath), -4));
-			if(AutoLoader::loadClass($class)) {
-				$classes['______'][$class] = array();
-			}
+			$this->retrieveRealClass($class, $classes);
 
 			// if files present like this : xxxx/Cube/Cube.php
-			if(preg_match('/(.+\/(.[^\/]+)\/\2)\.php$/', $name, $matches)){
+			if(preg_match(Parser::PATTERN_CUBE_file, $name, $matches)){
 				$class = str_replace(DIRECTORY_SEPARATOR, '\\', substr($matches[1], strlen($includePath)));
-				$this->ee($class, $parts, $classes);
+				$this->retrieveParts($class, $parts, $classes);
 			}
 		};
 
@@ -93,20 +96,36 @@ trait ParserHelper
 
 	/**
 	 * @param string $class
+	 * @param array  $classes
+	 * @throws AutoLoaderException
+	 */
+	protected function retrieveRealClass($class, array &$classes = array())
+	{
+		foreach($this->locations as $location) {
+			$oClass =  $location . $class;
+			if (AutoLoader::loadClass($oClass)) {
+				$classes[$class] = array();
+				$classes[$class]['Class'] = $oClass;
+				return;
+			}
+		}
+	}
+
+	/**
+	 * @param string $class
 	 * @param array  $parts
 	 * @param array  $classes
 	 * @throws AutoLoaderException
 	 */
-	protected function ee($class, array $parts, array &$classes = array()){
+	protected function retrieveParts($class, array $parts, array &$classes = array())
+	{
 		foreach($parts as $part => &$partConfig) {
 			$classService = $class.$part;
-
-			$locations = array('Cache\\', 'Override\\', '');
-			foreach($locations as $location) {
+			foreach($this->locations as $location) {
 				$oClass = $location.$classService;
 				if(!$partConfig['found'] && AutoLoader::loadClass($oClass)) {
 					$classes[$class][$part] = $oClass;
-					$partConfig['found'] = true;
+					$partConfig['found']    = true;
 					if(isset($partConfig['callback']) && is_callable($partConfig['callback'])) {
 						$partConfig['callback']($class, $classService);
 					}

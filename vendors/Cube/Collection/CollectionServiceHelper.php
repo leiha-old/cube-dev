@@ -95,11 +95,14 @@ trait CollectionServiceHelper
 			elseif (is_array($item[$h])) {
 				$tmp = &$item[$h];
 			}
-			elseif(!$isEnd) {
-				self::exception(Collection::ERROR_DATA_ERROR);
+//			elseif(!$isEnd) {
+//				self::exception(Collection::ERROR_DATA_ERROR);
+//			}
+
+			if(false === $cbForEachItem($tmp, $isEnd, $key, $railProgression)) {
+
 			}
 
-			$item[$i] = &$cbForEachItem($item[$h], $isEnd, $key, $railProgression);
 		}
 		return $item[$i-1];
 	}

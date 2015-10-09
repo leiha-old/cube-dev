@@ -17,23 +17,6 @@ trait FileSystemServiceHelper
     private $includePaths;
 
 	/**
-	 * @return Parser
-	 */
-	public function parser(){
-		return Parser::instance($this);
-	}
-
-	/**
-	 * @param string    $className
-	 * @param bool      $silent
-	 * @return bool
-	 * @throws AutoLoaderException
-	 */
-	public function isClass($className, $silent = true) {
-		return AutoLoader::loadClass($className, $silent);
-	}
-
-	/**
 	 * @param string $path
 	 * @param \Closure $callback ($item, $path)
 	 * @throws FileSystemException
@@ -61,6 +44,23 @@ trait FileSystemServiceHelper
     public function __construct(array $includePaths) {
         $this->includePaths = $includePaths;
     }
+
+	/**
+	 * @return Parser
+	 */
+	public function parser(){
+		return Parser::instance($this);
+	}
+
+	/**
+	 * @param string    $className
+	 * @param bool      $silent
+	 * @return bool
+	 * @throws AutoLoaderException
+	 */
+	public function isClass($className, $silent = true) {
+		return AutoLoader::loadClass($className, $silent);
+	}
 
     /**
      * @param \Closure $cbForEachFile (\DirectoryIterator $item)

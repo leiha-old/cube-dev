@@ -18,6 +18,11 @@ trait MapperServiceHelper
 	/**
 	 * @var Collection
 	 */
+	private static $_treeClasses;
+
+	/**
+	 * @var Collection
+	 */
 	private static $_configurators;
 
 	/**
@@ -31,12 +36,12 @@ trait MapperServiceHelper
 	private static $_singles;
 
 
-	public function init()
+	public function __construct()
 	{
 		if(!self::$_configurators){
-			self::$_configurators = Collection::instance();
-			self::$_reflectors    = Collection::instance();
-			self::$_singles       = Collection::instance();
+			self::$_treeClasses = Collection::instance();
+			self::$_reflectors  = Collection::instance();
+			self::$_singles     = Collection::instance();
 		}
 		return $this;
 	}
@@ -97,23 +102,21 @@ trait MapperServiceHelper
 	public static function instanceTo($className, array $args = array())
 	{
 		// Retrieve Reflector
-		if(!$reflector = self::$_reflectors->get($className, true)) {
-			$reflector = self::$_reflectors->set($className, Reflection::reflectClass($className));
+		if(!$reflector = self::$_reflectors->get($className, true))
+		{
+			$className = self::$_treeClasses
+				->getRailOr(array($className, 'Class'), $className)
+			;
 
-			// Retrieve Configurator
-			if(!$configurator = self::getConfiguratorTo($className)) {
-				$configurator = self::setConfiguratorTo($className, $className.'Configurator');
-			}
+			$reflector = self::$_reflectors
+				->set($className, Reflection::reflectClass($className))
+			;
 		}
 
 		$instance = $reflector->newInstanceWithoutConstructor();
-
-
-
-
-//        if($reflector->hasMethod($method)) {
-//            $instance->$method($options);
-//        }
+		if($reflector->hasMethod('____construct')) {
+			$instance->____construct();
+		}
 
 		// Call the real construct (__construct())
 		if($reflector->hasMethod('__construct')) {

@@ -86,6 +86,19 @@ trait CollectionHelper
 		return $this->_items[$itemKey];
 	}
 
+	/**
+	 * @param array $rail
+	 * @param mixed $default
+	 * @return mixed Return item found at the end of rail (you can add & for reference)
+	 */
+	public function &getRailOr(array $rail, $default = null)
+	{
+		if(!$item = $this->getRail($rail)) {
+			$item = $default;
+		}
+		return $item;
+	}
+
     /**
      * @param array $rail
      * @param bool $silent
@@ -94,16 +107,13 @@ trait CollectionHelper
      */
     public function &getRail(array $rail, $silent = true)
     {
-        $ret = &$this->iterateOnRail($rail,
-            function ($exist, $isEnd, &$item, $key, $railProgression)
+        $ret = $this->iterateOnRail($rail,
+            function (&$item, $isEnd, $key, $railProgression)
                 use ($silent)
             {
-                if (!$exist) {
-                    $this->exception(Collection::ERROR_RAIL_404, compact('railProgression'), $silent);
-                }
-                else if ($isEnd) {
-                    return $item;
-                }
+	            if (!!isset($item[$key])) {
+		            $this->exception(Collection::ERROR_RAIL_404, compact('railProgression'), $silent);
+	            }
             }
         );
         return $ret;

@@ -8,8 +8,10 @@
 
 namespace Cube\Poo\Mapper\Mappable;
 
-
-class Mappable
+abstract class Mappable
+	implements MappableBehavior
 {
+	use MappableHelper;
+
 
 }

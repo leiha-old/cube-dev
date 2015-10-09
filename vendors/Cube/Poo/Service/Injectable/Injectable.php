@@ -8,8 +8,11 @@
 
 namespace Cube\Poo\Service\Injectable;
 
-
-class Injectable
+abstract class Injectable
+	implements InjectableBehavior
 {
+	use InjectableHelper;
+
+
 
 }

@@ -14,25 +14,19 @@ trait MappableHelper
      */
     private $configurator;
 
-	/**
-	 * @var MapperService
-	 */
-	private $mapper;
-
     /**
      * @return $this
      */
     public function ____construct()
     {
-	    $this->mapper       = Mapper::single();
-        $this->configurator = $this->mapper->getConfiguratorTo(get_called_class(), $this);
+        //$this->configurator = self::mapper()->getConfiguratorTo(get_called_class(), $this);
         return $this;
     }
 
 	/**
 	 * @return MapperService
 	 */
-	private static function mapper()
+	public static function mapper()
 	{
 		return Mapper::single();
  	}

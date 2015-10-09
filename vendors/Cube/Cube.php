@@ -9,20 +9,20 @@ use Cube\FileSystem\FileSystem;
 use Cube\FileSystem\FileSystemService;
 use Cube\Poo\Exception\Exception;
 use Cube\Poo\Mapper\Mappable\MappableBehavior;
+use Cube\Poo\Mapper\Mappable\MappableHelper;
 use Cube\Poo\Mapper\Mapper;
 use Cube\Poo\Mapper\MapperService;
 use Cube\Poo\Single\SingleHelper;
 
-class Cube
+abstract class Cube
     implements CubeConstants
 {
-    use SingleHelper;
+    use MappableHelper;
 
 	/**
 	 * @var FileSystemService
 	 */
 	private $fileSystem;
-
 
 	/**
 	 * @var AutoLoader
@@ -30,17 +30,17 @@ class Cube
 	private $autoLoader;
 
 	/**
-	 * @var MapperService
+	 * @var Mapper
 	 */
-	private $mapper;
+	private static $_mapper;
 
 	/**
-	 * @param MappableBehavior $configurator
-	 * @return mixed
+	 * @param \Closure|null $cbOnStart
+	 * @return static
 	 */
-	public function ____configureBehavior(MappableBehavior $configurator)
-	{
-		// TODO: Implement ____configureBehavior() method.
+	public static function init(\Closure $cbOnStart = null) {
+		self::mapper();
+		return self::single($cbOnStart);
 	}
 
 	/**
@@ -48,15 +48,12 @@ class Cube
 	 */
 	public function __construct(\Closure $cbOnStart = null)
 	{
-		// Init Mapper
-		$this->mapper();
-
 		// Configure Cube
 		if($cbOnStart) {
 			$cbOnStart($this);
 		}
 
-		$this->initException();
+		$this->fileSystem()->parser()->parse();
 	}
 
 	/**
@@ -71,43 +68,10 @@ class Cube
 	}
 
 	/**
-	 * @return MapperService
-	 */
-	public function mapper()
-	{
-		if(!$this->mapper) {
-			$this->mapper = Mapper::single()->init();
-		}
-		return $this->mapper;
-	}
-
-	/**
 	 * @return AutoLoader
 	 */
 	public function autoLoader()
 	{
-		if(!$this->autoLoader) {
-			$this->autoLoader = AutoLoader::single();
-		}
-		return $this->autoLoader;
+		return AutoLoader::single();
 	}
-
-    /**
-     * @return $this
-     */
-    public function initException()
-    {
-        $handler = function(\Exception $exception){
-            //$eClass = $this->configurator->getMapping(Cube::MAPPING_EXCEPTION);
-            if(!($exception instanceof Exception)) {
-                $e = Exception::instance($exception->getMessage());
-                $e->setFile($exception->getFile(), $exception->getLine());
-                $exception = $e;
-            }
-            print($exception->render());
-            exit;
-        };
-        set_exception_handler($handler);
-        return $this;
-    }
 }

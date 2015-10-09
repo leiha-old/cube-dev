@@ -1,6 +1,6 @@
 <?php
 /**
- * Class Parser
+ * Class ParserConstants
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -
@@ -8,8 +8,7 @@
 
 namespace Cube\FileSystem\Parser;
 
-class Parser
-	implements ParserConstants
+interface ParserConstants
 {
-	use ParserHelper;
+	const PATTERN_CUBE_file = '/(.+\/(.[^\/]+)\/\2)\.php$/';
 }
