@@ -44,6 +44,15 @@ trait CollectionHelper
     }
 
     /**
+     * @param array $items
+     * @return $this
+     */
+    public function setAll(array $items) {
+        $this->_items = $items;
+        return $this;
+    }
+
+    /**
      * @return bool
      */
     public function isEmpty() {
@@ -102,21 +111,28 @@ trait CollectionHelper
     /**
      * @param array $rail
      * @param bool $silent
-     * @return mixed Return item found at the end of rail (you can add & for reference)
+     * @return mixed|false[null
      * @throws CollectionException
      */
     public function &getRail(array $rail, $silent = true)
     {
-        $ret = $this->iterateOnRail($rail,
-            function (&$item, $isEnd, $key, $railProgression)
+        return $this->iterateOnRail($rail,
+            function ($isEnd, &$item, $key, $railProgression)
                 use ($silent)
             {
-	            if (!!isset($item[$key])) {
+                if (!!isset($item[$key])) {
 		            $this->exception(Collection::ERROR_RAIL_404, compact('railProgression'), $silent);
+                    $ret = false;
 	            }
+                elseif($isEnd) {
+                    $ret = true;
+                }
+                else {
+                    $ret = null;
+                }
+                return $ret;
             }
         );
-        return $ret;
     }
 
     /**
@@ -156,9 +172,9 @@ trait CollectionHelper
      * @return mixed Return item found at the end of rail (you can add & for reference)
      * @throws CollectionException
      */
-    public function &setRail($rail, $value, $force = false)
+    public function &setRail($rail, $value, $force = true)
     {
-        $cbSetRail = function &(&$item, $isEnd, $key, $railProgression)
+        $cbSetRail = function ($isEnd, &$item, $key, $railProgression)
             use ($force, &$value)
         {
             // If part (key) of rail is present
@@ -180,7 +196,6 @@ trait CollectionHelper
                 // If is the end of rail put the value otherwise set a array for continue loop
                 $item[$key] = $isEnd ? $value : array();
             }
-            return $item[$key];
         };
 
         return $this->iterateOnRail($rail, $cbSetRail);

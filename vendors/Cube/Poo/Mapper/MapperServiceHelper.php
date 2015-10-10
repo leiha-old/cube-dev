@@ -47,6 +47,15 @@ trait MapperServiceHelper
 	}
 
 	/**
+	 * @param array $items
+	 * @return $this
+	 */
+	public function setAll(array $items) {
+		self::$_treeClasses->setAll($items);
+		return $this;
+	}
+
+	/**
 	 * @param string $className
 	 * @param MappableHelper|MappableBehavior $targetInstance
 	 * @param bool   $silent

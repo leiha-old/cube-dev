@@ -2,9 +2,9 @@
 
 namespace Cube\FileSystem;
 
-use Cache\Cube\FileSystem\AutoLoader\AutoLoaderException;
 use Cube\FileSystem\AutoLoader\AutoLoader;
-use Cube\FileSystem\Parser\Parser;
+use Cube\FileSystem\AutoLoader\AutoLoaderException;
+use Cube\FileSystem\Crawler\Crawler;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 trait FileSystemServiceHelper
@@ -46,10 +46,10 @@ trait FileSystemServiceHelper
     }
 
 	/**
-	 * @return Parser
+	 * @return Crawler
 	 */
-	public function parser(){
-		return Parser::instance($this);
+	public function crawler(){
+		return Crawler::single($this);
 	}
 
 	/**

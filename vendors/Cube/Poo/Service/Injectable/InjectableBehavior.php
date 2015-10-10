@@ -8,7 +8,10 @@
 
 namespace Cube\Poo\Service\Injectable;
 
+use Cube\Poo\Mapper\Mappable\MappableBehavior;
+
 interface InjectableBehavior
+    extends MappableBehavior
 {
 
 }

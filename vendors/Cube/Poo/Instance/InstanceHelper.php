@@ -11,7 +11,7 @@ namespace Cube\Poo\Instance;
 trait InstanceHelper
 {
 	/**
-	 * @return $this
+	 * @return static
 	 */
 	public static function instance()
 	{

@@ -7,12 +7,9 @@ include_once(__DIR__.'/FileSystem/AutoLoader/AutoLoader.php');
 use Cube\FileSystem\AutoLoader\AutoLoader;
 use Cube\FileSystem\FileSystem;
 use Cube\FileSystem\FileSystemService;
-use Cube\Poo\Exception\Exception;
-use Cube\Poo\Mapper\Mappable\MappableBehavior;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
-use Cube\Poo\Mapper\Mapper;
-use Cube\Poo\Mapper\MapperService;
-use Cube\Poo\Single\SingleHelper;
+use Cube\Poo\Service\Service;
+use Cube\Template\Template;
 
 abstract class Cube
     implements CubeConstants
@@ -24,15 +21,10 @@ abstract class Cube
 	 */
 	private $fileSystem;
 
-	/**
-	 * @var AutoLoader
-	 */
-	private $autoLoader;
-
-	/**
-	 * @var Mapper
-	 */
-	private static $_mapper;
+    /**
+     * @var Service
+     */
+    public $services;
 
 	/**
 	 * @param \Closure|null $cbOnStart
@@ -53,8 +45,39 @@ abstract class Cube
 			$cbOnStart($this);
 		}
 
-		$this->fileSystem()->parser()->parse();
+        $fileSystem     = $this->fileSystem();
+		$mapper         = $this->mapper()->setAll($fileSystem->crawler()->findClasses());
+        $this->services = $mapper->singleTo('Cube\Poo\Service\Service');
+        $this->services
+            ->injectInstance('cube.mapper'    , $mapper)
+            ->injectInstance('cube.fileSystem', $fileSystem)
+        ;
+
+
+        $this->createDna();
+
+		$e = 'e';
 	}
+
+    public function createDna() {
+
+        $tpl = Template::instance();
+        $tpl->addSection('ee', 'ServiceMethod');
+        //$tpl->addSection('ee', 'vvvv');
+
+
+        $this->services()->iterateOnService(function ($service, $key) {
+
+        });
+    }
+
+    /**
+     * @return Service
+     */
+    public function services()
+    {
+        return $this->services;
+    }
 
 	/**
 	 * @return FileSystem
@@ -62,7 +85,7 @@ abstract class Cube
 	public function fileSystem()
 	{
 		if(!$this->fileSystem) {
-			$this->fileSystem = FileSystem::single(AutoLoader::getListOfIncludeFiles());
+			$this->fileSystem = FileSystem::instance(AutoLoader::getListOfIncludeFiles());
 		}
 		return $this->fileSystem;
 	}

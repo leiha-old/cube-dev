@@ -92,17 +92,20 @@ trait CollectionServiceHelper
 				/** @var $item Collection[] */
 				$tmp = &$item[$h]->get($key, $silent);
 			}
-			elseif (is_array($item[$h])) {
-				$tmp = &$item[$h];
+            else {
+                $tmp = &$item[$h];
+            }
+
+            $ret = $cbForEachItem($isEnd, $tmp, $key, $railProgression);
+
+			if(null !== $ret) {
+                return $ret;
 			}
-//			elseif(!$isEnd) {
-//				self::exception(Collection::ERROR_DATA_ERROR);
-//			}
-
-			if(false === $cbForEachItem($tmp, $isEnd, $key, $railProgression)) {
-
-			}
-
+            elseif(isset($tmp[$key])) {
+                $item[$i] = &$tmp[$key];
+			} else {
+                return $ret; // $ret = null
+            }
 		}
 		return $item[$i-1];
 	}

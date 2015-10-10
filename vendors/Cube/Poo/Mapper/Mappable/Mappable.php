@@ -12,6 +12,4 @@ abstract class Mappable
 	implements MappableBehavior
 {
 	use MappableHelper;
-
-
 }

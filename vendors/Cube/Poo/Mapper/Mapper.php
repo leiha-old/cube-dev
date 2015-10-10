@@ -8,11 +8,11 @@
 
 namespace Cube\Poo\Mapper;
 
-use Cube\Collection\Collection;
-use Cube\Poo\Service\Service;
+use Cube\Poo\Service\Injectable\Injectable;
 use Cube\Poo\Single\SingleHelper;
 
 class Mapper
+    extends Injectable
     implements MapperConstants
 {
 	use SingleHelper;

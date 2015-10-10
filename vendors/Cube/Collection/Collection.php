@@ -3,9 +3,10 @@
 namespace Cube\Collection;
 
 use Cube\Poo\Instance\InstanceHelper;
+use Cube\Poo\Mapper\Mappable\Mappable;
 
 class Collection
-    //extends \ArrayObject
+    extends    Mappable
     implements CollectionConstants,
                \IteratorAggregate
 {
