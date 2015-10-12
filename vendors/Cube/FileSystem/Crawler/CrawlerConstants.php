@@ -15,6 +15,6 @@ interface CrawlerConstants
 
     const PATTERN_CUBE_object   = '/(.+\/(.[^\/\.]+)\/\2)\.php$/';
 
-    const PATTERN_CUBE_template = '/(.+\/(.[^\/\.]+)\/\2)\.block.php$/';
+    const PATTERN_CUBE_template = '/([[:alnum:]\-_\/]+)\/([[:alnum:]\/]+)\.block\.php$/';
 
 }

@@ -23,6 +23,26 @@ trait ClosureReflectionTrait
     abstract public function getDocComment();
 
     /**
+     * @return int
+     */
+    abstract public function getEndLine();
+
+    /**
+     * @return int
+     */
+    abstract public function getStartLine();
+
+    /**
+     * @return string
+     */
+    abstract public function getFileName();
+
+    /**
+     * @return string
+     */
+    abstract public function getName();
+
+    /**
      * @param array $values
      * @return array
      */
@@ -79,5 +99,42 @@ trait ClosureReflectionTrait
         }
 
         return $args;
+    }
+
+    /**
+     * @return array
+     */
+    public function extractDoc2()
+    {
+        $attributes = array(
+            'param'      => '([[:alnum:]]+){0,1} \$([[:alnum:]]+)(?: (.*)){0,1}',
+            'visibility' => '([[:alnum:]]+)'
+        );
+
+        foreach($attributes as $attribute => $pattern) {
+            $pattern = '#@'.$attribute.' '.$pattern.'#m';
+            if (preg_match_all($pattern, $this->getDocComment(), $matches, PREG_PATTERN_ORDER)) {
+                foreach($matches[1] as $i => $type) {
+
+                }
+                $eeee = 'eeeeee';
+
+            }
+        }
+        $ee = 'dddd';
+
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource()
+    {
+        $start   = $this->getStartLine() - 2;
+        $end     = $this->getEndLine() - $start;
+        $extract = implode('', array_slice(file($this->getFileName()), $start, $end));
+        if(preg_match('/(\(.[^\)]*\)[[:space:]]*{(?:[^{}]+|(?R))*})/ms', $extract, $matches)) {
+            return $matches[1];
+        }
     }
 }

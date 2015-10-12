@@ -77,11 +77,16 @@ class Crawler
         use (&$parts, &$classes)
         {
             $name  = $item->getRealPath();
-            // if files present like this : xxxx/Cube/Cube.php
+
             if(preg_match(Crawler::PATTERN_CUBE_class, $name, $matches)){
                 $class = str_replace(DIRECTORY_SEPARATOR, '\\', substr($matches[1], strlen($includePath)));
                 $this->retrieveRealClass($class, $classes);
             }
+
+//            if(preg_match(Crawler::PATTERN_CUBE_template, $name, $matches)){
+//                $class = str_replace(DIRECTORY_SEPARATOR, '\\', substr($matches[1], strlen($includePath)));
+//                $this->retrieveRealClass($class, $classes);
+//            }
 
             // if files present like this : xxxx/Cube/Cube.php
             if(preg_match(Crawler::PATTERN_CUBE_object, $name, $matches)){

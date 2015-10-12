@@ -61,13 +61,20 @@ abstract class Cube
 
     public function createDna() {
 
-        $tpl = Template::instance();
-        $tpl->addSection('ee', 'ServiceMethod');
+//        $tpl = Template::instance();
+//        $tpl->addForEachSection('dna.methods', function(Template $engine, $item){
+//            return "
+//                /**
+//                 * @return $item[className]
+//                 */
+//                public function $item[methodName]();
+//            ";
+//        });
         //$tpl->addSection('ee', 'vvvv');
 
 
         $this->services()->iterateOnService(function ($service, $key) {
-
+            $ee = '';
         });
     }
 
