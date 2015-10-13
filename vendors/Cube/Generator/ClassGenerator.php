@@ -10,6 +10,7 @@ class ClassGenerator
 
     const CLASS_TYPE_interface = 'interface';
     const CLASS_TYPE_class     = 'class';
+    const CLASS_TYPE_abstract  = 'abstract class';
     const CLASS_TYPE_trait     = 'trait';
 
     const VISIBILITY_public    = 'public';
@@ -24,7 +25,7 @@ class ClassGenerator
     /**
      * @var string
      */
-    protected $type = self::CLASS_TYPE_class;
+    protected $type;
 
     /**
      * @var string
@@ -49,9 +50,11 @@ class ClassGenerator
 
     /**
      * @param string $className
+     * @param string $type      self::CLASS_TYPE_*
      */
-    public function __construct($className)
+    public function __construct($className, $type = self::CLASS_TYPE_class)
     {
+        $this->type      = $type;
         $this->className = $className;
     }
 
@@ -71,37 +74,70 @@ class ClassGenerator
      */
     public function addTrait($traitName)
     {
-        $this->traits[] = $traitName;
+        $this->traits = array_merge($this->traits, $traitName);;
         return $this;
     }
 
     /**
-     * @param string $interfaceName
+     * @param array|string $interfaceNames
      * @return $this
      */
-    public function addInterface($interfaceName)
+    public function addInterface($interfaceNames)
     {
-        $this->implements[] = $interfaceName;
+        $this->implements = array_merge($this->implements, $interfaceNames);
         return $this;
     }
 
     /**
-     * @param string    $methodName
-     * @param \Closure  $closure
-     * @param string    $visibility self::VISIBILITY_*
+     * @param \Closure $closure
+     * @param array $data
      * @return $this
      * @throws \Cube\Poo\Reflection\ReflectionException
      */
-    public function addMethod(\Closure $closure, $visibility = self::VISIBILITY_public)
+    public function addMethod(\Closure $closure, array $data = array())
     {
         $f = Reflection::reflectFunction($closure);
 
-        $zz = $f->extractDoc2();
-
-        $this->methods[$methodName] =
-             "\t".$f->getDocComment()
-            ."\n\t".$visibility.' function '.$methodName.' '.$f->getSource()
-        ;
+        $source = $f->getSource();
+        if(count($data)) {
+            $source = preg_replace_callback('/\$\$([[:alnum:]_]+)/',
+                function($matches) use ($data){
+                    return isset($data[$matches[1]])
+                        ? $data[$matches[1]]
+                        : $matches[0]
+                        ;
+                }
+                , $source
+            );
+        }
+        $this->methods[] = $source;
         return $this;
     }
+
+    public function render()
+    {
+        $extends = '';
+        if(count($this->extends)) {
+            $extends = "\n\t".'extends '.$this->extends;
+        }
+
+        $implements = '';
+        if(count($this->implements)) {
+            $implements = "\n\t".'implements '.implode(', ', $this->implements);
+        }
+
+        $traits = '';
+        if(count($this->traits)) {
+            $traits = "\t".'use '.implode(";\n\tuse ", $this->traits).";\n\n";
+        }
+
+        $methods = implode("\n\n", $this->methods);
+
+        return $this->type.' '.$this->className
+            .$extends
+            .$implements
+            ."\n{\n$traits.$methods\n}"
+            ;
+    }
+
 }

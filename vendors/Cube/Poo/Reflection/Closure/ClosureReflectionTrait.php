@@ -9,6 +9,8 @@
 namespace Cube\Poo\Reflection\Closure;
 
 use Cube\Collection\Collection;
+use Cube\Poo\Reflection\Doc\Attribute;
+use Cube\Poo\Reflection\Reflection;
 
 trait ClosureReflectionTrait
 {
@@ -49,7 +51,7 @@ trait ClosureReflectionTrait
     public function getParametersExtended(array $values = array())
     {
         $params = array();
-        $doc    = $this->extractDoc();
+        $doc    = $this->extractDocAttribute('param');
 
         Collection::instance($this->getParameters())->iterateWithCounter(
             function($counter, \ReflectionParameter &$value) use ($doc, &$params, $values)
@@ -82,47 +84,26 @@ trait ClosureReflectionTrait
     }
 
     /**
+     * @param string $type
      * @return array
      */
-    protected function extractDoc()
+    public function extractDocAttribute($type = 'param')
     {
-        $pattern = '#@(param)(?: ([[:alnum:]]+)){0,1} \$([[:alnum:]]+)(?: (.*)){0,1}$#m';
-
-        preg_match_all($pattern, $this->getDocComment(), $matches, PREG_PATTERN_ORDER);
-
-        $args = array();
-        foreach($matches[0] as $key => $match) {
-            $args[$matches[3][$key]] = array(
-                'type' => $matches[2][$key],
-                'desc' => $matches[4][$key],
-            );
-        }
-
-        return $args;
+        $params = $this->extractDocAttributes($type);
+        return $params[$type];
     }
 
     /**
      * @return array
      */
-    public function extractDoc2()
+    public function extractDocAttributes()
     {
-        $attributes = array(
-            'param'      => '([[:alnum:]]+){0,1} \$([[:alnum:]]+)(?: (.*)){0,1}',
-            'visibility' => '([[:alnum:]]+)'
-        );
-
-        foreach($attributes as $attribute => $pattern) {
-            $pattern = '#@'.$attribute.' '.$pattern.'#m';
-            if (preg_match_all($pattern, $this->getDocComment(), $matches, PREG_PATTERN_ORDER)) {
-                foreach($matches[1] as $i => $type) {
-
-                }
-                $eeee = 'eeeeee';
-
-            }
+        $doc        = array();
+        $attributes = func_num_args() ? func_get_args() : Reflection::getListOfDocAttributes();
+        foreach($attributes as $attribute) {
+            $doc[$attribute] = Reflection::getDocAttribute($attribute, $this->getDocComment());
         }
-        $ee = 'dddd';
-
+        return $doc;
     }
 
     /**
@@ -133,8 +114,26 @@ trait ClosureReflectionTrait
         $start   = $this->getStartLine() - 2;
         $end     = $this->getEndLine() - $start;
         $extract = implode('', array_slice(file($this->getFileName()), $start, $end));
-        if(preg_match('/(\(.[^\)]*\)[[:space:]]*{(?:[^{}]+|(?R))*})/ms', $extract, $matches)) {
-            return $matches[1];
+        if(preg_match('/((\(.[^\)]*\))[[:space:]]*{(?:[^{}]+|(?R))*})/ms', $extract, $matches))
+        {
+            $attributes = $this->extractDocAttributes('abstract', 'visibility', 'name');
+
+            if(!isset($attributes['visibility'])) {
+                $attributes['visibility'] = '';
+            }
+
+            if(!isset($attributes['name'])) {
+                $attributes['name'] = $this->getName();
+            }
+
+            $source = $attributes['visibility'].' function '.$attributes['name'];
+            if($attributes['abstract']) {
+                $source = 'abstract '.$source.$matches[2].';';
+            } else {
+                $source .= ' '.$matches[1];
+            }
+
+            return "\t".$this->getDocComment()."\n\t".$source;
         }
     }
 }

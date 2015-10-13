@@ -8,15 +8,42 @@
 
 namespace Cube\Poo\Reflection;
 
-
 use Cube\Poo\Mapper\Mappable\MappableConfigurator;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
+use Cube\Poo\Reflection\Doc\Attribute;
 
 class Reflection
     extends \ReflectionClass
 {
     use MappableHelper;
     use ReflectionStatic;
+
+    /**
+     * @var array
+     */
+    private static $docAttributes = array(
+        'param'      => 'Cube\Poo\Reflection\Closure\Doc\ParamAttribute',
+        'visibility' => 'Cube\Poo\Reflection\Closure\Doc\VisibilityAttribute',
+        'name'       => 'Cube\Poo\Reflection\Closure\Doc\NameAttribute',
+        'abstract'   => 'Cube\Poo\Reflection\Closure\Doc\AbstractAttribute',
+    );
+
+    /**
+     * @param string $name
+     * @return Attribute
+     */
+    public static function getDocAttribute($name, $string) {
+        /** @var Attribute $parser */
+        $parser = new self::$docAttributes[$name]();
+        return $parser->parse($string);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getListOfDocAttributes() {
+        return array_keys(self::$docAttributes);
+    }
 
     /**
      * @param MappableConfigurator $configurator
