@@ -7,7 +7,6 @@ use Cube\Poo\Reflection\Reflection;
 
 class ClassGenerator
 {
-
     const CLASS_TYPE_interface = 'interface';
     const CLASS_TYPE_class     = 'class';
     const CLASS_TYPE_abstract  = 'abstract class';
@@ -31,6 +30,11 @@ class ClassGenerator
      * @var string
      */
     protected $extends;
+
+    /**
+     * @var string
+     */
+    protected $namespace;
 
     /**
      * @var array
@@ -65,6 +69,16 @@ class ClassGenerator
     public function setExtend($className)
     {
         $this->extends = $className;
+        return $this;
+    }
+
+    /**
+     * @param string $namespace
+     * @return $this
+     */
+    public function setNameSpace($namespace)
+    {
+        $this->namespace = $namespace;
         return $this;
     }
 
@@ -116,6 +130,13 @@ class ClassGenerator
 
     public function render()
     {
+        $namespace = '';
+        if(count($this->namespace)) {
+            $namespace = "\n".'namespace '.$this->namespace.";\n\n";
+        }
+
+        $className = $this->type.' '.$this->className;
+
         $extends = '';
         if(count($this->extends)) {
             $extends = "\n\t".'extends '.$this->extends;
@@ -133,7 +154,9 @@ class ClassGenerator
 
         $methods = implode("\n\n", $this->methods);
 
-        return $this->type.' '.$this->className
+        return
+            $namespace
+            .$className
             .$extends
             .$implements
             ."\n{\n$traits.$methods\n}"

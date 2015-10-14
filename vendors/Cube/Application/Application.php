@@ -19,8 +19,8 @@ class Application
 	 */
 	public function __construct(\Closure $cbOnStart = null)
 	{
-		parent::__construct($cbOnStart);
-		$this->initException();
+        $this->initException();
+        parent::__construct($cbOnStart);
 	}
 
 	/**

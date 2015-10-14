@@ -88,14 +88,12 @@ abstract class ExceptionAbstract
 
     public function render()
     {
-        $ret = '[ Exception ]'."\n\n"
+        return '[ Exception ]'."\n\n"
             .$this->getLog()."\n"
             .' - '.$this->getFile().':'.$this->getLine()."\n"
             //.print_r($this->getTraces(), true)
             ."\n".$this->renderTraces()
         ;
-
-        echo $ret;
     }
 
     public function renderTraces()
