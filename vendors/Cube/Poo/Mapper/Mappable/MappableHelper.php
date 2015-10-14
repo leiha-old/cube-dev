@@ -3,7 +3,6 @@
 namespace Cube\Poo\Mapper\Mappable;
 
 use Cube\Poo\Mapper\Mapper;
-use Cube\Poo\Mapper\MapperService;
 use Cube\Poo\Single\SingleHelper;
 
 trait MappableHelper
@@ -24,7 +23,7 @@ trait MappableHelper
     }
 
 	/**
-	 * @return MapperService
+	 * @return Mapper
 	 */
 	public static function mapper()
 	{

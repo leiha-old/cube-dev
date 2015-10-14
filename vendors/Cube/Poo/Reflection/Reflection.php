@@ -26,6 +26,7 @@ class Reflection
         'visibility' => 'Cube\Poo\Reflection\Closure\Doc\VisibilityAttribute',
         'name'       => 'Cube\Poo\Reflection\Closure\Doc\NameAttribute',
         'abstract'   => 'Cube\Poo\Reflection\Closure\Doc\AbstractAttribute',
+        'return'     => 'Cube\Poo\Reflection\Closure\Doc\ReturnAttribute',
     );
 
     /**

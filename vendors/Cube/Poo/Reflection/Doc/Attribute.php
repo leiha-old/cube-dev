@@ -21,7 +21,7 @@ abstract class Attribute
      */
     public function getPattern()
     {
-        return ' ([[:alnum:]]+)';
+        return ' ([[:alnum:]\$]+)';
     }
 
     /**

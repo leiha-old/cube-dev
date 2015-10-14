@@ -8,10 +8,9 @@
 
 namespace Cube\Poo\Exception;
 
-use Cube\Poo\Exception\Trace\Trace;
 use Cube\Poo\Exception\Trace\TraceException;
 
-abstract class ExceptionAbstract
+abstract class ExceptionWrapper
     extends \Exception
 {
     /**
@@ -84,8 +83,6 @@ abstract class ExceptionAbstract
         return $traces;
     }
 
-
-
     public function render()
     {
         return '[ Exception ]'."\n\n"
@@ -137,7 +134,7 @@ abstract class ExceptionAbstract
             }
 
             $content = '';
-            switch($arg['type']){
+            switch($arg['type']) {
                 case 'string':
                     $content = ' = "'.$arg['value'].'"';
                     break;

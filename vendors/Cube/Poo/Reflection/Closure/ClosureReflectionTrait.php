@@ -116,9 +116,9 @@ trait ClosureReflectionTrait
         $start   = $this->getStartLine() - 2;
         $end     = $this->getEndLine() - $start;
         $extract = implode('', array_slice(file($this->getFileName()), $start, $end));
-        if(preg_match('/((\(.[^\)]*\))[[:space:]]*{(?:[^{}]+|(?R))*})/ms', $extract, $matches))
+        if(preg_match('/((\([^\)]*\))[[:space:]]*{(?:[^{}]+|(?R))*})/ms', $extract, $matches))
         {
-            $attributes = $this->extractDocAttributes('abstract', 'visibility', 'name');
+            $attributes = $this->extractDocAttributes('abstract', 'visibility', 'name', 'return');
 
             if(!isset($attributes['visibility'])) {
                 $attributes['visibility'] = '';

@@ -8,7 +8,7 @@
 
 namespace Cube\Collection;
 
-trait CollectionServiceHelper
+trait CollectionGeneHelper
 {
 	/**
 	 * @param string $msg

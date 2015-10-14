@@ -10,7 +10,7 @@ namespace Cube\Collection;
 
 trait CollectionHelper
 {
-	use CollectionServiceHelper;
+    use CollectionGeneHelper;
 
     /**
      * @var array
