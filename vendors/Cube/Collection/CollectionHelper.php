@@ -256,7 +256,7 @@ trait CollectionHelper
     }
 
     /**
-     * @param \Closure $cbForEachItem ((&)$value, $key, $counter, $total)
+     * @param \Closure $cbForEachItem ($isEnd, (&)$value, $key, $counter, $total)
      * @param bool $reverseMode
      * @return $this
      */

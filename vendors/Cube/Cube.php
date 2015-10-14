@@ -9,7 +9,6 @@ use Cube\FileSystem\FileSystem;
 use Cube\FileSystem\FileSystemService;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
 use Cube\Poo\Service\Service;
-use Cube\Template\Template;
 
 abstract class Cube
     implements CubeConstants
@@ -92,7 +91,7 @@ abstract class Cube
 	public function fileSystem()
 	{
 		if(!$this->fileSystem) {
-			$this->fileSystem = FileSystem::instance(AutoLoader::getListOfIncludeFiles());
+			$this->fileSystem = FileSystem::instance(AutoLoader::getListOfIncludeFiles(false));
 		}
 		return $this->fileSystem;
 	}

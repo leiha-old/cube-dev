@@ -8,9 +8,8 @@
 
 namespace Cube\Poo\Exception;
 
-use Cube\Collection\Collection;
-use Cube\Poo\Reflection\Closure\ClosureReflection;
-use Cube\Poo\Reflection\Reflection;
+use Cube\Poo\Exception\Trace\Trace;
+use Cube\Poo\Exception\Trace\TraceException;
 
 abstract class ExceptionAbstract
     extends \Exception
@@ -26,81 +25,13 @@ abstract class ExceptionAbstract
     protected $data;
 
     /**
-     * @return string
-     */
-    public function render()
-    {
-	    $ret = '[ Exception ]'."\n\n"
-            .$this->getLog()."\n"
-            .' - '.$this->getFile().':'.$this->getLine()."\n"
-            //.print_r($this->getTraces(), true)
-			."\n".$this->renderTraces()
-            ;
-
-        echo $ret;
-    }
-
-	public function renderTraces()
-	{
-		$bTraces = $this->getTraces();
-		if(!count($bTraces)) {
-			return;
-		}
-
-		$traces = '[ BackTraces ]'."\n";
-		foreach($bTraces as $trace) {
-			$traces .= "\n";
-			if(isset($trace['class'])) {
-				$traces .= $trace['class'].$trace['type'].$trace['function'];
-			} else {
-				$traces .= $trace['function'];
-			}
-
-			if(isset($trace['file'])) {
-				$traces .= "\n - ".$trace['file'] . ':' . $trace['line'];
-			}
-			$traces .= "\n";
-
-			$traces .= $this->renderArgsTrace($trace);
-		}
-
-		return $traces;
-	}
-
-	/**
-	 * @param array $trace
-	 * @return string
-	 */
-	public function renderArgsTrace(array $trace)
-	{
-		if(count($trace['args'])) {
-			$args = array();
-			foreach($trace['args'] as $name => $arg) {
-				if(isset($arg['value'])) {
-					$content = '';
-					switch($arg['value']['type']){
-						case 'string':
-							$content = ' = "'.$arg['value']['content'].'"';
-							break;
-					}
-
-					$args[$name] = $arg['value']['type'].' $'.$name.$content;
-				} else {
-					$args[$name] = ' $'.$name;
-				}
-			}
-			return "\t - ".implode("\n\t - ", $args)."\n";
-		}
-	}
-
-    /**
      * @param string $msg
      * @param array $data
      */
     public function __construct($msg, array $data = array())
     {
-        $this->message = $msg;
-        $this->data = $data;
+        $this->data     = $data;
+        $this->message  = $msg;
     }
 
     /**
@@ -145,88 +76,76 @@ abstract class ExceptionAbstract
      * @return array
      */
     public function getTraces()
+	{
+		$traces = $this->getTrace();
+        foreach ($traces as &$trace) {
+            $trace = new TraceException($trace);
+		}
+        return $traces;
+    }
+
+
+
+    public function render()
     {
-        $autoload = false;
-        $traces   = $this->getTrace();
+        $ret = '[ Exception ]'."\n\n"
+            .$this->getLog()."\n"
+            .' - '.$this->getFile().':'.$this->getLine()."\n"
+            //.print_r($this->getTraces(), true)
+            ."\n".$this->renderTraces()
+        ;
 
-	    /**
-	     * @param array $trace
-	     */
-	    $cbFilterClosure = function(array &$trace)
-	    {
-		    $values = array();
-		    foreach($trace['args'] as $value) {
-			    $type  = gettype($value);
-			    if('object' == $type) {
-				    $type = get_class($value);
-			    }
-			    $values[]['value'] = array('content' => $value, 'type' => $type);
-		    }
-		    $trace['args'] = $values;
-	    };
+        echo $ret;
+    }
 
-	    /**
-	     * @param array   $trace
-	     * @param boolean $autoload
-	     */
-	    $cbFilterDefault = function (array &$trace, &$autoload)
-	    {
-		    $type     = 'function';
-		    $function = $trace['function'];
-		    if(isset($trace['class'])) {
-			    $type     = 'method';
-			    $function = '\\'.$trace['class'].'::'.$function;
-		    }
+    public function renderTraces()
+    {
+        $bTraces = $this->getTraces();
+        if(!count($bTraces)) {
+            return;
+        }
 
-		    $byPass = array('require_once');
-		    if(isset($trace['args']) && !in_array($function, $byPass)) {
-			    /** @var ClosureReflection $reflector */
-			    if($reflector = Reflection::reflect($type, $function)) {
-				    $trace['args'] = $reflector->getParametersExtended($trace['args']);
-			    }
-		    } else {
-			    $args = array();
-				foreach($trace['args'] as $name => $value) {
-					$type  = gettype($value);
-					if('object' == $type) {
-						$type = get_class($value);
-					}
+        $traces = '[ BackTraces ]'."\n";
+        /** @var TraceException $trace */
+        foreach($bTraces as $trace) {
+            $traces .= "\n";
+            $traces .= $trace->getFunctionName();
+            if($file = $trace->getFile()) {
+                $traces .= "\n - ".$file . ':' . $trace->getLine();
+            }
+            $traces .= "\n";
 
-					$args[$name]['value'] = array(
-						'content' => $value,
-						'type'    => $type
-					);
-				}
-			    $trace['args'] = $args;
-		    }
+            $traces .= $this->renderArgsOfTrace($trace);
+        }
 
-		    if($autoload
-			    && 'spl_autoload_call' == $function)
-		    {
-			    $this->file = $trace['file'];
-			    $this->line = $trace['line'];
-			    #return false;
-		    }
-		    elseif('\Cube\FileSystem\AutoLoader\AutoLoader::autoload' == $function) {
-			    $autoload = true;
-		    }
-	    };
+        return $traces;
+    }
 
-	    /**
-	     * @param array $trace
-	     * @return bool
-	     */
-        $cbFilter = function(array &$trace)
-            use (&$autoload, $cbFilterClosure, $cbFilterDefault)
+    /**
+     * @param TraceException $trace
+     * @return string
+     */
+    public function renderArgsOfTrace(TraceException $trace)
+    {
+        if(!$args = $trace->getArgs()) {
+            return '';
+        }
+
+        foreach($args as $name => &$arg)
         {
-	        if(strpos($trace['function'], '{closure}') > -1) {
-		        $cbFilterClosure($trace);
-	        } else {
-		        $cbFilterDefault($trace, $autoload);
-	        }
-            return true;
-        };
+            if(!isset($arg['value'])) {
+                $arg = ' $' . $name;
+                continue;
+            }
 
-        return Collection::instance($traces)->filter($cbFilter);
+            $content = '';
+            switch($arg['type']){
+                case 'string':
+                    $content = ' = "'.$arg['value'].'"';
+                    break;
+            }
+            $arg = $arg['type'].' $'.$name.$content;
+        }
+        return "\t - ".implode("\n\t - ", $args)."\n";
     }
 }

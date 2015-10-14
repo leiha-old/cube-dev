@@ -8,8 +8,7 @@
 
 namespace Cube\Poo\Reflection\Closure;
 
-use Cube\Collection\Collection;
-use Cube\Poo\Reflection\Doc\Attribute;
+use Cube\Collection\CollectionService;
 use Cube\Poo\Reflection\Reflection;
 
 trait ClosureReflectionTrait
@@ -45,42 +44,45 @@ trait ClosureReflectionTrait
     abstract public function getName();
 
     /**
-     * @param array $values
+     * @param array $args
      * @return array
      */
-    public function getParametersExtended(array $values = array())
+    public function getParametersExtended(array $args = array())
     {
-        $params = array();
+
+        $return = array();
         $doc    = $this->extractDocAttribute('param');
+        $params = $this->getParameters();
 
-        Collection::instance($this->getParameters())->iterateWithCounter(
-            function($counter, \ReflectionParameter &$value) use ($doc, &$params, $values)
+        CollectionService::iterateArrayWithCounter(
+            $params,
+            function($end, \ReflectionParameter &$reflector, $counter)
+                use ($doc, &$return, $args)
             {
-                $name = $value->getName();
+                if(isset($args[$counter]))
+                {
+                    $arg  = $args[$counter];
+                    $name = $reflector->getName();
+                    $type = is_object($arg) ? get_class($arg) : gettype($arg);
 
-                $params[$name] = array();
-                if(isset($doc[$name])) {
-                    $params[$name]['doc'] = $doc[$name];
-                }
+                    $description = '';
+                    if(isset($doc[$name])) {
+                        $description = $doc[$name]['desc'];
+                        if($type != $doc[$name]['type']) {
+                            $type .= ' ( '.$doc[$name]['type'].' )';
+                        }
+                    }
 
-	            $params[$name]['value'] = null;
-	            if(isset($values[$counter])){
-
-		            $value = $values[$counter];
-		            $type  = gettype($value);
-		            if('object' == $type) {
-			            $type = get_class($value);
-		            }
-
-		            $params[$name]['value'] = array(
-			            'content' => $value,
-			            'type'    => $type
-		            );
+                    $return[$name] = array(
+                        'type'        => $type,
+                        'value'       => $arg,
+                        'description' => $description
+                    );
 	            }
             }
         );
 
-        return $params;
+        return $return;
     }
 
     /**

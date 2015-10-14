@@ -33,6 +33,11 @@ class AutoLoader
     private static $includePaths = array();
 
     /**
+     * @var array
+     */
+    private static $includePathsWithoutVendors = array();
+
+    /**
      * @var AutoLoader
      */
     private static $autoloader;
@@ -65,11 +70,12 @@ class AutoLoader
     }
 
     /**
+     * @param bool $withVendors
      * @return array
      */
-    static public function getListOfIncludeFiles()
+    static public function getListOfIncludeFiles($withVendors = true)
     {
-        return self::$includePaths;
+        return $withVendors ? self::$includePaths : self::$includePathsWithoutVendors;
     }
 
     /**
@@ -98,9 +104,24 @@ class AutoLoader
      * @param string $includePath
      * @return AutoLoader
      */
-    static public function add($name, $includePath)
+    static public function addVendor($name, $includePath)
+    {
+       return self::add($name, $includePath, true);
+    }
+
+    /**
+     * @param string $name
+     * @param string $includePath
+     * @param bool $vendor
+     * @return AutoLoader
+     */
+    static public function add($name, $includePath, $vendor = false)
     {
         self::$includePaths[$name] = $includePath;
+        if(!$vendor) {
+            self::$includePathsWithoutVendors[$name] = $includePath;
+        }
+
         return self::single();
     }
 

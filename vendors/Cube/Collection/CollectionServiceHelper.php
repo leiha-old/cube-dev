@@ -17,7 +17,7 @@ trait CollectionServiceHelper
 	 * @return void|false
 	 * @throws CollectionException
 	 */
-	public function exception($msg, array $data = array(), $silent = false) {
+	public static function exception($msg, array $data = array(), $silent = false) {
 		if(!$silent) {
 			throw CollectionException::instance($msg, $data);
 		}
@@ -29,7 +29,7 @@ trait CollectionServiceHelper
 	 * @param \Closure $callback ((&)$value, $key)
 	 * @param bool $reverseMode
 	 */
-	public function iterateArray(array &$items, \Closure $callback, $reverseMode = false)
+	public static function iterateArray(array &$items, \Closure $callback, $reverseMode = false)
 	{
 		if($reverseMode) {
 			$items = array_reverse($items);
@@ -50,7 +50,7 @@ trait CollectionServiceHelper
 	 * @param \Closure $callback ($isEnd, (&)$value, $key, $counter, $total)
 	 * @param bool $reverseMode
 	 */
-	public function iterateArrayWithCounter(array &$items, \Closure $callback, $reverseMode = false)
+	public static function iterateArrayWithCounter(array &$items, \Closure $callback, $reverseMode = false)
 	{
 		if($reverseMode) {
 			$items = array_reverse($items);
@@ -77,7 +77,7 @@ trait CollectionServiceHelper
 	 * @param bool $silent
 	 * @return mixed
 	 */
-	public function &iterateArrayOnRail(array &$items, array $rail, \Closure $cbForEachItem, $silent = false)
+	public static function &iterateArrayOnRail(array &$items, array $rail, \Closure $cbForEachItem, $silent = false)
 	{
 		$item[-1] = &$items;
 

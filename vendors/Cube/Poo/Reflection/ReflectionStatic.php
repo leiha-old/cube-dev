@@ -74,7 +74,7 @@ trait ReflectionStatic
         try {
             if( $method) {
                 return new MethodReflection($classMethod, $method);
-            } elseif(is_callable($classMethod)) {
+            } else {
                 return new MethodReflection($classMethod);
             }
         } catch(\Exception $e) {
