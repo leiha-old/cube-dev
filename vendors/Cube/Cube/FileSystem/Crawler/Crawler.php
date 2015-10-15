@@ -42,7 +42,7 @@ class Crawler
             'ServiceHelper' => array(
                 'found'    => false,
             ),
-            'Configurator'  => array(
+            'Facade'  => array(
                 'found'    => false,
                 'callback' => function ($className, $classConfigurator) {
                     //Mapper::single()->setConfiguratorTo($className, $classConfigurator);
