@@ -62,6 +62,10 @@ abstract class ExceptionWrapper
     public function parser($msg, array $data)
     {
         $cb = function ($matches) use ($data) {
+//            if(!isset($row[$matches[1]])) {
+//                throw new \Exception("The key [ $matches[1] ] is not present in row ! ");
+//            }
+
             return isset($data[$matches[1]])
                 ? $data[$matches[1]]
                 : $matches[0]
@@ -83,21 +87,26 @@ abstract class ExceptionWrapper
         return $traces;
     }
 
+    /**
+     * @return string
+     */
     public function render()
     {
         return '[ Exception ]'."\n\n"
             .$this->getLog()."\n"
             .' - '.$this->getFile().':'.$this->getLine()."\n"
-            //.print_r($this->getTraces(), true)
             ."\n".$this->renderTraces()
         ;
     }
 
-    public function renderTraces()
+    /**
+     * @return string
+     */
+    private function renderTraces()
     {
         $bTraces = $this->getTraces();
         if(!count($bTraces)) {
-            return;
+            return '';
         }
 
         $traces = '[ BackTraces ]'."\n";
@@ -109,7 +118,6 @@ abstract class ExceptionWrapper
                 $traces .= "\n - ".$file . ':' . $trace->getLine();
             }
             $traces .= "\n";
-
             $traces .= $this->renderArgsOfTrace($trace);
         }
 
@@ -120,7 +128,7 @@ abstract class ExceptionWrapper
      * @param TraceException $trace
      * @return string
      */
-    public function renderArgsOfTrace(TraceException $trace)
+    private function renderArgsOfTrace(TraceException $trace)
     {
         if(!$args = $trace->getArgs()) {
             return '';
@@ -134,7 +142,7 @@ abstract class ExceptionWrapper
             }
 
             $content = '';
-            switch($arg['type']) {
+            switch($arg['type']){
                 case 'string':
                     $content = ' = "'.$arg['value'].'"';
                     break;

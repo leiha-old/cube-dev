@@ -128,6 +128,9 @@ class ClassGenerator
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function render()
     {
         $namespace = '';

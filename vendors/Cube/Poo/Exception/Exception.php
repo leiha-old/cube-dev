@@ -10,4 +10,12 @@ class Exception
 {
     use MappableHelper;
 
+	/**
+	 * @param \Exception $exception
+	 * @return $this
+	 */
+	public static function forward(\Exception $exception) {
+		$e = new static($exception->getMessage());
+		return $e;
+	}
 }
