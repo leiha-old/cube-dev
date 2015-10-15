@@ -11,7 +11,7 @@ trait MappableHelper
 
     /**
      */
-    private $configurator;
+    //private $configurator;
 
     /**
      * @return $this

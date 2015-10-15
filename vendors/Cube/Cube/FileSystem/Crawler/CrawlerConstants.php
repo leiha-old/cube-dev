@@ -11,9 +11,9 @@ namespace Cube\FileSystem\Crawler;
 interface CrawlerConstants
 {
 
-	const PATTERN_CUBE_class    = '/(.+\/(.[^\/\.]+))\.php$/';
+	const PATTERN_CUBE_class    = '/(.+\/[A-Z](.[^\/\.]+))\.php$/';
 
-    const PATTERN_CUBE_object   = '/(.+\/(.[^\/\.]+)\/\2)\.php$/';
+    const PATTERN_CUBE_object   = '/(.+\/([A-Z].[^\/\.]+)\/\2)\.php$/';
 
     const PATTERN_CUBE_template = '/([[:alnum:]\-_\/]+)\/([[:alnum:]\/]+)\.block\.php$/';
 

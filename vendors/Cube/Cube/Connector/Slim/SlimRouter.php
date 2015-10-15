@@ -31,48 +31,63 @@ class SlimRouter
     }
 
     /**
+     * @param string $type [get|put|post|delete]
      * @param string $pattern
      * @param string $controllerName
      * @param string $methodName
+     * @return $this
+     */
+    protected function addRoute($type, $pattern, $controllerName, $methodName) {
+        $this->getWrapped()->get($pattern,
+            function(Request $request, Response $response, array $args)
+            use ($controllerName, $methodName)
+            {
+                return (new $controllerName())->$methodName(func_get_args());
+            });
+        return $this;
+    }
+
+    /**
+     * @param string $pattern
+     * @param string $controllerName
+     * @param string $methodName
+     * @return SlimRouter|void
      */
     public function get($pattern, $controllerName, $methodName)
     {
-        $this->getWrapped()->get($pattern,
-            function(Request $request, Response $response, array $args)
-                use ($controllerName, $methodName)
-            {
-
-            }
-        );
+        return $this->addRoute('get', $pattern, $controllerName, $methodName);
     }
 
     /**
      * @param string $pattern
      * @param string $controllerName
      * @param string $methodName
+     * @return SlimRouter|void
      */
     public function post($pattern, $controllerName, $methodName)
     {
-        // TODO: Implement post() method.
+        return $this->addRoute('post', $pattern, $controllerName, $methodName);
     }
 
     /**
      * @param string $pattern
      * @param string $controllerName
      * @param string $methodName
+     * @return SlimRouter|void
      */
     public function put($pattern, $controllerName, $methodName)
     {
-        // TODO: Implement put() method.
+        return $this->addRoute('put', $pattern, $controllerName, $methodName);
     }
 
     /**
      * @param string $pattern
      * @param string $controllerName
      * @param string $methodName
+     * @return SlimRouter|void
      */
     public function delete($pattern, $controllerName, $methodName)
     {
-        // TODO: Implement delete() method.
+        return $this->addRoute('delete', $pattern, $controllerName, $methodName);
     }
 }

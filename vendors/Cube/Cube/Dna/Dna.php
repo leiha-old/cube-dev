@@ -10,10 +10,13 @@ namespace Cube\Dna;
 
 use Cube\Collection\Collection;
 use Cube\Dna\Gene\GeneBehavior;
+use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 class Dna
 {
     const GENE_TYPE_instance = 'instance';
+
+    use MappableHelper;
 
     /**
      * @var Collection

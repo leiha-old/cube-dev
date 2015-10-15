@@ -10,11 +10,13 @@ namespace Cube\Application;
 
 use Cube\Collection\Collection;
 use Cube\Cube;
+use Cube\CubeConfigurator;
 use Cube\Dna\Dna;
 use Cube\Dna\Gene\GeneBehavior;
 use Cube\FileSystem\AutoLoader\AutoLoader;
 use Cube\FileSystem\FileSystem;
 use Cube\Generator\ClassGenerator;
+use Cube\Http\Router\RouterBehavior;
 use Cube\Poo\Exception\Exception;
 use Cube\Poo\Mapper\Mapper;
 
@@ -29,13 +31,21 @@ class Application
     /**
      * @var Dna
      */
-    public $dna;
+    protected $dna;
+
+    /**
+     * @var RouterBehavior
+     */
+    protected $router;
+
+
 
     /**
      * @param \Closure|null $cbOnStart
      * @return static
      */
-    public static function init(\Closure $cbOnStart = null) {
+    public static function init(\Closure $cbOnStart = null)
+    {
         Mapper::init();
         return self::single($cbOnStart);
     }
@@ -50,77 +60,43 @@ class Application
 
         $fileSystem = $this->fileSystem();
         $mapper     = $this->mapper()->setAll($fileSystem->crawler()->findClasses());
-        $this->dna  = $mapper->singleTo('Cube\Dna\Dna');
+        $router     = $this->router();
+
+        $this->dna  = Dna::single();
         $this->dna
             ->injectInstance('cube.mapper'    , $mapper)
             ->injectInstance('cube.fileSystem', $fileSystem)
+            ->injectInstance('cube.router'    , $router)
+
         ;
+    }
 
+    /**
+     * @return ApplicationConfigurator
+     */
+    public function getConfigurator()
+    {
+        return $this->configurator;
+    }
 
-        $this->createRna();
-
-        $e = 'e';
-	}
-
-    public function createRna() {
-
-        $generator = new ClassGenerator('toto', ClassGenerator::CLASS_TYPE_class);
-        $generator
-            ->setNameSpace('Test\Generator')
-            ;
-
-        $dna = array();
-        $this->dna()->iterateOnGene(
-            function (array &$gene, $geneId)
-                use ($generator, &$dna)
-            {
-                $c[-1]   = array();
-                $explode = explode('.', $geneId);
-                Collection::iterateArrayWithCounter($explode,
-                    function ($isEnd, $value, $key, $counter, $total)
-                        use (&$dna, &$c, &$gene)
-                    {
-                        $c[$counter-1][$value] = /*$isEnd ? array('__GENE__' => $gene) :*/ array();
-                        $c[$counter] = &$c[$counter-1][$value];
-                    }
-                );
-                $dna = array_merge_recursive($dna, $c[-1]);
-            }
-        );
-
-        Collection::iterateArray($dna,
-            function(&$value, $key)
-                use ($generator)
-            {
-                $generator->addMethod(
-                    /**
-                     * @name $$geneId
-                     * @visibility public
-                     * @return $$geneClass
-                     */
-                    function () {},
-                    compact('geneId', 'geneClass')
-                );
-        });
-
-
-            $eee = '';
-
-//                $generator->addMethod(
-//                /**
-//                 * @name $$geneId
-//                 * @visibility public
-//                 * @return $$geneClass
-//                 */
-//                    function () {},
-//                    compact('geneId', 'geneClass')
-//                );
+    public function router()
+    {
+        if(!$this->fileSystem) {
+            $this->fileSystem = FileSystem::instance(AutoLoader::getListOfIncludeFiles(false));
+        }
+        return $this->fileSystem;
 
 
 
 
-        $render = $generator->render();
-        $ee = '';
+    }
+
+    /**
+     * @return ApplicationConfigurator
+     */
+    public static function getConfiguratorInstance()
+    {
+        return ApplicationConfigurator::instance();
     }
 
     /**

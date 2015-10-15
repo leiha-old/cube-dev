@@ -2,31 +2,23 @@
 
 namespace Cube;
 
-use Cube\Collection\CollectionHelper;
-use Cube\Poo\Mapper\Mappable\MappableBehavior;
+use Cube\Collection\Collection;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 class CubeConfigurator
 {
-	/**
-	 * @param MappableBehavior $configurator
-	 * @return mixed
-	 */
-	public function ____configureBehavior(MappableBehavior $configurator)
-	{
-		// TODO: Implement ____configureBehavior() method.
-	}
-
     use MappableHelper;
-    use CollectionHelper {
-        __construct as protected ____constructCollection;
-    }
 
     /**
+     * @var Collection
+     */
+    protected $settings = array();
+
+	/**
      */
     public function __construct()
     {
-        $this->____constructCollection(array(
+        $this->settings = Collection::instance(array(
             'mapping' => array()
         ));
     }
@@ -38,7 +30,7 @@ class CubeConfigurator
      */
     public function getMapping($mapName, $silent = false)
     {
-        return $this->getRail(['mapping', $mapName], $silent);
+        return $this->settings->getRail(['mapping', $mapName], $silent);
     }
 
     /**
@@ -48,6 +40,6 @@ class CubeConfigurator
      */
     public function addMapping($mapName, $className, $force = true)
     {
-        return $this->setRail(['mapping', $mapName], $className, $force);
+        return $this->settings->setRail(['mapping', $mapName], $className, $force);
     }
 }
