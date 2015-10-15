@@ -20,15 +20,8 @@ class FileSystemFacade
     private $fileSystemClass = FileSystem::CLASS_name;
 
     /**
-     * return ApplicationConfigurator
-     */
-    public function end() {
-        parent::end();
-    }
-
-    /**
      * @param string $fileSystemClass
-     * @return $this
+     * @return FileSystemFacadeBehavior
      */
     public function setFileSystemClass($fileSystemClass)
     {
@@ -40,7 +33,7 @@ class FileSystemFacade
      * @param string $name
      * @param string $includePath
      * @param bool $vendor
-     * @return $this
+     * @return FileSystemFacadeBehavior
      */
     public function addIncludePath($name, $includePath, $vendor = false)
     {

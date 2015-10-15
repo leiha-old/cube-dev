@@ -20,13 +20,17 @@ class ApplicationFacade
      * @return HttpFacade
      */
     public function http() {
-        return HttpFacade::single()->setParentFacade($this);
+        return HttpFacade::single()
+            ->setParentFacade($this)
+            ;
     }
 
     /**
      * @return FileSystemFacade
      */
     public function fileSystem() {
-        return FileSystemFacade::single($this);
+        return FileSystemFacade::single($this)
+            ->setParentFacade($this)
+            ;
     }
 }

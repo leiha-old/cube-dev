@@ -8,8 +8,7 @@
 
 namespace Cube\Application;
 
-use Cube\FileSystem\FileSystemFacade;
-use Cube\Http\HttpFacade;
+use Cube\FileSystem\FileSystemFacadeBehavior;
 use Cube\Http\HttpFacadeBehavior;
 use Cube\Poo\Facade\FacadeBehavior;
 
@@ -22,7 +21,7 @@ interface ApplicationFacadeBehavior
     public function http();
 
     /**
-     * @return FileSystemFacade
+     * @return FileSystemFacadeBehavior
      */
     public function fileSystem();
 }

@@ -6,9 +6,9 @@ use Cube\Application\ApplicationFacade;
 require '../../vendors/Cube/Cube/Cube.php';
 
 $cube = Application::init(
-    function(ApplicationFacade $configurator, Application $cube)
+    function(ApplicationFacade $facade, Application $cube)
     {
-        $configurator
+        $facade
             ->http()
                 ->setRouterClass($cube::CONNECTOR_SLIM_router)
                 ->end()

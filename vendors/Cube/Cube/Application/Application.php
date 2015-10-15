@@ -65,7 +65,6 @@ class Application
             ->injectInstance('cube.mapper'    , $mapper)
             ->injectInstance('cube.fileSystem', $fileSystem)
             ->injectInstance('cube.router'    , $router)
-
         ;
     }
 

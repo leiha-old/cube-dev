@@ -49,48 +49,4 @@ class SlimRouter
             });
         return $this;
     }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return SlimRouter|void
-     */
-    public function get($pattern, $controllerName, $methodName)
-    {
-        return $this->addRoute('get', $pattern, $controllerName, $methodName);
-    }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return SlimRouter|void
-     */
-    public function post($pattern, $controllerName, $methodName)
-    {
-        return $this->addRoute('post', $pattern, $controllerName, $methodName);
-    }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return SlimRouter|void
-     */
-    public function put($pattern, $controllerName, $methodName)
-    {
-        return $this->addRoute('put', $pattern, $controllerName, $methodName);
-    }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return SlimRouter|void
-     */
-    public function delete($pattern, $controllerName, $methodName)
-    {
-        return $this->addRoute('delete', $pattern, $controllerName, $methodName);
-    }
 }
