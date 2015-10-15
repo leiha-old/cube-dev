@@ -1,55 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9fc572b-1508-49cc-ba43-6d06e36e5ba7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacadeBehavior.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/ConnectorConstants.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/CubeFacade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaConstants.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Error/Error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Error/ErrorException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/Facade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeBehavior.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeWrapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/Generator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/GeneratorConstants.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Http.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpConstants.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacadeBehavior.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/Router.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleBehavior.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConfigurator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/CubeConfigurator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Router/Router.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Router/RouterInterface.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/Configurator/Http.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator/ClassGenerator.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGeneratorSample.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator/ClassGeneratorSample.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerWrapper.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerInterface.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerBehavior.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/Trace/TraceException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionTrace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGene.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGene.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGeneHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGeneHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Cube.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Cube.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Dna.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Dna.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimRouter.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimRouter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/www/index.php" afterPath="$PROJECT_DIR$/test/www/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="d9fc572b-1508-49cc-ba43-6d06e36e5ba7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/__OLD/" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -879,7 +831,13 @@
       <option name="project" value="LOCAL" />
       <updated>1444945578917</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactoring">
+      <created>1444945594788</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1444945594788</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
