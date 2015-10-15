@@ -8,7 +8,10 @@
 
 namespace Cube\Dna\Gene;
 
+use Cube\Poo\Single\SingleBehavior;
+
 interface GeneBehavior
+    extends SingleBehavior
 {
 
 }

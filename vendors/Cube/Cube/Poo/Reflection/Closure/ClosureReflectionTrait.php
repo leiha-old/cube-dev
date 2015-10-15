@@ -8,7 +8,7 @@
 
 namespace Cube\Poo\Reflection\Closure;
 
-use Cube\Collection\CollectionService;
+use Cube\Collection\Collection;
 use Cube\Poo\Reflection\Reflection;
 
 trait ClosureReflectionTrait
@@ -54,7 +54,7 @@ trait ClosureReflectionTrait
         $doc    = $this->extractDocAttribute('param');
         $params = $this->getParameters();
 
-        CollectionService::iterateArrayWithCounter(
+        Collection::iterateArrayWithCounter(
             $params,
             function($end, \ReflectionParameter &$reflector, $counter)
                 use ($doc, &$return, $args)

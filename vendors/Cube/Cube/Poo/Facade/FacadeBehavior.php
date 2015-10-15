@@ -3,12 +3,12 @@
  * Created by PhpStorm.
  * User: lia
  * Date: 15/10/15
- * Time: 20:37
+ * Time: 21:00
  */
 
-namespace Cube\Logger;
+namespace Cube\Poo\Facade;
 
-class Logger
+interface FacadeBehavior
 {
 
 }

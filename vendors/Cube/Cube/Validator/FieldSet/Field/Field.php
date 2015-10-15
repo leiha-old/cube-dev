@@ -4,7 +4,6 @@ namespace Cube\Validator\FieldSet\Field;
 
 use Cube\Validator\Cleaner\Cleaner;
 use Cube\Validator\Cleaner\CleanerConstants;
-
 use Cube\Validator\Constraint\Constraint;
 use Cube\Validator\Constraint\ConstraintConstants;
 use Cube\Validator\Constraint\RestrictedValuesConstraint;

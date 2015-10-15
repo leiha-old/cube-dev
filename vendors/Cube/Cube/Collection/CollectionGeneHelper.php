@@ -1,6 +1,6 @@
 <?php
 /**
- * Class CollectionServiceHelper
+ * Class CollectionGeneHelper
  * @author Leiha Sellier <leiha.sellier@gmail.com>
  * @link   https://github.com/leiha
  * -

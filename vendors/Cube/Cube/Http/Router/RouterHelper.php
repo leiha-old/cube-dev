@@ -1,9 +1,14 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: lia
+ * Date: 15/10/15
+ * Time: 20:40
+ */
 
-namespace Cube\Router;
+namespace Cube\Http\Router;
 
-abstract class Router
-    implements RouterInterface
+trait RouterHelper
 {
     /**
      * @param string $type

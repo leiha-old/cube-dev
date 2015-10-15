@@ -6,12 +6,14 @@
  * Time: 20:51
  */
 
-namespace Cube\Generator;
+namespace Cube\Generator\ClassGenerator;
+
+use Cube\Generator\Generator;
 
 class ClassGeneratorSample
 {
     public function ____test() {
-        $generator = new ClassGenerator('toto', ClassGenerator::CLASS_TYPE_abstract);
+        $generator = new ClassGenerator('toto', Generator::TYPE_abstract);
         $generator
             ->setNameSpace('Test\Generator')
             ->setExtend('FakeExtend')

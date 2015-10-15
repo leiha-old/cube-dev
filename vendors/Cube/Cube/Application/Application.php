@@ -8,11 +8,9 @@
 
 namespace Cube\Application;
 
-use Cube\Collection\Collection;
 use Cube\Cube;
-use Cube\CubeConfigurator;
 use Cube\Dna\Dna;
-use Cube\Dna\Gene\GeneBehavior;
+use Cube\Error\ErrorException;
 use Cube\FileSystem\AutoLoader\AutoLoader;
 use Cube\FileSystem\FileSystem;
 use Cube\Generator\ClassGenerator;
@@ -22,6 +20,7 @@ use Cube\Poo\Mapper\Mapper;
 
 class Application
 	extends Cube
+
 {
     /**
      * @var FileSystem
@@ -37,8 +36,6 @@ class Application
      * @var RouterBehavior
      */
     protected $router;
-
-
 
     /**
      * @param \Closure|null $cbOnStart
@@ -56,6 +53,7 @@ class Application
 	public function __construct(\Closure $cbOnStart = null)
 	{
         $this->initException();
+        $this->initError();
         parent::__construct($cbOnStart);
 
         $fileSystem = $this->fileSystem();
@@ -72,31 +70,32 @@ class Application
     }
 
     /**
-     * @return ApplicationConfigurator
+     * @return ApplicationFacade
      */
     public function getConfigurator()
     {
         return $this->configurator;
     }
 
+    /**
+     * @return RouterBehavior
+     */
     public function router()
     {
-        if(!$this->fileSystem) {
-            $this->fileSystem = FileSystem::instance(AutoLoader::getListOfIncludeFiles(false));
+        if(!$this->router) {
+            /** @var RouterBehavior $routerClass */
+            $routerClass  = $this->getConfigurator()->http()->getRouterClass();
+            $this->router = $routerClass::single();
         }
-        return $this->fileSystem;
-
-
-
-
+        return $this->router;
     }
 
     /**
-     * @return ApplicationConfigurator
+     * @return ApplicationFacade
      */
     public static function getConfiguratorInstance()
     {
-        return ApplicationConfigurator::instance();
+        return ApplicationFacade::instance();
     }
 
     /**
@@ -124,6 +123,29 @@ class Application
     public function autoLoader()
     {
         return AutoLoader::single();
+    }
+
+
+    /**
+     * @throws ErrorException
+     */
+    public function initError()
+    {
+        /**
+         * @param int $code
+         * @param string $msg
+         * @param string $file
+         * @param int $line
+         * @param array $context
+         * @throws ErrorException
+         */
+        $handler = function($code, $msg, $file, $line, $context)
+        {
+            throw (new ErrorException($msg))->setFile($file, $line);
+        };
+        set_error_handler($handler);
+        return $this;
+
     }
 
 	/**

@@ -8,7 +8,10 @@
 
 namespace Cube\Http\Router;
 
+use Cube\Dna\Gene\GeneBehavior;
+
 interface RouterBehavior
+    extends GeneBehavior
 {
     /**
      * @param string $pattern

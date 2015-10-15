@@ -1,21 +1,12 @@
 <?php
 
-namespace Cube\Generator;
+namespace Cube\Generator\ClassGenerator;
 
-
+use Cube\Generator\Generator;
 use Cube\Poo\Reflection\Reflection;
 
 class ClassGenerator
 {
-    const CLASS_TYPE_interface = 'interface';
-    const CLASS_TYPE_class     = 'class';
-    const CLASS_TYPE_abstract  = 'abstract class';
-    const CLASS_TYPE_trait     = 'trait';
-
-    const VISIBILITY_public    = 'public';
-    const VISIBILITY_protected = 'protected';
-    const VISIBILITY_private   = 'public';
-
     /**
      * @var string
      */
@@ -54,9 +45,9 @@ class ClassGenerator
 
     /**
      * @param string $className
-     * @param string $type      self::CLASS_TYPE_*
+     * @param string $type      Generator::TYPE_*
      */
-    public function __construct($className, $type = self::CLASS_TYPE_class)
+    public function __construct($className, $type = Generator::TYPE_class)
     {
         $this->type      = $type;
         $this->className = $className;

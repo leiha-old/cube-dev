@@ -1,11 +1,12 @@
 <?php
 
-namespace Cube\Poo\Exception\Trace;
+namespace Cube\Poo\Exception;
 
 use Cube\Poo\Reflection\Closure\ClosureReflection;
 use Cube\Poo\Reflection\Reflection;
+use Cube\Poo\Reflection\ReflectionException;
 
-class TraceException
+class ExceptionTrace
 {
     /**
      * @var string
@@ -91,17 +92,28 @@ class TraceException
             return;
         }
 
-        /** @var ClosureReflection $reflector */
-        if('anonymous' != $this->type) {
-            $reflector  = Reflection::reflect($this->type, $this->functionName);
-            $this->args = $reflector->getParametersExtended($trace['args']);
-        } else {
+        /**
+         * @param array $trace
+         */
+        $paramsNormalizer = function (array $trace) {
             foreach ($trace['args'] as $i => &$arg) {
                 $this->args[$i] = array(
                     'type'  => is_object($arg) ? get_class($arg) : gettype($arg),
                     'value' => $arg,
                     'doc'   => ''
                 );
+            }
+        };
+
+        if('anonymous' == $this->type) {
+            $paramsNormalizer($trace);
+        } else {
+            try {
+                /** @var ClosureReflection $reflector */
+                $reflector  = Reflection::reflect($this->type, $this->functionName);
+                $this->args = $reflector->getParametersExtended($trace['args']);
+            } catch (ReflectionException $e) {
+                $paramsNormalizer($trace);
             }
         }
     }

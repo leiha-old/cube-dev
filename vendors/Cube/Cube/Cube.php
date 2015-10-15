@@ -5,24 +5,25 @@ namespace Cube;
 include_once(__DIR__.'/FileSystem/AutoLoader/AutoLoader.php');
 
 use Cube\Application\Application;
+use Cube\Connector\ConnectorConstants;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 abstract class Cube
-    implements CubeConstants
+    implements CubeConstants, ConnectorConstants
 {
     use MappableHelper;
 
     /**
-     * @var CubeConfigurator
+     * @var CubeFacade
      */
     protected $configurator;
 
     /**
-     * @return CubeConfigurator
+     * @return CubeFacade
      */
 	public static function getConfiguratorInstance()
     {
-        return CubeConfigurator::instance();
+        return CubeFacade::instance();
 	}
 
     /**
@@ -41,7 +42,7 @@ abstract class Cube
 	}
 
     /**
-     * @return CubeConfigurator
+     * @return CubeFacade
      */
     public function getConfigurator()
     {

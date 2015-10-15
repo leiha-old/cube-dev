@@ -8,8 +8,6 @@
 
 namespace Cube\Poo\Exception;
 
-use Cube\Poo\Exception\Trace\TraceException;
-
 abstract class ExceptionWrapper
     extends \Exception
 {
@@ -66,6 +64,15 @@ abstract class ExceptionWrapper
 //                throw new \Exception("The key [ $matches[1] ] is not present in row ! ");
 //            }
 
+
+            if(isset($data[$matches[1]])) {
+                if(is_array($data[$matches[1]])) {
+                    $data[$matches[1]] = "\n - \n". implode(" - \n", $data[$matches[1]]);
+                }
+            }
+
+
+
             return isset($data[$matches[1]])
                 ? $data[$matches[1]]
                 : $matches[0]
@@ -82,7 +89,7 @@ abstract class ExceptionWrapper
 	{
 		$traces = $this->getTrace();
         foreach ($traces as &$trace) {
-            $trace = new TraceException($trace);
+            $trace = new ExceptionTrace($trace);
 		}
         return $traces;
     }
@@ -92,7 +99,7 @@ abstract class ExceptionWrapper
      */
     public function render()
     {
-        return '[ Exception ]'."\n\n"
+        return '[ '.get_called_class().' ]'."\n\n"
             .$this->getLog()."\n"
             .' - '.$this->getFile().':'.$this->getLine()."\n"
             ."\n".$this->renderTraces()
@@ -110,7 +117,7 @@ abstract class ExceptionWrapper
         }
 
         $traces = '[ BackTraces ]'."\n";
-        /** @var TraceException $trace */
+        /** @var ExceptionTrace $trace */
         foreach($bTraces as $trace) {
             $traces .= "\n";
             $traces .= $trace->getFunctionName();
@@ -125,10 +132,10 @@ abstract class ExceptionWrapper
     }
 
     /**
-     * @param TraceException $trace
+     * @param ExceptionTrace $trace
      * @return string
      */
-    private function renderArgsOfTrace(TraceException $trace)
+    private function renderArgsOfTrace(ExceptionTrace $trace)
     {
         if(!$args = $trace->getArgs()) {
             return '';

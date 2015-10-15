@@ -1,9 +1,24 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: lia
+ * Date: 15/10/15
+ * Time: 20:42
+ */
 
 namespace Cube\Logger;
 
-interface LoggerInterface
+trait LoggerHelper
 {
+    /**
+     * @param string $type
+     * @param string $msg
+     * @param array $data
+     * @param array $context
+     * @return mixed
+     */
+    abstract protected function log($type, $msg, array $data = array(), array $context = array());
+
     /**
      * Log debug message
      * @param string $msg
@@ -11,7 +26,10 @@ interface LoggerInterface
      * @param array $context
      * @return mixed|bool What the Logger returns, or false if Logger not set or not enabled
      */
-    public function debug($msg, array $data = array(), $context = array());
+    public function debug($msg, array $data = array(), $context = array())
+    {
+        return $this->log('debug', $msg, $data, $context);
+    }
 
     /**
      * Log info message
@@ -20,7 +38,10 @@ interface LoggerInterface
      * @param array $context
      * @return mixed|bool What the Logger returns, or false if Logger not set or not enabled
      */
-    public function info($msg, array $data = array(), $context = array());
+    public function info($msg, array $data = array(), $context = array())
+    {
+        return $this->log('info', $msg, $data, $context);
+    }
 
     /**
      * Log notice message
@@ -29,7 +50,11 @@ interface LoggerInterface
      * @param array $context
      * @return mixed|bool What the Logger returns, or false if Logger not set or not enabled
      */
-    public function notice($msg, array $data = array(), $context = array());
+    public function notice($msg, array $data = array(), $context = array())
+    {
+        return $this->log('notice', $msg, $data, $context);
+    }
+
 
     /**
      * Log alert message
@@ -38,7 +63,10 @@ interface LoggerInterface
      * @param array $context
      * @return bool|mixed What the Logger returns, or false if Logger not set or not enabled
      */
-    public function alert($msg, array $data = array(), $context = array());
+    public function alert($msg, array $data = array(), $context = array())
+    {
+        return $this->log('alert', $msg, $data, $context);
+    }
 
     /**
      * Log warning message
@@ -47,7 +75,10 @@ interface LoggerInterface
      * @param array $context
      * @return mixed|bool What the Logger returns, or false if Logger not set or not enabled
      */
-    public function warning($msg, array $data = array(), $context = array());
+    public function warning($msg, array $data = array(), $context = array())
+    {
+        return $this->log('warning', $msg, $data, $context);
+    }
 
     /**
      * Log error message
@@ -56,7 +87,10 @@ interface LoggerInterface
      * @param array $context
      * @return mixed|bool What the Logger returns, or false if Logger not set or not enabled
      */
-    public function error($msg, array $data = array(), $context = array());
+    public function error($msg, array $data = array(), $context = array())
+    {
+        return $this->log('error', $msg, $data, $context);
+    }
 
     /**
      * Log critical message
@@ -65,6 +99,8 @@ interface LoggerInterface
      * @param array $context
      * @return mixed|bool What the Logger returns, or false if Logger not set or not enabled
      */
-    public function critical($msg, array $data = array(), $context = array());
-
+    public function critical($msg, array $data = array(), $context = array())
+    {
+        return $this->log('critical', $msg, $data, $context);
+    }
 }
