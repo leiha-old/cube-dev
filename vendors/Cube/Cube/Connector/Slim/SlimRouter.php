@@ -26,8 +26,6 @@ class SlimRouter
             'debug' => true
             )
         ));
-
-        unset($this->getWrapped()->container['errorHandler']);
     }
 
     /**

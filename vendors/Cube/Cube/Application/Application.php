@@ -21,7 +21,6 @@ use Cube\Poo\Mapper\Mapper;
 
 class Application
 	extends Cube
-
 {
     /**
      * @var FileSystem
@@ -150,7 +149,6 @@ class Application
         };
         set_error_handler($handler);
         return $this;
-
     }
 
 	/**

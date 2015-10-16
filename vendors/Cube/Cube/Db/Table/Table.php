@@ -8,7 +8,7 @@
 
 namespace Cube\Db\Table;
 
-use Application\Db\Db;
+use Cube\Db\Db;
 use Cube\Db\Table\Field\Field;
 use Cube\Validator\FieldSet\FieldSet;
 

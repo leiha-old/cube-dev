@@ -8,7 +8,7 @@
 
 namespace Cube\Db;
 
-class DbConfigurator
+class DbFacade
     implements DbConstants
 {
     const CHARSET_utf8 = 'utf8';

@@ -13,12 +13,12 @@ class Db
     extends \PDO
 {
     /**
-     * @var DbConfigurator
+     * @var DbFacade
      */
     protected $configurator;
 
     /**
-     * @var DbConfigurator[]
+     * @var DbFacade[]
      */
     private static $_configurators = array();
 
@@ -37,12 +37,12 @@ class Db
 
     /**
      * @param string $connectionName
-     * @return DbConfigurator
+     * @return DbFacade
      */
     public static function getConfigurator($connectionName)
     {
         if(!self::hasConfigurator($connectionName)) {
-            self::$_configurators[$connectionName] = new DbConfigurator();
+            self::$_configurators[$connectionName] = new DbFacade();
         }
         return self::$_configurators[$connectionName];
     }
@@ -60,9 +60,9 @@ class Db
     }
 
     /**
-     * @param DbConfigurator $configurator
+     * @param DbFacade $configurator
      */
-    public function __construct(DbConfigurator $configurator)
+    public function __construct(DbFacade $configurator)
     {
         $this->configurator = $configurator;
         parent::__construct(
