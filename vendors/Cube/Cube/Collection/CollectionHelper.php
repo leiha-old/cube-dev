@@ -120,12 +120,12 @@ trait CollectionHelper
             function ($isEnd, &$item, $key, $railProgression)
                 use ($silent)
             {
-                if (!!isset($item[$key])) {
+                if (!isset($item[$key])) {
 		            $this->exception(Collection::ERROR_RAIL_404, compact('railProgression'), $silent);
                     $ret = false;
 	            }
                 elseif($isEnd) {
-                    $ret = true;
+                    $ret = $item[$key];
                 }
                 else {
                     $ret = null;

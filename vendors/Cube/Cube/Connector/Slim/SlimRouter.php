@@ -10,8 +10,6 @@ namespace Cube\Connector\Slim;
 
 use Cube\Http\Router\RouterWrapper;
 use Cube\Poo\Single\SingleHelper;
-use Slim\Http\Request;
-use Slim\Http\Response;
 use Slim\Slim;
 
 class SlimRouter
@@ -23,7 +21,13 @@ class SlimRouter
      * @param array $args
      */
     public function __construct(array $args = array()){
-        parent::__construct('\Slim\Slim', $args);
+        parent::__construct('\Slim\Slim', array(
+            array(
+            'debug' => true
+            )
+        ));
+
+        unset($this->getWrapped()->container['errorHandler']);
     }
 
     /**
@@ -42,11 +46,16 @@ class SlimRouter
      */
     protected function addRoute($type, $pattern, $controllerName, $methodName) {
         $this->getWrapped()->$type($pattern,
-            function(Request $request, Response $response, array $args)
+            function()//Request $request, Response $response, array $args
                 use ($controllerName, $methodName)
             {
-                return (new $controllerName())->$methodName(func_get_args());
+                return call_user_func_array(array(new $controllerName(), $methodName), func_get_args());
             });
         return $this;
+    }
+
+    public function run()
+    {
+        $this->getWrapped()->run();
     }
 }

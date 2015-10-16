@@ -1290,7 +1290,7 @@ class Slim
      */
     public function run()
     {
-        set_error_handler(array('\Slim\Slim', 'handleErrors'));
+        //set_error_handler(array('\Slim\Slim', 'handleErrors'));
 
         //Apply final outer middleware layers
         if ($this->config('debug')) {
@@ -1332,7 +1332,7 @@ class Slim
 
         $this->applyHook('slim.after');
 
-        restore_error_handler();
+        //restore_error_handler();
     }
 
     /**

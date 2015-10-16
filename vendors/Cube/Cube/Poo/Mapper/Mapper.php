@@ -55,7 +55,7 @@ class Mapper
      * @param array $items
      * @return $this
      */
-    public function setAll(array $items) {
+    public function mapAll(array $items) {
         self::$_treeClasses->setAll($items);
         return $this;
     }
@@ -93,6 +93,16 @@ class Mapper
             }
             return self::$_configurators->set($className, $configuratorClassName, true);
         }
+    }
+
+    /**
+     * @param string $className1
+     * @param string $className2
+     * @return static
+     */
+    public static function map($className1, $className2) {
+        self::$_treeClasses->setRail(array($className1, 'Class'), $className2);
+        return self::single();
     }
 
     /**

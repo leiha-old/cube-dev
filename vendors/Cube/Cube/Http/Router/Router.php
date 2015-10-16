@@ -11,6 +11,11 @@ namespace Cube\Http\Router;
 class Router
     extends RouterWrapper
 {
+    public function __construct()
+    {
+        parent::__construct($this);
+    }
+
     /**
      * @param string $type
      * @param string $pattern
@@ -21,5 +26,13 @@ class Router
     protected function addRoute($type, $pattern, $controller, $action)
     {
         // TODO: Implement addRoute() method.
+    }
+
+    /**
+     * @return void
+     */
+    public function run()
+    {
+        // TODO: Implement run() method.
     }
 }

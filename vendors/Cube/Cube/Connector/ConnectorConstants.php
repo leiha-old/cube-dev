@@ -10,5 +10,5 @@ namespace Cube\Connector;
 
 interface ConnectorConstants
 {
-    const CONNECTOR_SLIM_router = '\Cube\Connector\Slim\SlimRouter';
+    const CONNECTOR_SLIM_router = 'Cube\Connector\Slim\SlimRouter';
 }

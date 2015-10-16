@@ -14,6 +14,7 @@ use Cube\Error\ErrorException;
 use Cube\FileSystem\AutoLoader\AutoLoader;
 use Cube\FileSystem\FileSystem;
 use Cube\Generator\ClassGenerator;
+use Cube\Http\Router\Router;
 use Cube\Http\Router\RouterBehavior;
 use Cube\Poo\Exception\Exception;
 use Cube\Poo\Mapper\Mapper;
@@ -54,18 +55,27 @@ class Application
 	{
         $this->initException();
         $this->initError();
-        parent::__construct($cbOnStart);
 
         $fileSystem = $this->fileSystem();
-        $mapper     = $this->mapper()->setAll($fileSystem->crawler()->findClasses());
+        $mapper     = $this->mapper()->mapAll($fileSystem->crawler()->findClasses());
+
+        parent::__construct($cbOnStart);
+
         $router     = $this->router();
 
-        $this->dna  = Dna::single();
-        $this->dna
+        $this->dna()
             ->injectInstance('cube.mapper'    , $mapper)
             ->injectInstance('cube.fileSystem', $fileSystem)
             ->injectInstance('cube.router'    , $router)
         ;
+    }
+
+    /**
+     * @return void
+     */
+    public function run()
+    {
+        $this->router()->run();
     }
 
     /**
@@ -81,12 +91,7 @@ class Application
      */
     public function router()
     {
-        if(!$this->router) {
-            /** @var RouterBehavior $routerClass */
-            $routerClass  = $this->getConfigurator()->http()->getRouterClass();
-            $this->router = $routerClass::single();
-        }
-        return $this->router;
+        return Router::single();
     }
 
     /**
@@ -102,7 +107,7 @@ class Application
      */
     public function dna()
     {
-        return $this->dna;
+        return Dna::single();
     }
 
     /**
@@ -111,7 +116,7 @@ class Application
     public function fileSystem()
     {
         if(!$this->fileSystem) {
-            $this->fileSystem = FileSystem::instance(AutoLoader::getListOfIncludeFiles(false));
+            $this->fileSystem = FileSystem::single(AutoLoader::getListOfIncludeFiles(false));
         }
         return $this->fileSystem;
     }
@@ -124,11 +129,10 @@ class Application
         return AutoLoader::single();
     }
 
-
     /**
      * @throws ErrorException
      */
-    public function initError()
+    private function initError()
     {
         /**
          * @param int $code
@@ -140,7 +144,9 @@ class Application
          */
         $handler = function($code, $msg, $file, $line, $context)
         {
-            throw (new ErrorException($msg))->setFile($file, $line);
+            throw (new ErrorException($msg))
+                    ->setFile($file, $line)
+                    ;
         };
         set_error_handler($handler);
         return $this;
@@ -152,7 +158,8 @@ class Application
 	 */
 	private function initException()
 	{
-		$handler = function(\Exception $exception){
+		$handler = function(\Exception $exception)
+        {
 			//$eClass = $this->configurator->getMapping(Cube::MAPPING_EXCEPTION);
 			if(!($exception instanceof Exception)) {
 				$e = Exception::instance($exception->getMessage());

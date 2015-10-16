@@ -17,4 +17,9 @@ abstract class RouterWrapper
 {
     use RouterHelper;
     use MappableHelper;
+
+    /**
+     * @return void
+     */
+    abstract public function run();
 }
