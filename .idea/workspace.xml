@@ -2,17 +2,264 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9fc572b-1508-49cc-ba43-6d06e36e5ba7" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConfigurator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/www/.htaccess" afterPath="$PROJECT_DIR$/test/www/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/AbstractAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/AbstractAttribute.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConstants.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacadeBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Doc/Attribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Doc/Attribute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Behaviorist/Behaviorist.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Behaviorist/Behaviorist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Biologist.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Biologist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/BiologistException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/BiologistException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Block/Block.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Block/Block.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/BooleanConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/BooleanConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsFCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsFCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator/ClassGeneratorSample.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator/ClassGeneratorSample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/Cleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/Cleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGene.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGene.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGeneHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGeneHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionSample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/ConnectorConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/ConnectorConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/Constraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/Constraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintAbstract.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintInterface.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintOptions.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintOptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/ContentTypes.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/ContentTypes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Cookies.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Cookies.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Crawler.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Crawler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/CrawlerConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/CrawlerConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Cube.iml" afterPath="$PROJECT_DIR$/.idea/Cube.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/Cube.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/Cube.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Cube.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Cube.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/CubeConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/CubeConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/CubeFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/CubeFacade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/DateConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/DateConstraint.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Db.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Dna.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Dna.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Dna.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Dna.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehaviorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EmailCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EmailCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/EmailConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/EmailConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EncodedCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EncodedCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Environment.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Environment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Error/ErrorException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Error/ErrorException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Error/ErrorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Error/ErrorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Exception/ExceptionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Exception/ExceptionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionTrace.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionTrace.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/Facade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/Facade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/Factory.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/Factory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/FactoryHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/FactoryHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldInterface.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/FieldSet.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/FieldSet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystem.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystem.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehaviorStatic.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehaviorStatic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacadeBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemSample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/FilterVarAbstract.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/FilterVarAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/Flash.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/Flash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/FloatCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/FloatCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/FloatConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/FloatConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/Gene.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/Gene.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfiguratorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfiguratorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/Generator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/Generator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/GeneratorConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/GeneratorConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Headers.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Headers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Application/Controller/Home.php" afterPath="$PROJECT_DIR$/test/Application/Controller/Home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Http.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Http.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacadeBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Injector.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Injector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Instance/InstanceHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Instance/InstanceHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/IntCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/IntCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IntConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IntConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IpConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IpConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/JointCollection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/JointCollection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/Loader.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/Loader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehaviorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Log.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Log.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/LogWriter.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/LogWriter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/MacConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/MacConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/Mappable.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/Mappable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableConfigurator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/Mapper.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/Mapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehaviorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/MapperConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/MapperConstants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/MethodOverride.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/MethodOverride.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Method/MethodReflection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Method/MethodReflection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/MultiSort/MultiSortHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/MultiSort/MultiSortHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionSample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/NameAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/NameAttribute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/Observer.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/Observer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehaviorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ParamAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ParamAttribute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Pass.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Pass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/PregConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/PregConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchAbstract.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchOptions.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchOptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/PrettyExceptions.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/PrettyExceptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/QuotesCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/QuotesCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectableBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectableBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Reflection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Reflection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionClass.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionClass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunction.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunctionTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunctionTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethod.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethodTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethodTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionStatic.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionStatic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RegexConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RegexConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Request.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Response.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Response.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RestrictedValuesConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RestrictedValuesConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ReturnAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ReturnAttribute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Rna/Rna.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Rna/Rna.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Route.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Route.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/Router.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/Router.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Router.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Router.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Template/ServiceMethod.block.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Template/ServiceMethod.block.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/SessionCookie.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/SessionCookie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Helper/Set.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Helper/Set.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleSample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Slim.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Slim.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimApplication.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimApplication.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimLogger.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimLogger.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimRouter.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimRouter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/Sort/SortCollectionHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/Sort/SortCollectionHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionSample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Stop.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Stop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StringCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StringCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/StringConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/StringConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StrippedCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StrippedCleaner.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Template.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/TimeStampConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/TimeStampConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UnsafeCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UnsafeCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UrlCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UrlCleaner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/UrlConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/UrlConstraint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Util.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Util.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Validator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Validator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/View.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/View.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewHtml.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewHtml.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/View/Behavior/ViewableBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/View/Behavior/ViewableBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/VisibilityAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/VisibilityAttribute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/Wizard.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/Wizard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehaviorStatic.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehaviorStatic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardSample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/Wrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/Wrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/WrapperBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/WrapperBehavior.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blade.xml" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/__OLD/" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path=".directory" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,53 +283,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Field.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-              <folding>
-                <element signature="e#111#126#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DbConstants.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbFacade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5077989">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JointCollection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/JointCollection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -91,50 +296,78 @@
       <file leaf-file-name="Joint.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.625">
+              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorException.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Error/ErrorException.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/www/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Error.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Error/Error.php">
+      <file leaf-file-name="DbFacade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.75">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Application/Controller/Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationConstants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConstants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpConstants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpConstants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-60.166668">
-              <caret line="150" column="21" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
-              <folding>
-                <element signature="e#157#171#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.33273703">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationFacade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php">
+      <file leaf-file-name="MappableHelper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.75">
-              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -155,8 +388,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemBehvavior.php" />
-        <option value="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemConstants.php" />
         <option value="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php" />
         <option value="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionTrace.php" />
         <option value="$PROJECT_DIR$/vendors/Cube/Cube/Cube.php" />
@@ -206,6 +437,8 @@
         <option value="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php" />
         <option value="$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php" />
         <option value="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php" />
+        <option value="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php" />
+        <option value="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php" />
       </list>
     </option>
   </component>
@@ -221,11 +454,11 @@
       <server host="test.local" id="7e0bf77e-c3eb-4251-ae74-664a4db81a6c" name="test.local" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="width" value="1928" />
-    <option name="height" value="1084" />
+    <option name="x" value="541" />
+    <option name="width" value="834" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -280,6 +513,9 @@
             <id>PHP</id>
           </State>
           <State>
+            <id>Php Inspections (EA Extended)PHP</id>
+          </State>
+          <State>
             <id>Potentially confusing code constructsJavaScript</id>
           </State>
           <State>
@@ -310,6 +546,11 @@
             <id>XSLT</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Blade files</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -353,6 +594,16 @@
               <option name="myItemId" value="cube-dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cube-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -377,6 +628,122 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cube-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Poo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cube-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Poo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cube-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Poo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mappable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cube-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -644,16 +1011,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cube" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cube-dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -662,13 +1019,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Apps/Composer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="SlimRouter&#9;FILE&#9;file:///home/lia/Studio/cube-dev/vendors/Cube/Cube/Connector/Slim/SlimRouter.php&#10;File&#9;FILE&#9;file:///home/lia/Studio/cube-dev/vendors/Cube/Cube/FileSystem/FileSystemFacade.php" />
+    <property name="ToolWindowDocumentation.ShowToolbar" value="false" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbException.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -684,331 +1043,6 @@
       <recent name="$PROJECT_DIR$/vendors/Cube/Cube/Poo" />
       <recent name="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Application/Configurator/Http.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/Collection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGene.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGeneHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/MultiSort/MultiSortHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Collection/Sort/SortCollectionHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimApplication.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimLogger.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimRouter.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Cube.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/CubeConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/CubeConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/Db.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/DbException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/JointCollection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Dna/Dna.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Dna/Rna/Rna.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/AutoLoader/AutoLoader.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/AutoLoader/AutoLoaderException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Crawler.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/CrawlerConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Template/ServiceMethod.block.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystem.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGeneratorSample.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterWrapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerInterface.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/Exception.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionWrapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/Trace/TraceException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/Factory.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/FactoryHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Instance/InstanceHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/Mappable.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/MapperConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/AbstractAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/NameAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ParamAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ReturnAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/VisibilityAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Doc/Attribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Method/MethodReflection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Reflection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionStatic.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/Wrapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/WrapperBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Router/Router.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Router/RouterInterface.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Template/Block/Block.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Template/Template.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsFCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/Cleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EmailCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EncodedCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/FloatCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/IntCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/QuotesCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StringCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StrippedCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UnsafeCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UrlCleaner.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/BooleanConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/Constraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintAbstract.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintInterface.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintOptions.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/DateConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/EmailConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/FloatConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IntConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IpConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/MacConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/PregConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RegexConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RestrictedValuesConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/StringConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/TimeStampConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/UrlConstraint.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldInterface.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/FieldSet.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/FilterVarAbstract.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchAbstract.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchOptions.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube/Validator/Validator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Environment.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Exception/Pass.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Exception/Stop.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Helper/Set.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Http/Cookies.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Http/Headers.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Http/Request.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Http/Response.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Http/Util.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Log.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/LogWriter.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Middleware.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Middleware/ContentTypes.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Middleware/Flash.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Middleware/MethodOverride.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Middleware/PrettyExceptions.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Middleware/SessionCookie.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Route.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Router.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/Slim.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim/View.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Application/Application.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/Collection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/CollectionConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/CollectionException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/CollectionGene.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/CollectionGeneHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/CollectionHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/MultiSort/MultiSortHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Collection/Sort/SortCollectionHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Connector/Slim/SlimRouter.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Cube.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/CubeConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/CubeConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Dna/Dna.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Dna/Gene/GeneBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/AutoLoader/AutoLoader.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/AutoLoader/AutoLoaderException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/Crawler/Crawler.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/Crawler/CrawlerConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/Crawler/Template/ServiceMethod.block.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/FileSystem.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/FileSystemConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/FileSystemConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/FileSystem/FileSystemException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Generator/ClassGenerator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Generator/ClassGeneratorSample.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Http/Router/RouterBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Http/Router/RouterWrapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Exception/Exception.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Exception/ExceptionConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Exception/ExceptionWrapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Exception/Trace/TraceException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Factory/Factory.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Factory/FactoryHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Instance/InstanceHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Mapper/Mappable/Mappable.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Mapper/Mappable/MappableBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Mapper/Mappable/MappableConfigurator.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Mapper/Mappable/MappableHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Mapper/Mapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Mapper/MapperConstants.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Closure/ClosureReflection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Closure/Doc/AbstractAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Closure/Doc/NameAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Closure/Doc/ParamAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Closure/Doc/ReturnAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Closure/Doc/VisibilityAttribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Doc/Attribute.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Method/MethodReflection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/Reflection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/ReflectionException.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Reflection/ReflectionStatic.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Single/SingleHelper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Wrapper/Wrapper.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Poo/Wrapper/WrapperBehavior.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Template/Block/Block.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Cube/Template/Template.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Environment.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Exception/Pass.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Exception/Stop.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Helper/Set.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Http/Cookies.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Http/Headers.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Http/Request.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Http/Response.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Http/Util.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Log.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/LogWriter.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Middleware.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Middleware/ContentTypes.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Middleware/Flash.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Middleware/MethodOverride.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Middleware/PrettyExceptions.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Middleware/SessionCookie.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Route.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Router.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/Slim.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/vendors/Slim/View.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="PHP HTTP Request.GET : Home">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -1118,30 +1152,40 @@
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1928" height="1084" extended-state="6" />
+    <frame x="541" y="0" width="834" height="1080" extended-state="4" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24760383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25026625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39636752" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32987013" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32928312" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.30277187" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="10" y="6" width="1360" height="1069" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.23714505" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="7" y="0" width="531" height="1080" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32597402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.25249425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32996207" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.39542145" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="7" y="0" width="531" height="1080" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1167,7 +1211,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="91" />
+      <option name="time" value="92" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PhpHttpRequestRunConfigurationType">
@@ -1178,43 +1222,10 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Http/Http.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConstants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/Wrapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.625">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.083334">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,7 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,7 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,9 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.875">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="e#114#158#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1248,7 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,9 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.416667">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#113#155#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,7 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,7 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="11.083333">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,7 +1282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1290,7 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.875">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,7 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.125">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1306,15 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.125">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.416666">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,7 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.916667">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1330,7 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,7 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.416666">
           <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1354,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.125">
           <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,9 +1345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.125">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="e#114#159#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1372,7 +1352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.4583335">
           <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1380,7 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33268481">
           <caret line="267" column="26" selection-start-line="267" selection-start-column="26" selection-end-line="267" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,7 +1366,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.125">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.875">
           <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,7 +1380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.333333">
           <caret line="654" column="9" selection-start-line="654" selection-start-column="9" selection-end-line="654" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1412,7 +1387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1420,9 +1394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6666665">
           <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="e#107#154#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1430,7 +1401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.1898305">
           <caret line="637" column="42" selection-start-line="637" selection-start-column="42" selection-end-line="637" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,9 +1408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5762712">
           <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
-          <folding>
-            <element signature="e#107#154#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1448,25 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1355932">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Application/Controller/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/www/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="e#7#40#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1474,9 +1422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.75">
           <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <element signature="e#117#152#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1484,7 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1492,7 +1436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1500,7 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5">
           <caret line="4" column="28" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1508,7 +1450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.5">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1516,25 +1457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.75">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-60.166668">
-          <caret line="150" column="21" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
-          <folding>
-            <element signature="e#157#171#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1542,7 +1464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,15 +1471,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php">
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#111#126#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1570,36 +1499,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php">
+    <entry file="file://$PROJECT_DIR$/test/Application/Controller/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="e#111#126#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php">
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConstants.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpConstants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.625">
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5077989">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.directory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33273703">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>

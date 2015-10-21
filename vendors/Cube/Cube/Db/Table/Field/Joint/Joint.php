@@ -73,6 +73,7 @@ class Joint
      * @param string $operator
      * @return $this
      */
+
     public function addClauseOn($foreignField, $localField = '', $operator= '=')
     {
         $this->clausesOn[] = array(
