@@ -2,259 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9fc572b-1508-49cc-ba43-6d06e36e5ba7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/www/.htaccess" afterPath="$PROJECT_DIR$/test/www/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/AbstractAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/AbstractAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Application/ApplicationFacadeBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Doc/Attribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Doc/Attribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Behaviorist/Behaviorist.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Behaviorist/Behaviorist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Biologist.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Biologist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/BiologistException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/BiologistException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Behavior/BiologistTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Block/Block.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Block/Block.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/BooleanConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/BooleanConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsFCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CharsFCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator/ClassGeneratorSample.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/ClassGenerator/ClassGeneratorSample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/Cleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/Cleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/CleanerException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/ClosureReflectionTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGene.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGene.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGeneHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionGeneHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/CollectionHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/CollectionSample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Configurator/Configurable/ConfigurableInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/ConnectorConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/ConnectorConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/Constraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/Constraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintAbstract.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintAbstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintInterface.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintOptions.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/ConstraintOptions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/ContentTypes.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/ContentTypes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Cookies.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Cookies.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Crawler.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Crawler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/CrawlerConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/CrawlerConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Cube.iml" afterPath="$PROJECT_DIR$/.idea/Cube.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/Cube.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/Cube.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Cube.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Cube.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/CubeConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/CubeConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/CubeFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/CubeFacade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/CubeTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/DateConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/DateConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Db.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Dna.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Dna.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Dna.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Dna.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaBehaviorInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/DnaException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/DnaHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EmailCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EmailCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/EmailConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/EmailConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EncodedCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/EncodedCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Environment.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Environment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Error/ErrorException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Error/ErrorException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Error/ErrorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Error/ErrorInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Exception/ExceptionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Exception/ExceptionInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionTrace.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionTrace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Exception/ExceptionWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/Facade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/Facade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Facade/FacadeWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/Factory.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/Factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/FactoryHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Factory/FactoryHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Factory/FactoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Field.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/Field.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldInterface.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/Field/FieldInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/FieldSet.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/FieldSet/FieldSet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystem.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystem.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehaviorStatic.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemBehaviorStatic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemFacadeBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/FileSystem/FileSystemSample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/FileSystemWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/FilterVarAbstract.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/FilterVarAbstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/Flash.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/Flash.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/FloatCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/FloatCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/FloatConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/FloatConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/Gene.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/Gene.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Gene/GeneBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfiguratorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneConfiguratorInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Gene/GeneInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/Generator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/Generator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/GeneratorConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Generator/GeneratorConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Headers.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Headers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Application/Controller/Home.php" afterPath="$PROJECT_DIR$/test/Application/Controller/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Http.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Http.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacade.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacadeBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/HttpFacadeBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Behavior/InjectableTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Injector.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/Injector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Injector/InjectorTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Instance/InstanceHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Instance/InstanceHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/InstanceInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/IntCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/IntCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IntConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IntConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IpConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/IpConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/JointCollection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/JointCollection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/Loader.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/Loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderBehaviorInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Loader/LoaderTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Log.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Log.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/LogWriter.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/LogWriter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/Logger.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Logger/LoggerWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/MacConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/MacConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/Mappable.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/Mappable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableConfigurator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mappable/MappableHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/Mapper.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/Mapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/Mapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperBehaviorInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/MapperConstants.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Mapper/MapperConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Mapper/MapperInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/MethodOverride.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/MethodOverride.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Method/MethodReflection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Method/MethodReflection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/MultiSort/MultiSortHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/MultiSort/MultiSortHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/MultiSortable/MultiSortableCollectionSample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/NameAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/NameAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/Observer.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/Observer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehaviorInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverBehaviorInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Observer/ObserverInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ParamAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ParamAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Pass.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Pass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/PregConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/PregConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchAbstract.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchAbstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchOptions.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Tool/PregMatchOptions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/PrettyExceptions.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/PrettyExceptions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/QuotesCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/QuotesCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectableBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectableBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Reflection.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Reflection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionClass.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionException.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionException.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunction.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunctionTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionFunctionTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethod.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethod.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethodTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionMethodTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionStatic.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/ReflectionStatic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Dna/Biologist/Reflection/ReflectionTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RegexConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RegexConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Request.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Response.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RestrictedValuesConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/RestrictedValuesConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ReturnAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/ReturnAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Rna/Rna.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Dna/Rna/Rna.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Route.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/Router.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/Router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Router.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterWrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Http/Router/RouterWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Template/ServiceMethod.block.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/FileSystem/Crawler/Template/ServiceMethod.block.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/SessionCookie.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Middleware/SessionCookie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Helper/Set.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Helper/Set.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleConfigurator.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleConfigurator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Single/SingleHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Core/Instance/Single/SingleSample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Slim.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Slim.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimApplication.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimApplication.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimLogger.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimLogger.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimRouter.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Connector/Slim/SlimRouter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/Sort/SortCollectionHelper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Collection/Sort/SortCollectionHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionInterface.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Collection/Sortable/SortableCollectionSample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Stop.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Exception/Stop.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StringCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StringCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/StringConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/StringConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StrippedCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/StrippedCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Template.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Template/Template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/TimeStampConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/TimeStampConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UnsafeCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UnsafeCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UrlCleaner.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Cleaner/UrlCleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/UrlConstraint.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Constraint/UrlConstraint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Util.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/Http/Util.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Validator.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Validator/Validator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Slim/Slim/View.php" afterPath="$PROJECT_DIR$/vendors/Slim/Slim/View.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewHtml.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewHtml.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewTrait.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Exception/View/ViewTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Cube/View/Behavior/ViewableBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Cube/View/Behavior/ViewableBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/VisibilityAttribute.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Reflection/Closure/Doc/VisibilityAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/Wizard.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/Wizard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehavior.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehaviorStatic.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardBehaviorStatic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardSample.php" afterPath="$PROJECT_DIR$/__OLD/Cube/Wizard/WizardSample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/Wrapper.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/Wrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/WrapperBehavior.php" afterPath="$PROJECT_DIR$/vendors/Cube/Cube/Poo/Wrapper/WrapperBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blade.xml" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/__OLD/" />
@@ -286,7 +33,7 @@
       <file leaf-file-name="DbConstants.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
+            <state vertical-scroll-proportion="0.0">
               <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
@@ -296,18 +43,18 @@
       <file leaf-file-name="Joint.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.625">
+            <state vertical-scroll-proportion="0.0">
               <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/www/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.06944445">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -316,7 +63,7 @@
       <file leaf-file-name="DbFacade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding />
             </state>
@@ -353,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33273703">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -378,8 +125,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Leiha Sellier &lt;leiha.sellier@gmail.com&gt;" />
         <option value="Leiha &lt;leiha.sellier@gmail.com&gt;" />
+        <option value="Leiha Sellier &lt;leiha.sellier@gmail.com&gt;" />
       </list>
     </option>
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -449,6 +196,7 @@
   <component name="NamedScopeManager">
     <order />
   </component>
+  <component name="PhpDebugGeneral" break_at_first_line="true" />
   <component name="PhpServers">
     <servers>
       <server host="test.local" id="7e0bf77e-c3eb-4251-ae74-664a4db81a6c" name="test.local" />
@@ -456,8 +204,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="541" />
-    <option name="width" value="834" />
+    <option name="x" value="452" />
+    <option name="width" value="978" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1019,7 +767,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -1149,7 +897,13 @@
       <option name="project" value="LOCAL" />
       <updated>1444958341529</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactoring">
+      <created>1445461571351</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1445461571352</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1162,22 +916,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="541" y="0" width="834" height="1080" extended-state="4" />
+    <frame x="452" y="0" width="978" height="1080" extended-state="4" />
     <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32987013" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.23714505" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="0" y="0" width="452" height="1080" />
+      <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32987013" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="1430" y="379" width="440" height="698" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32928312" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.30277187" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="10" y="6" width="1360" height="1069" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" x="1430" y="0" width="438" height="378" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32597402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1430" y="379" width="440" height="698" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.30299786" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="10" y="6" width="1360" height="1069" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.23714505" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="7" y="0" width="531" height="1080" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32597402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.25249425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32996207" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.39542145" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="7" y="0" width="531" height="1080" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.25249425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1430" y="379" width="440" height="698" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1377" y="55" width="498" height="1022" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32996207" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" x="1430" y="379" width="440" height="698" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.39542145" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="452" height="1080" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1185,6 +938,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1485,9 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="e#111#126#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1495,7 +1246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1548,23 +1298,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/Table/Field/Joint/Joint.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.625">
-          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/www/index.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbFacade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
@@ -1574,13 +1316,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Db/DbConstants.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
@@ -1588,8 +1329,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendors/Cube/Cube/Application/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33273703">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06944445">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
