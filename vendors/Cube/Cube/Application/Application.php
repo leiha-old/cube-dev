@@ -53,10 +53,11 @@ class Application
 	public function __construct(\Closure $cbOnStart = null)
 	{
         $this->initException();
+        /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
         $this->initError();
 
         $fileSystem = $this->fileSystem();
-        $mapper     = $this->mapper()->mapAll($fileSystem->crawler()->findClasses());
+        $mapper     = self::mapper()->mapAll($fileSystem->crawler()->findClasses());
 
         parent::__construct($cbOnStart);
 

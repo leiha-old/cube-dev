@@ -27,11 +27,6 @@ class Table
      */
     protected $database;
 
-    /**
-     * @var Field[]
-     */
-    protected $fields = array();
-
     public function __construct() {
         parent::__construct  (static::TABLE_name);
 

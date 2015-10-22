@@ -32,7 +32,7 @@ class Db
      * @return bool
      */
     public static function hasConfigurator($connectionName) {
-        return isset(self::$_configurators[$connectionName]);
+        return array_key_exists($connectionName, self::$_databases);
     }
 
     /**
@@ -53,7 +53,7 @@ class Db
      */
     public static function get($connectionName)
     {
-        if(!isset(self::$_databases[$connectionName])) {
+        if(!array_key_exists($connectionName, self::$_databases)) {
             self::$_databases[$connectionName] = new static(static::getConfigurator($connectionName));
         }
         return self::$_databases[$connectionName];

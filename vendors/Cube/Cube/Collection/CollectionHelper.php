@@ -80,6 +80,21 @@ trait CollectionHelper
 		return $this-> { is_array($itemKey) ? 'getRail' : 'getItem' } ($itemKey, $silent);
     }
 
+    /**
+     * @param string|array $itemKey
+     * @param mixed        $defaultValue
+     * @return mixed
+     */
+    public function &getOr($itemKey, $defaultValue = null)
+    {
+        $value = $this-> { is_array($itemKey) ? 'getRail' : 'getItem' } ($itemKey, true);
+        if(!$value){
+            $value = $defaultValue;
+        }
+
+        return $value;
+    }
+
 	/**
 	 * @param string $itemKey
 	 * @param bool $silent
@@ -87,7 +102,7 @@ trait CollectionHelper
 	 * @throws CollectionException
 	 */
 	public function &getItem($itemKey, $silent = false) {
-		$is = isset($this->_items[$itemKey]);
+		$is = array_key_exists($itemKey, $this->_items);
 		if(!$is && !$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $silent)) {
 			$ret = false;
 			return $ret;

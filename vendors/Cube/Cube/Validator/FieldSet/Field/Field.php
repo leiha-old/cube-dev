@@ -4,8 +4,10 @@ namespace Cube\Validator\FieldSet\Field;
 
 use Cube\Validator\Cleaner\Cleaner;
 use Cube\Validator\Cleaner\CleanerConstants;
+use Cube\Validator\Cleaner\CleanerException;
 use Cube\Validator\Constraint\Constraint;
 use Cube\Validator\Constraint\ConstraintConstants;
+use Cube\Validator\Constraint\ConstraintException;
 use Cube\Validator\Constraint\RestrictedValuesConstraint;
 use Cube\Validator\FieldSet\FieldSet;
 
@@ -78,9 +80,11 @@ class Field
     /**
      * @param mixed $value
      * @param array $errors
+     * @throws ConstraintException
+     * @throws CleanerException
      * @return boolean
      */
-    public function validate(&$value, &$errors = array())
+    public function validate(&$value, &$errors)
     {
         Cleaner::run($this->cleaners, $value);
 
@@ -88,11 +92,12 @@ class Field
             $errors[$this->name] = $errs;
         }
 
-        return !isset($errors[$this->name]);
+        return !array_key_exists($this->name, $errors);
     }
 
     /**
      * @param string $value1
+     * @throws ConstraintException
      * @return $this
      */
     public function addAllowedValues($value1 /* , value2, value2, .etc.. */)
@@ -120,6 +125,7 @@ class Field
 
 
         if($is = Constraint::has($constraintName)) {
+            /** @noinspection OffsetOperationsInspection */
             $this->constraints[$constraintName] = $cb;
             return $this;
         }
@@ -129,6 +135,7 @@ class Field
     /**
      * @param string $cleanerName (Field | Validator)::CLEANER_*
      * @param array  $options
+     * @throws CleanerException
      * @return $this
      */
     public function addCleaner($cleanerName = self::CLEANER_string, array $options = array())

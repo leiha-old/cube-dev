@@ -170,7 +170,7 @@ class DbFacade
 
     /**
      * @param string $host
-     * @return DbConfigurator
+     * @return $this
      */
     public function setHost($host)
     {

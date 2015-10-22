@@ -14,10 +14,13 @@ $cube = Application::init(
                 ->addIncludePath('Slim'       , realpath(__DIR__.'/../../vendors/Slim/').'/')
                 ;
 
-         $facade
+
+        $controller = 'Application\Controller\Home';
+        $facade
              ->http()
                 ->mapRouter($cube::CONNECTOR_SLIM_router)
-                ->get('/', 'Application\Controller\Home', 'home')
+                ->get('/'    , $controller, 'home')
+                ->get('/form', $controller, 'form')
                 ;
     }
 );
