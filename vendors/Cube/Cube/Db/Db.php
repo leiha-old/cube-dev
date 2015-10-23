@@ -27,6 +27,11 @@ class Db
      */
     private static $_databases = array();
 
+    public static function error(\Exception $e)
+    {
+        return DbError::instance($e->getMessage());
+    }
+
     /**
      * @param string $connectionName
      * @return bool
@@ -94,8 +99,8 @@ class Db
             }
             return $stmt;
         }
-        catch (\PDOError $e) {
-            throw new DbError($e->getMessage());
+        catch (\PDOException $e) {
+            throw self::error($e);
         }
     }
 }
