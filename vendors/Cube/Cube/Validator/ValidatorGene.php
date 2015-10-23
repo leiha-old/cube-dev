@@ -15,7 +15,7 @@ class ValidatorGene
     /**
      * @return string
      */
-    protected function getClassOfValidator()
+    protected function ____getClassOfValidator()
     {
         return Validator::Validator;
     }
@@ -23,7 +23,7 @@ class ValidatorGene
     /**
      * @return string
      */
-    protected function getClassOfField()
+    protected function ____getClassOfField()
     {
         return Validator::Field;
     }

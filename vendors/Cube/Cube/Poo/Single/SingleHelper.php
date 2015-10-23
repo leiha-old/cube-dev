@@ -9,12 +9,20 @@ trait SingleHelper
 	 */
 	private static $_single;
 
+    /**
+     * @return string
+     */
+    protected static function ____getClassOf()
+    {
+        return get_called_class();
+    }
+
 	/**
 	 * @return static
 	 */
 	public static function single()
 	{
-		return self::singleTo(get_called_class(), func_get_args());
+		return static::singleTo(static::____getClassOf(), func_get_args());
 	}
 
     /**

@@ -11,11 +11,19 @@ namespace Cube\Poo\Instance;
 trait InstanceHelper
 {
 	/**
+	 * @return string
+	 */
+	protected static function ____getClassOf()
+	{
+		return get_called_class();
+	}
+
+	/**
 	 * @return static
 	 */
 	public static function instance()
 	{
-		return static::instanceTo(get_called_class(), func_get_args());
+		return static::instanceTo(static::____getClassOf(), func_get_args());
 	}
 
 	/**

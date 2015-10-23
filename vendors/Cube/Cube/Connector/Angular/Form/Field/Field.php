@@ -8,8 +8,8 @@
 
 namespace Cube\Connector\Angular\Field;
 
-
-class Field extends \Cube\Form\Field\Field
+class Field
+    extends \Cube\Form\Field\Field
 {
 
 }

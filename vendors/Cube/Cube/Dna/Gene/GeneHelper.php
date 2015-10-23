@@ -14,7 +14,5 @@ trait GeneHelper
 {
     use MappableHelper;
 
-    public static function single() {
-        return static::singleTo(get_called_class().'Gene', func_get_args());
-    }
+
 }

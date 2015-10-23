@@ -22,7 +22,7 @@ trait MappableHelper
 	 */
 	public static function single()
 	{
-		return self::mapper()->singleTo(get_called_class(), func_get_args());
+		return static::mapper()->singleTo(static::____getClassOf(), func_get_args());
 	}
 
 	/**
@@ -30,6 +30,6 @@ trait MappableHelper
 	 */
 	public static function instance()
 	{
-		return self::mapper()->instanceTo(get_called_class(), func_get_args());
+		return static::mapper()->instanceTo(static::____getClassOf(), func_get_args());
 	}
 }

@@ -40,7 +40,7 @@ trait ValidatorHelper
      */
     public function __constructValidator($validatorsName)
     {
-        if(!is_subclass_of($validatorsName, $this->getClassOfValidator()))
+        if(!is_subclass_of($validatorsName, $this->____getClassOfValidator()))
         {
             // @Todo : Make an Exception
         }
@@ -58,12 +58,12 @@ trait ValidatorHelper
     /**
      * @return string
      */
-    abstract protected function getClassOfValidator();
+    abstract protected function ____getClassOfValidator();
 
     /**
      * @return string
      */
-    abstract protected function getClassOfField();
+    abstract protected function ____getClassOfField();
 
     /**
      * @param bool $includeGroups
