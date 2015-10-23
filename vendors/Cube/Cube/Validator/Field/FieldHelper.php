@@ -13,7 +13,7 @@ use Cube\Validator\Cleaner\CleanerError;
 use Cube\Validator\Constraint\Constraint;
 use Cube\Validator\Constraint\ConstraintError;
 use Cube\Validator\Constraint\RestrictedValuesConstraint;
-use Cube\Validator\Test\Type;
+use Cube\Validator\Type\Type;
 use Cube\Validator\Validator;
 
 trait FieldHelper
@@ -77,7 +77,7 @@ trait FieldHelper
      */
     public function validate(&$value, &$errors)
     {
-        Cleaner::run($this->cleaners, $value);
+        Cleaner::single()->run($this->cleaners, $value);
 
         if($errs = Constraint::run($this->constraints, $value)) {
             $errors[$this->name] = $errs;
@@ -95,7 +95,7 @@ trait FieldHelper
     {
         $allowedValues = func_get_args();
         return $this->addConstraint  (
-            Field::CONSTRAINT_restricted,
+            Constraint::Restricted,
             function(RestrictedValuesConstraint $constraint)
             use ($allowedValues)
             {
@@ -110,7 +110,7 @@ trait FieldHelper
      * @return $this|false
      * @throws \Cube\Validator\Constraint\ConstraintError
      */
-    public function addConstraint($constraintName = Field::CONSTRAINT_string, \closure $cb = null)
+    public function addConstraint($constraintName = Constraint::String, \closure $cb = null)
     {
         //$c = new \ReflectionFunction($cb);
 
@@ -124,12 +124,12 @@ trait FieldHelper
     }
 
     /**
-     * @param string $cleanerName (Field | Validator)::CLEANER_*
+     * @param string $cleanerName Cleaner::*
      * @param array  $options
      * @throws CleanerError
      * @return $this
      */
-    public function addCleaner($cleanerName = Field::CLEANER_string, array $options = array())
+    public function addCleaner($cleanerName = Cleaner::String, array $options = array())
     {
         if($is = Cleaner::has($cleanerName)) {
             $this->cleaners[$cleanerName] = $options;
@@ -147,10 +147,10 @@ trait FieldHelper
     }
 
     /**
-     * @param string $type (Field | Validator)::TYPE_*
+     * @param string $type Type::*
      * @return $this
      */
-    public function setType($type = Field::TYPE_string)
+    public function setType($type = Type::String)
     {
         $this->type = $type;
         return $this;

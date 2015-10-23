@@ -10,5 +10,8 @@ namespace Cube\Connector;
 
 interface ConnectorConstants
 {
-    const SLIM_Router = 'Cube\Connector\Slim\SlimRouter';
+    const SLIM_Router  = 'Cube\Connector\Slim\SlimRouter';
+
+    const ANGULAR_Form  = 'Cube\Connector\AngularForm';
+    const ANGULAR_Field = 'Cube\Connector\AngularField';
 }

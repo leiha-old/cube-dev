@@ -13,9 +13,6 @@ use Cube\Form\FormWrapper;
 class AngularForm
     extends FormWrapper
 {
-    const CLASS_fieldSet = 'Cube\Connector\AngularForm';
-    const CLASS_field    = 'Cube\Connector\AngularField';
-
     private static $allowedAttributes = array(
         'app'  => array(),
         'class' => array(
@@ -35,5 +32,19 @@ class AngularForm
     }
 
 
+    /**
+     * @return string
+     */
+    protected function getClassOfValidator()
+    {
+        return 'Cube\Connector\AngularForm';
+    }
 
+    /**
+     * @return string
+     */
+    protected function getClassOfField()
+    {
+        return 'Cube\Connector\AngularField';
+    }
 }

@@ -10,5 +10,5 @@ namespace Cube\Poo\Error;
 
 interface ErrorConstants
 {
-
+    const TYPE_404 = 'TYPE_404';
 }

@@ -2,10 +2,10 @@
 
 namespace Cube\FileSystem\AutoLoader;
 
-use Cube\Poo\Error\Error;
+use Cube\Poo\Error\ErrorWrapper;
 
 class AutoLoaderError
-    extends Error
+    extends ErrorWrapper
 {
     const FILE_404  = 'File [404] : [ :file: ]';
 

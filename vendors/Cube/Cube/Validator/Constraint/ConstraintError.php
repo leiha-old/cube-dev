@@ -8,10 +8,10 @@
 
 namespace Cube\Validator\Constraint;
 
-use Cube\Poo\Error\Error;
+use Cube\Poo\Error\ErrorWrapper;
 
 class ConstraintError
-    extends Error
+    extends ErrorWrapper
 {
 
 }

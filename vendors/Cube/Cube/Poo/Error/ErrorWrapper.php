@@ -8,9 +8,13 @@
 
 namespace Cube\Poo\Error;
 
+use Cube\Poo\Mapper\Mappable\MappableHelper;
+
 abstract class ErrorWrapper
     extends \Exception
 {
+    use MappableHelper;
+
     /**
      * @var \Closure
      */

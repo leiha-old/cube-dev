@@ -8,10 +8,10 @@
 
 namespace Cube\Collection;
 
-use Cube\Poo\Error\Error;
+use Cube\Poo\Error\ErrorWrapper;
 
 class CollectionError
-    extends Error
+    extends ErrorWrapper
 {
 
 

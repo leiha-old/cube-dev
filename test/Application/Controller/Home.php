@@ -19,7 +19,7 @@ class Home
     public function form() {
 
         $az = new Ressources('toto');
-
+        $e = '';
 
     }
 }

@@ -8,10 +8,10 @@
 
 namespace Cube\Validator\Cleaner;
 
-use Cube\Poo\Error\Error;
+use Cube\Poo\Error\ErrorWrapper;
 
 class CleanerError
-    extends Error
+    extends ErrorWrapper
 {
 
 }

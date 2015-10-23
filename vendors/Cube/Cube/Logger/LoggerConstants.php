@@ -2,14 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: lia
- * Date: 15/10/15
- * Time: 20:37
+ * Date: 23/10/15
+ * Time: 05:28
  */
 
 namespace Cube\Logger;
 
-class Logger
-    implements LoggerConstants
+interface LoggerConstants
 {
 
 }

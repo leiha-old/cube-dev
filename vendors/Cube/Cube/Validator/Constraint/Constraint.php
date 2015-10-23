@@ -8,6 +8,8 @@
 
 namespace Cube\Validator\Constraint;
 
+use Cube\Poo\Error\Error;
+
 class Constraint
     implements ConstraintConstants
 {
@@ -72,7 +74,7 @@ class Constraint
     public static function has($constraintName, $silent = false) {
         $is = array_key_exists($constraintName, static::$factory);
         if(!$is && !$silent) {
-            throw static::error(self::ERROR_TYPE_404, compact('constraintName'));
+            throw static::error(Error::TYPE_404, compact('constraintName'));
         }
         return $is;
     }

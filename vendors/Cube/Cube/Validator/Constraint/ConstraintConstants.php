@@ -15,60 +15,60 @@ interface ConstraintConstants
     /**
      * @var MacConstraint|string
      */
-    const Mac         = Field::TYPE_mac;
+    const Mac         = Field::Mac;
 
     /**
      * @var EmailConstraint|string
      */
-    const Email       = Field::TYPE_email;
+    const Email       = Field::Email;
 
     /**
      * @var FloatConstraint|string
      */
-    const Float       = Field::TYPE_float;
+    const Float       = Field::Float;
 
     /**
      * @var IntConstraint|string
      */
-    const Int         = Field::TYPE_int;
+    const Int         = Field::Int;
 
     /**
      * @var IpConstraint|string
      */
-    const Ip          = Field::TYPE_ip;
+    const Ip          = Field::Ip;
 
     /**
      * @var RegExpConstraint|string
      */
-    const Regexp      = Field::TYPE_regexp;
+    const Regexp      = Field::Regexp;
 
     /**
      * @var UrlConstraint|string
      */
-    const Url         = Field::TYPE_url;
+    const Url         = Field::Url;
 
     /**
      * @var StringConstraint|string
      */
-    const String      = Field::TYPE_string;
+    const String      = Field::String;
 
     /**
      * @var BooleanConstraint|string
      */
-    const Boolean     = Field::TYPE_boolean;
+    const Boolean     = Field::Boolean;
 
     /**
      * @var TimeStampConstraint|string
      */
-    const Timestamp   = Field::TYPE_timestamp;
+    const Timestamp   = Field::Timestamp;
 
     /**
      * @var DateConstraint|string
      */
-    const Date        = Field::TYPE_date;
+    const Date        = Field::Date;
 
     /**
      * @var RestrictedValuesConstraint|string
      */
-    const Restricted  = Field::TYPE_restricted;
+    const Restricted  = Field::Restricted;
 }

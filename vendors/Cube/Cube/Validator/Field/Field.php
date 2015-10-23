@@ -3,7 +3,7 @@
 namespace Cube\Validator\Field;
 
 class Field
-    extends FieldWrapper
+    implements FieldConstants
 {
 
 }

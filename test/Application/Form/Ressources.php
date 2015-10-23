@@ -8,10 +8,10 @@
 
 namespace Application\Form;
 
-use Cube\Form\FormWrapper;
+use Cube\Connector\Angular\AngularForm;
 
 class Ressources
-    extends FormWrapper
+    extends AngularForm
 {
 
 }

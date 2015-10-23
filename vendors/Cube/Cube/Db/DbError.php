@@ -8,10 +8,10 @@
 
 namespace Cube\Db;
 
-use Cube\Poo\Error\Error;
+use Cube\Poo\Error\ErrorWrapper;
 
 class DbError
-    extends Error
+    extends ErrorWrapper
 {
 
 }

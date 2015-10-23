@@ -10,20 +10,20 @@ namespace Cube\Validator;
 
 use Cube\Validator\Constraint\ConstraintError;
 use Cube\Validator\Field\Field;
+use Cube\Validator\Field\FieldBehavior;
+use Cube\Validator\Type\Type;
 
 trait ValidatorHelper
 {
-
-
     /**
-     * @var Field[]
+     * @var FieldBehavior[]
      */
     protected $fields = array();
 
     /**
-     * @var Validator[]
+     * @var ValidatorBehavior[]
      */
-    protected $fieldSets = array();
+    protected $validators = array();
 
     /**
      * @var array
@@ -36,11 +36,15 @@ trait ValidatorHelper
     protected $name = '';
 
     /**
-     * @param string $fieldSetName
+     * @param string $validatorsName
      */
-    public function __construct($fieldSetName)
+    public function __constructValidator($validatorsName)
     {
-        $this->name = $fieldSetName;
+        if(!is_subclass_of($validatorsName, $this->getClassOfValidator()))
+        {
+            // @Todo : Make an Exception
+        }
+        $this->name = $validatorsName;
     }
 
     /**
@@ -52,6 +56,16 @@ trait ValidatorHelper
     }
 
     /**
+     * @return string
+     */
+    abstract protected function getClassOfValidator();
+
+    /**
+     * @return string
+     */
+    abstract protected function getClassOfField();
+
+    /**
      * @param bool $includeGroups
      * @return array
      */
@@ -60,8 +74,8 @@ trait ValidatorHelper
         $values = $this->valuesValidated;
 
         if($includeGroups) {
-            foreach($this->fieldSets as $fieldSet) {
-                $values = array_merge($values, $fieldSet->getAllValues());
+            foreach($this->validators as $validators) {
+                $values = array_merge($values, $validators->getAllValues());
             }
         }
 
@@ -76,8 +90,8 @@ trait ValidatorHelper
      */
     public function validateGroupValues($groupName, array $values, &$errors)
     {
-        return array_key_exists($groupName, $this->fieldSets)
-            ? $this->fieldSets[$groupName]->validateValues($values, $errors)
+        return array_key_exists($groupName, $this->validators)
+            ? $this->validators[$groupName]->validateValues($values, $errors)
             : false
             ;
     }
@@ -91,12 +105,12 @@ trait ValidatorHelper
     public function validateValues(array $values, &$errors, $includeGroups = true)
     {
         /**
-         * Validate Fields of fieldSet
+         * Validate Fields of validators
          */
         $cValidateFields = function()
         use ($values, &$errors)
         {
-            foreach($this->fields as $fieldId => $field) {
+            foreach($this->getFields() as $fieldId => $field) {
                 $fieldName = $field->getName();
 
                 empty($values[$fieldName])
@@ -107,20 +121,20 @@ trait ValidatorHelper
         };
 
         /**
-         * Validate Groups of fieldSet
+         * Validate Groups of validators
          */
         $cValidateGroups = function()
         use ($values, &$errors, $includeGroups)
         {
             if ($includeGroups) {
-                foreach ($this->fieldSets as $fieldSetName => $fieldSet) {
-                    // If array values contains a key of fieldSet name and is an array
+                foreach ($this->validators as $validatorsName => $validators) {
+                    // If array values contains a key of validators name and is an array
                     // Then we take this array for validation
-                    $_values = isset($values[$fieldSetName]) && is_array($values[$fieldSetName])
-                        ? $values[$fieldSetName]
+                    $_values = isset($values[$validatorsName]) && is_array($values[$validatorsName])
+                        ? $values[$validatorsName]
                         : $values;
 
-                    $fieldSet->validateValues($_values, $errors);
+                    $validators->validateValues($_values, $errors);
                 }
             }
         };
@@ -135,10 +149,10 @@ trait ValidatorHelper
 
     /**
      * @param string $fieldId
-     * @param Field $field
+     * @param FieldBehavior $field
      * @param array $errors
      */
-    protected function fixEmptyValue($fieldId, Field $field, &$errors)
+    protected function fixEmptyValue($fieldId, FieldBehavior $field, &$errors)
     {
         if($field->isRequired()) {
             $errors[$field->getName()]['required'] = true;
@@ -153,12 +167,12 @@ trait ValidatorHelper
 
     /**
      * @param string $fieldId
-     * @param Field  $field
+     * @param FieldBehavior  $field
      * @param mixed  $value
      * @param array  $errors
      * @return bool
      */
-    protected function validateValue($fieldId, Field $field, $value, &$errors)
+    protected function validateValue($fieldId, FieldBehavior $field, $value, &$errors)
     {
         $is = $field->validate($value, $errors);
         if($is) {
@@ -177,17 +191,17 @@ trait ValidatorHelper
      */
     public function addGroup($groupName)
     {
-        return $this->_add('fieldSet', $groupName);
+        return $this->_add('validators', $groupName);
     }
 
     /**
      * @param string $fieldName
      * @param mixed $defaultValue
-     * @param string $type          Validator::*
+     * @param string $type          Type::*
      * @throws ConstraintError
-     * @return Field
+     * @return FieldBehavior
      */
-    public function addField($fieldName, $defaultValue = null, $type = Validator::String)
+    public function addField($fieldName, $defaultValue = null, $type = Type::String)
     {
         return $this->_add('field', $fieldName)
             ->setType        ($type)
@@ -198,11 +212,11 @@ trait ValidatorHelper
 
     /**
      * @param string $groupName
-     * @return Validator
+     * @return ValidatorBehavior
      */
     public function getGroup($groupName)
     {
-        return $this->_get('fieldSet', $groupName);
+        return $this->_get('validators', $groupName);
     }
 
     /**
@@ -215,9 +229,9 @@ trait ValidatorHelper
     }
 
     /**
-     * @param string $type [field | fieldSet]
+     * @param string $type [field | validators]
      * @param string $name
-     * @return Validator|Field
+     * @return ValidatorBehavior|FieldBehavior
      */
     private function _add($type, $name)
     {
@@ -228,9 +242,9 @@ trait ValidatorHelper
     }
 
     /**
-     * @param string $type [field | fieldSet]
+     * @param string $type [field | validators]
      * @param string $name
-     * @return Field
+     * @return FieldBehavior
      */
     private function _get($type, $name)
     {
@@ -240,5 +254,13 @@ trait ValidatorHelper
         }
 
         return null;
+    }
+
+    /**
+     * @return FieldBehavior[]
+     */
+    public function getFields()
+    {
+        return $this->fields;
     }
 }

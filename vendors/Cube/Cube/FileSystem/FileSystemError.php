@@ -8,10 +8,10 @@
 
 namespace Cube\FileSystem;
 
-use Cube\Poo\Error\Error;
+use Cube\Poo\Error\ErrorWrapper;
 
 class FileSystemError
-    extends Error
+    extends ErrorWrapper
 {
 
 }

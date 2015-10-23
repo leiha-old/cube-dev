@@ -8,10 +8,10 @@
 
 namespace Cube\Poo\Reflection;
 
-use Cube\Poo\Error\Error;
+use Cube\Poo\Error\ErrorWrapper;
 
 class ReflectionError
-    extends Error
+    extends ErrorWrapper
 {
 
 }

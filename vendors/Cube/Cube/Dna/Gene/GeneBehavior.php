@@ -8,10 +8,10 @@
 
 namespace Cube\Dna\Gene;
 
-use Cube\Poo\Single\SingleBehavior;
+use Cube\Poo\Mapper\Mappable\MappableBehavior;
 
 interface GeneBehavior
-    extends SingleBehavior
+    extends MappableBehavior
 {
 
 }
