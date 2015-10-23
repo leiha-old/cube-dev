@@ -83,7 +83,7 @@ class AutoLoader
      * @param bool $silent
      * @param string $extension
      * @return bool
-     * @throws AutoLoaderException
+     * @throws AutoLoaderError
      */
     static public function loadFile($path, $silent = true, $extension = '.php')
     {
@@ -91,8 +91,8 @@ class AutoLoader
 	    if (file_exists($file)) {
             return require_once($file);
         } elseif (!$silent) {
-            // @Throw AutoLoaderException
-            throw new AutoLoaderException(AutoLoaderException::FILE_404, compact('file'));
+            // @TFhrow AutoLoaderError
+            throw new AutoLoaderError(AutoLoaderError::FILE_404, compact('file'));
         } else {
 		    return false;
 	    }
@@ -129,7 +129,7 @@ class AutoLoader
 	 * @param string $className
 	 * @param bool $silent
 	 * @return bool
-	 * @throws AutoLoaderException
+	 * @throws AutoLoaderError
 	 */
 	public static function loadClass($className, $silent = true)
 	{
@@ -146,9 +146,9 @@ class AutoLoader
 					|| trait_exists    ($className, false)
 				;
 				if(!$is && !$silent) {
-					// @Throw AutoLoaderException
-					throw new AutoLoaderException(
-						AutoLoaderException::CLASS_404,
+					// @Throw AutoLoaderError
+					throw new AutoLoaderError(
+						AutoLoaderError::CLASS_404,
 						compact('className', 'includePaths')
 					);
 				}
@@ -161,7 +161,7 @@ class AutoLoader
 
     /**
      * @param string $className
-     * @throws AutoLoaderException
+     * @throws AutoLoaderError
      */
     public static function autoload($className)
     {

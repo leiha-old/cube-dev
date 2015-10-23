@@ -10,10 +10,11 @@ namespace Cube\Db\Table;
 
 use Cube\Db\Db;
 use Cube\Db\Table\Field\Field;
-use Cube\Validator\FieldSet\FieldSet;
+use Cube\Validator\Test\Type;
+use Cube\Validator\Validator;
 
 class Table
-    extends FieldSet
+    extends Validator
 {
     const CLASS_fieldSet     = 'Cube\Db\Table\Table';
     const CLASS_field        = 'Cube\Db\Table\Field\Field';
@@ -62,10 +63,10 @@ class Table
     /**
      * @param string $fieldName
      * @param mixed  $defaultValue
-     * @param string $type          Field::TYPE_*
+     * @param string $type          Type::*
      * @return Field
      */
-    public function addField($fieldName, $defaultValue = null, $type = self::TYPE_string)
+    public function addField($fieldName, $defaultValue = null, $type = Type::String)
     {
         /** @var Field $field */
         $field = parent::addField($fieldName, $defaultValue, $type);

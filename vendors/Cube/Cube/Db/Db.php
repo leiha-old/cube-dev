@@ -77,7 +77,7 @@ class Db
      * @param string $query
      * @param \closure $callback (PDOStatement $stmt)
      * @return string
-     * @throws DbException
+     * @throws DbError
      */
     public function prepareAndExecute($query, \closure $callback = null)
     {
@@ -94,8 +94,8 @@ class Db
             }
             return $stmt;
         }
-        catch (\PDOException $e) {
-            throw new DbException($e->getMessage());
+        catch (\PDOError $e) {
+            throw new DbError($e->getMessage());
         }
     }
 }

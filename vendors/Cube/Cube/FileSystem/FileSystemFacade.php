@@ -21,7 +21,7 @@ class FileSystemFacade
 
     /**
      * @param string $fileSystemClass
-     * @return FileSystemFacadeBehavior
+     * @return FileSystemFacade
      */
     public function setFileSystemClass($fileSystemClass)
     {
@@ -33,7 +33,7 @@ class FileSystemFacade
      * @param string $name
      * @param string $includePath
      * @param bool $vendor
-     * @return FileSystemFacadeBehavior
+     * @return FileSystemFacade
      */
     public function addIncludePath($name, $includePath, $vendor = false)
     {

@@ -97,7 +97,7 @@ class ClassGenerator
      * @param \Closure $closure
      * @param array $data
      * @return $this
-     * @throws \Cube\Poo\Reflection\ReflectionException
+     * @throws \Cube\Poo\Reflection\ReflectionError
      */
     public function addMethod(\Closure $closure, array $data = array())
     {

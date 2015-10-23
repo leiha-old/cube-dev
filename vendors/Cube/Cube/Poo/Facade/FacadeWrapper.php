@@ -13,6 +13,6 @@ use Cube\Poo\Mapper\Mappable\MappableHelper;
 abstract class FacadeWrapper
     implements FacadeBehavior
 {
-    use FacadeHelper;
     use MappableHelper;
+    use FacadeHelper;
 }

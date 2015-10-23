@@ -2,11 +2,13 @@
 
 namespace Cube\Validator\Constraint;
 
-use Cube\Validator\Tool\FilterVarAbstract;
+use Cube\Validator\Tool\FilterVarHelper;
 
 class IpConstraint
-    extends FilterVarAbstract
+    extends ConstraintWrapper
 {
+    use FilterVarHelper;
+
     /**
      * @return int
      */

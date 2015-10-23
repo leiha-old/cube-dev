@@ -29,7 +29,7 @@ trait ReflectionStatic
 
         $classType = array_shift($args);
         if(!isset(static::$_abilities[$classType])) {
-            // @Todo : Make an Exception
+            // @Todo : Make an Error
         }
 
         return call_user_func_array(static::$_abilities[$classType], $args);
@@ -38,28 +38,28 @@ trait ReflectionStatic
     /**
      * @param string|\Closure $class
      * @return Reflection
-     * @throws ReflectionException
+     * @throws ReflectionError
      */
     public static function reflectClass($class)
     {
         try {
             return new Reflection($class);
         } catch(\Exception $e) {
-            throw new ReflectionException($e->getMessage());
+            throw new ReflectionError($e->getMessage());
         }
     }
 
     /**
      * @param string|\Closure $function
      * @return ClosureReflection
-     * @throws ReflectionException
+     * @throws ReflectionError
      */
     public static function reflectFunction($function)
     {
         try {
             return new ClosureReflection($function);
         } catch(\Exception $e) {
-            throw new ReflectionException($e->getMessage());
+            throw new ReflectionError($e->getMessage());
         }
     }
 
@@ -67,7 +67,7 @@ trait ReflectionStatic
      * @param string|\Object $classMethod
      * @param string $method
      * @return MethodReflection
-     * @throws ReflectionException
+     * @throws ReflectionError
      */
     public static function reflectMethod($classMethod, $method = '')
     {
@@ -78,7 +78,7 @@ trait ReflectionStatic
                 return new MethodReflection($classMethod);
             }
         } catch(\Exception $e) {
-            throw new ReflectionException($e->getMessage());
+            throw new ReflectionError($e->getMessage());
         }
     }
 }

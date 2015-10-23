@@ -15,11 +15,11 @@ trait CollectionGeneHelper
 	 * @param array  $data
 	 * @param bool   $silent
 	 * @return void|false
-	 * @throws CollectionException
+	 * @throws CollectionError
 	 */
-	public static function exception($msg, array $data = array(), $silent = false) {
+	public static function Error($msg, array $data = array(), $silent = false) {
 		if(!$silent) {
-			throw CollectionException::instance($msg, $data);
+			throw CollectionError::instance($msg, $data);
 		}
 		return false;
 	}
@@ -50,8 +50,9 @@ trait CollectionGeneHelper
 	 * @param \Closure $callback ($isEnd, (&)$value, $key, $counter, $total)
 	 * @param bool $reverseMode
 	 */
-	public static function iterateArrayWithCounter(array &$items, \Closure $callback, $reverseMode = false)
-	{
+	public static function iterateArrayWithCounter(
+		array &$items, \Closure $callback, $reverseMode = false
+	) {
 		if($reverseMode) {
 			$items = array_reverse($items);
 		}
@@ -77,8 +78,9 @@ trait CollectionGeneHelper
 	 * @param bool $silent
 	 * @return mixed
 	 */
-	public static function &iterateArrayOnRail(array &$items, array $rail, \Closure $cbForEachItem, $silent = false)
-	{
+	public static function &iterateArrayOnRail(
+        array &$items, array $rail, \Closure $cbForEachItem, $silent = false
+    ) {
 		$item[-1] = &$items;
 
 		$railProgression = array();

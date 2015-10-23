@@ -8,71 +8,67 @@
 
 namespace Cube\Validator\Constraint;
 
-use Cube\Validator\FieldSet\Field\FieldConstants;
+use Cube\Validator\Field\Field;
 
 interface ConstraintConstants
-    extends FieldConstants
 {
-
-    const ERROR_TYPE_404         = 'Constraint [ :constraintName: ] not present !';
-
     /**
      * @var MacConstraint|string
      */
-    const CONSTRAINT_mac         = self::TYPE_mac;
+    const Mac         = Field::TYPE_mac;
 
     /**
      * @var EmailConstraint|string
      */
-    const CONSTRAINT_email       = self::TYPE_email;
+    const Email       = Field::TYPE_email;
 
     /**
      * @var FloatConstraint|string
      */
-    const CONSTRAINT_float       = self::TYPE_float;
+    const Float       = Field::TYPE_float;
 
     /**
      * @var IntConstraint|string
      */
-    const CONSTRAINT_int         = self::TYPE_int;
+    const Int         = Field::TYPE_int;
 
     /**
      * @var IpConstraint|string
      */
-    const CONSTRAINT_ip          = self::TYPE_ip;
+    const Ip          = Field::TYPE_ip;
 
     /**
      * @var RegExpConstraint|string
      */
-    const CONSTRAINT_regexp      = self::TYPE_regexp;
+    const Regexp      = Field::TYPE_regexp;
 
     /**
      * @var UrlConstraint|string
      */
-    const CONSTRAINT_url         = self::TYPE_url;
+    const Url         = Field::TYPE_url;
 
     /**
      * @var StringConstraint|string
      */
-    const CONSTRAINT_string      = self::TYPE_string;
+    const String      = Field::TYPE_string;
 
     /**
      * @var BooleanConstraint|string
      */
-    const CONSTRAINT_boolean     = self::TYPE_boolean;
+    const Boolean     = Field::TYPE_boolean;
 
     /**
      * @var TimeStampConstraint|string
      */
-    const CONSTRAINT_timestamp   = self::TYPE_timestamp;
+    const Timestamp   = Field::TYPE_timestamp;
 
     /**
      * @var DateConstraint|string
      */
-    const CONSTRAINT_date        = self::TYPE_date;
+    const Date        = Field::TYPE_date;
 
     /**
      * @var RestrictedValuesConstraint|string
      */
-    const CONSTRAINT_restricted  = self::TYPE_restricted;
+    const Restricted  = Field::TYPE_restricted;
 }

@@ -9,7 +9,7 @@
 namespace Cube\FileSystem\Crawler;
 
 use Cube\FileSystem\AutoLoader\AutoLoader;
-use Cube\FileSystem\AutoLoader\AutoLoaderException;
+use Cube\FileSystem\AutoLoader\AutoLoaderError;
 use Cube\FileSystem\FileSystem;
 use Cube\Poo\Mapper\Mappable\Mappable;
 
@@ -57,7 +57,7 @@ class Crawler
             'Interface'     => array(
                 'found'    => false,
             ),
-            'Exception'     => array(
+            'Error'     => array(
                 'found'    => false,
             )
         );
@@ -71,10 +71,10 @@ class Crawler
         /**
          * @param \DirectoryIterator $item
          * @param $includePath
-         * @throws AutoLoaderException
+         * @throws AutoLoaderError
          */
         $parser = function(\DirectoryIterator $item, $includePath)
-        use (&$parts, &$classes)
+            use (&$parts, &$classes)
         {
             $name  = $item->getRealPath();
 
@@ -102,9 +102,9 @@ class Crawler
     /**
      * @param string $class
      * @param array  $classes
-     * @throws AutoLoaderException
+     * @throws AutoLoaderError
      */
-    protected function retrieveRealClass($class, array &$classes = array())
+    protected function retrieveRealClass($class, array &$classes)
     {
         foreach($this->locations as $location) {
             $oClass =  $location . $class;
@@ -120,9 +120,9 @@ class Crawler
      * @param string $class
      * @param array  $parts
      * @param array  $classes
-     * @throws AutoLoaderException
+     * @throws AutoLoaderError
      */
-    protected function retrieveParts($class, array $parts, array &$classes = array())
+    protected function retrieveParts($class, array $parts, array &$classes)
     {
         foreach($parts as $part => &$partConfig) {
             $classService = $class.$part;
@@ -131,7 +131,9 @@ class Crawler
                 if(!$partConfig['found'] && AutoLoader::loadClass($oClass)) {
                     $classes[$class][$part] = $oClass;
                     $partConfig['found']    = true;
-                    if(isset($partConfig['callback']) && is_callable($partConfig['callback'])) {
+                    if(array_key_exists('callback', $partConfig)
+                        && is_callable($partConfig['callback'])
+                    ) {
                         $partConfig['callback']($class, $classService);
                     }
                 }

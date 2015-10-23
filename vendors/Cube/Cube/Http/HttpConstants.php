@@ -10,5 +10,5 @@ namespace Cube\Http;
 
 interface HttpConstants
 {
-    const HTTP_router = 'Cube\Http\Router\Router';
+
 }

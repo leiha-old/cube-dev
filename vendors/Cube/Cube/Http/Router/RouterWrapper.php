@@ -22,4 +22,13 @@ abstract class RouterWrapper
      * @return void
      */
     abstract public function run();
+
+    /**
+     * @param $wrapped
+     * @param array $args
+     */
+    public function __construct($wrapped, array $args = array())
+    {
+        $this->__constructWrapper($wrapped, $args);
+    }
 }

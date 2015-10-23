@@ -3,7 +3,7 @@
 namespace Cube\Validator\Constraint;
 
 class RestrictedValuesConstraint
-    extends ConstraintAbstract
+    extends ConstraintWrapper
 {
     /**
      * @var string[]

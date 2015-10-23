@@ -73,7 +73,7 @@ trait CollectionHelper
      * @param string|array $itemKey
      * @param bool $silent
      * @return mixed|null
-     * @throws CollectionException
+     * @throws CollectionError
      */
     public function &get($itemKey, $silent = false)
     {
@@ -99,11 +99,11 @@ trait CollectionHelper
 	 * @param string $itemKey
 	 * @param bool $silent
 	 * @return mixed|null
-	 * @throws CollectionException
+	 * @throws CollectionError
 	 */
 	public function &getItem($itemKey, $silent = false) {
 		$is = array_key_exists($itemKey, $this->_items);
-		if(!$is && !$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $silent)) {
+		if(!$is && !self::Error(Collection::ERROR_ITEM_404, compact('itemKey'), $silent)) {
 			$ret = false;
 			return $ret;
 		}
@@ -114,10 +114,12 @@ trait CollectionHelper
 	 * @param array $rail
 	 * @param mixed $default
 	 * @return mixed Return item found at the end of rail (you can add & for reference)
+     * @throws CollectionError
 	 */
 	public function &getRailOr(array $rail, $default = null)
 	{
-		if(!$item = $this->getRail($rail)) {
+        /** @noinspection ReferenceMismatchInspection */
+        if(!$item = $this->getRail($rail)) {
 			$item = $default;
 		}
 		return $item;
@@ -127,16 +129,16 @@ trait CollectionHelper
      * @param array $rail
      * @param bool $silent
      * @return mixed|false[null
-     * @throws CollectionException
+     * @throws CollectionError
      */
     public function &getRail(array $rail, $silent = true)
     {
-        return $this->iterateOnRail($rail,
+        return self::iterateOnRail($rail,
             function ($isEnd, &$item, $key, $railProgression)
                 use ($silent)
             {
                 if (!isset($item[$key])) {
-		            $this->exception(Collection::ERROR_RAIL_404, compact('railProgression'), $silent);
+		            self::Error(Collection::ERROR_RAIL_404, compact('railProgression'), $silent);
                     $ret = false;
 	            }
                 elseif($isEnd) {
@@ -155,7 +157,7 @@ trait CollectionHelper
      * @param mixed $value
      * @param bool $force
      * @return mixed
-     * @throws CollectionException
+     * @throws CollectionError
      */
     public function &set($itemKey, $value, $force = false)
     {
@@ -167,12 +169,13 @@ trait CollectionHelper
      * @param mixed $value
      * @param bool $force
      * @return mixed
-     * @throws CollectionException
+     * @throws CollectionError
      */
     public function &setRef($itemKey, &$value, $force = true)
     {
         if(isset($this->_items[$itemKey])) {
-            if(!$this->exception(Collection::ERROR_ITEM_404, compact('itemKey'), $force)) {
+            /** @noinspection NestedPositiveIfStatementsInspection */
+            if(!self::Error(Collection::ERROR_ITEM_404, compact('itemKey'), $force)) {
                 return false;
             }
         }
@@ -185,7 +188,7 @@ trait CollectionHelper
      * @param mixed $value
      * @param bool $force
      * @return mixed Return item found at the end of rail (you can add & for reference)
-     * @throws CollectionException
+     * @throws CollectionError
      */
     public function &setRail($rail, $value, $force = true)
     {
@@ -196,16 +199,17 @@ trait CollectionHelper
             if (isset($item[$key])) {
                 if($isEnd) {
                     // If part (key) of rail is present, it's the end of the while and it's forced
-                    // Otherwise Exception is fired
-                    if(!$this->exception(
+                    // Otherwise Error is fired
+                    /** @noinspection NestedPositiveIfStatementsInspection */
+                    if(!self::Error(
                         Collection::ERROR_RAIL_duplicate, compact('railProgression'), $force
                     )) {
                         $item[$key] = $value;
                     }
                 }
             }
-            // If part (key) of rail is not present and is forced otherwise Exception is fired
-            elseif(!$this->exception(
+            // If part (key) of rail is not present and is forced otherwise Error is fired
+            elseif(!self::error(
                 Collection::ERROR_RAIL_404, compact('railProgression'), $force
             )) {
                 // If is the end of rail put the value otherwise set a array for continue loop
@@ -213,7 +217,7 @@ trait CollectionHelper
             }
         };
 
-        return $this->iterateOnRail($rail, $cbSetRail);
+        return self::iterateOnRail($rail, $cbSetRail);
     }
 
     /**
@@ -223,7 +227,7 @@ trait CollectionHelper
      */
     public function iterate(\Closure $cbForEachItem, $reverseMode = false)
     {
-        $this->iterateArray($this->_items, $cbForEachItem, $reverseMode);
+        self::iterateArray($this->_items, $cbForEachItem, $reverseMode);
         return $this;
     }
 
@@ -233,12 +237,13 @@ trait CollectionHelper
      * @param bool $silent
      * @param bool $reverseMode
      * @return $this
+     * @throws CollectionError
      */
     public function iterateItem(
         $itemKey, \Closure $cbForEachItem, $silent = true, $reverseMode = false
     ) {
         if($array = &$this->get($itemKey, $silent)) {
-            $this->iterateArray($array, $cbForEachItem, $reverseMode);
+            self::iterateArray($array, $cbForEachItem, $reverseMode);
         }
         return $this;
     }
@@ -254,7 +259,7 @@ trait CollectionHelper
         $rail, \Closure $cbForEachItem, $silent = false, $reverseMode = false
     ) {
         if($array = &$this->getRail($rail, $silent)) {
-            $this->iterateArray($array, $cbForEachItem, $reverseMode);
+            self::iterateArray($array, $cbForEachItem, $reverseMode);
         }
         return $this;
     }
@@ -267,7 +272,7 @@ trait CollectionHelper
      */
     public function &iterateOnRail(array $rail, \Closure $cbForEachItem, $silent = true)
     {
-        return $this->iterateArrayOnRail($this->_items, $rail, $cbForEachItem, $silent);
+        return self::iterateArrayOnRail($this->_items, $rail, $cbForEachItem, $silent);
     }
 
     /**
@@ -277,7 +282,7 @@ trait CollectionHelper
      */
     public function iterateWithCounter(\Closure $cbForEachItem, $reverseMode = false)
     {
-        $this->iterateArrayWithCounter($this->_items, $cbForEachItem, $reverseMode);
+        self::iterateArrayWithCounter($this->_items, $cbForEachItem, $reverseMode);
         return $this;
     }
 
@@ -291,6 +296,7 @@ trait CollectionHelper
      */
     public function mergeWith(array $items, $recursive = false)
     {
+        /** @noinspection NestedTernaryOperatorInspection */
         $f = 'array_merge'.$recursive ? '_recursive' : '';
         $this->_items = $f($this->_items, $items);
         return $this;
@@ -306,6 +312,7 @@ trait CollectionHelper
      */
     public function replaceWith(array $items, $recursive = false)
     {
+        /** @noinspection NestedTernaryOperatorInspection */
         $f = 'array_replace'.$recursive ? '_recursive' : '';
         $this->_items = $f($this->_items, $items);
         return $this;

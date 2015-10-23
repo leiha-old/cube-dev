@@ -3,7 +3,7 @@
 namespace Cube\Validator\Constraint;
 
 class StringConstraint
-    extends ConstraintAbstract
+    extends ConstraintWrapper
 {
     /**
      * @param $value

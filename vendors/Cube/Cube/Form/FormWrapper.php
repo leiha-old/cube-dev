@@ -9,13 +9,12 @@
 namespace Cube\Form;
 
 use Cube\Poo\Wrapper\Wrapper;
-use Cube\Validator\FieldSet\FieldSetHelper;
+use Cube\Poo\Wrapper\WrapperHelper;
+use Cube\Validator\ValidatorHelper;
 
 abstract class FormWrapper
     extends Wrapper
 {
-    use FieldSetHelper;
-
     const CLASS_fieldSet = 'Cube\Form\Form';
     const CLASS_field    = 'Cube\Form\Field\Field';
 

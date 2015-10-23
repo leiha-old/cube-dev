@@ -8,93 +8,22 @@
 
 namespace Cube\Http;
 
-use Cube\Application\ApplicationFacadeBehavior;
-use Cube\Http\Router\Router;
+use Cube\Http\Router\RouterFacade;
 use Cube\Poo\Facade\FacadeWrapper;
-use Cube\Poo\Mapper\Mapper;
 
 class HttpFacade
     extends    FacadeWrapper
-    implements HttpFacadeBehavior
+    implements HttpBehavior
 {
     /**
-     * @param string $routerClass
-     * @return HttpFacadeBehavior
+     * @param string $className
+     * @return RouterFacade
      */
-    public function mapRouter($routerClass)
+    public function router($className = Http::Router)
     {
-        Mapper::single()
-            ->map(Http::HTTP_router, $routerClass)
-        ;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return $this
-     */
-    public function get($pattern, $controllerName, $methodName)
-    {
-        Router::single()
-            ->get($pattern, $controllerName, $methodName)
+        return RouterFacade::single($className)
+            ->setParentFacade($this)
+            ->map($className)
             ;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return $this
-     */
-    public function post($pattern, $controllerName, $methodName)
-    {
-        Router::single()
-            ->post($pattern, $controllerName, $methodName)
-            ;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return $this
-     */
-    public function put($pattern, $controllerName, $methodName)
-    {
-        Router::single()
-            ->put($pattern, $controllerName, $methodName)
-            ;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pattern
-     * @param string $controllerName
-     * @param string $methodName
-     * @return $this
-     */
-    public function delete($pattern, $controllerName, $methodName)
-    {
-        Router::single()
-            ->delete($pattern, $controllerName, $methodName)
-            ;
-
-        return $this;
-    }
-
-    /**
-     * @return void
-     */
-    public function run()
-    {
-        Router::single()->run();
     }
 }

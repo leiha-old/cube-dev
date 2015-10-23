@@ -14,11 +14,6 @@ interface RouterBehavior
     extends GeneBehavior
 {
     /**
-     * @return void
-     */
-    public function run();
-
-    /**
      * @param string $pattern
      * @param string $controllerName
      * @param string $methodName

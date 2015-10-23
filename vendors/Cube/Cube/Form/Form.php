@@ -13,5 +13,5 @@ use Cube\Poo\Mapper\Mappable\MappableHelper;
 
 class Form
 {
-    use MappableHelper
+    use MappableHelper;
 }

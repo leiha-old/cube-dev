@@ -3,7 +3,7 @@
 namespace Cube\Validator\Constraint;
 
 class BooleanConstraint
-    extends ConstraintAbstract
+    extends ConstraintWrapper
 {
     /**
      * @param $value

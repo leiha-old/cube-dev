@@ -1,12 +1,14 @@
 <?php
 
+use Application\Controller;
 use Cube\Application\Application;
-use Cube\Application\ApplicationFacade;
+use Cube\Application\ApplicationBehavior;
+use Cube\Connector\Connector;
 
 require '../../vendors/Cube/Cube/Cube.php';
 
 $cube = Application::init(
-    function(ApplicationFacade $facade, Application $cube)
+    function(ApplicationBehavior $facade)
     {
         $facade
             ->fileSystem()
@@ -14,13 +16,11 @@ $cube = Application::init(
                 ->addIncludePath('Slim'       , realpath(__DIR__.'/../../vendors/Slim/').'/')
                 ;
 
-
-        $controller = 'Application\Controller\Home';
         $facade
              ->http()
-                ->mapRouter($cube::CONNECTOR_SLIM_router)
-                ->get('/'    , $controller, 'home')
-                ->get('/form', $controller, 'form')
+                ->router(Connector::SLIM_Router)
+                    ->get('/'    , Controller::Home, 'home')
+                    ->get('/form', Controller::Home, 'form')
                 ;
     }
 );

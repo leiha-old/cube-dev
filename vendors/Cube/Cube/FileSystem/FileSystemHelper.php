@@ -9,7 +9,7 @@
 namespace Cube\FileSystem;
 
 use Cube\FileSystem\AutoLoader\AutoLoader;
-use Cube\FileSystem\AutoLoader\AutoLoaderException;
+use Cube\FileSystem\AutoLoader\AutoLoaderError;
 use Cube\FileSystem\Crawler\Crawler;
 
 trait FileSystemHelper
@@ -17,12 +17,12 @@ trait FileSystemHelper
     /**
      * @var array
      */
-    private $includePaths;
+    protected $includePaths;
 
     /**
      * @param string $path
      * @param \Closure $callback ($item, $path)
-     * @throws FileSystemException
+     * @throws FileSystemError
      */
     public static function iterateOn($path, \Closure $callback)
     {
@@ -52,7 +52,7 @@ trait FileSystemHelper
      * @param string    $className
      * @param bool      $silent
      * @return bool
-     * @throws AutoLoaderException
+     * @throws AutoLoaderError
      */
     public function isClass($className, $silent = true) {
         return AutoLoader::loadClass($className, $silent);
@@ -60,11 +60,12 @@ trait FileSystemHelper
 
     /**
      * @param \Closure $cbForEachFile (\DirectoryIterator $item)
+     * @throws FileSystemError
      */
     public function iterateIncludePaths(\Closure $cbForEachFile)
     {
         foreach($this->includePaths as $includePath) {
-            $this->iterateOn($includePath,
+            self::iterateOn($includePath,
                 function(\DirectoryIterator $item)
                 use ($includePath, $cbForEachFile)
                 {

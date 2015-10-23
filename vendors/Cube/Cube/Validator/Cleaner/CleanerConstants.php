@@ -8,17 +8,19 @@
 
 namespace Cube\Validator\Cleaner;
 
+use Cube\Validator\Type\Type;
+
 interface CleanerConstants
 {
-    const CLEANER_email        = 'email';
-    const CLEANER_encoded      = 'encoded';
-    const CLEANER_quotes       = 'magic_quotes';
-    const CLEANER_float        = 'number_float';
-    const CLEANER_int          = 'number_int';
-    const CLEANER_chars        = 'special_chars';
-    const CLEANER_charsf       = 'full_special_chars';
-    const CLEANER_string       = 'string';
-    const CLEANER_stripped     = 'stripped';
-    const CLEANER_url          = 'url';
-    const CLEANER_unsafe       = 'unsafe_raw';
+    const Email        = Type::Email;
+    const Encoded      = 'encoded';
+    const Quotes       = 'magic_quotes';
+    const Float        = 'number_float';
+    const Int          = 'number_int';
+    const Chars        = 'special_chars';
+    const Charsf       = 'full_special_chars';
+    const String       = Type::String;
+    const Stripped     = 'stripped';
+    const Url          = Type::Url;
+    const Unsafe       = 'unsafe_raw';
 }

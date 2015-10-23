@@ -8,12 +8,14 @@
 
 namespace Cube\FileSystem;
 
+use Cube\Dna\Gene\GeneBehavior;
 use Cube\Poo\Mapper\Mappable\MappableHelper;
 use Cube\Poo\Wrapper\Wrapper;
 
 abstract class FileSystemWrapper
     extends    Wrapper
-    implements FileSystemBehavior, FileSystemConstants
+    implements FileSystemConstants,
+               GeneBehavior
 {
     use FileSystemHelper;
     use MappableHelper;
@@ -23,8 +25,9 @@ abstract class FileSystemWrapper
      * @param object $wrapped
      * @param array $args
      */
-    public function __construct(array $includePaths, $wrapped, $args = array()) {
-        parent::__construct($wrapped, $args);
+    public function __construct(array $includePaths, $wrapped, array $args = array())
+    {
+        parent::__constructWrapper($wrapped, $args);
         $this->includePaths = $includePaths;
     }
 }

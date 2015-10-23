@@ -2,33 +2,48 @@
 /**
  * Created by PhpStorm.
  * User: lia
- * Date: 15/10/15
- * Time: 20:59
+ * Date: 23/10/15
+ * Time: 02:04
  */
 
 namespace Cube\Poo\Facade;
 
+
+use Cube\Poo\Mapper\Mapper;
+
 trait FacadeHelper
 {
     /**
-     * @var Facade|FacadeBehavior
+     * @var FacadeBehavior
      */
-    private $parentFacade;
+    protected $parentFacade;
 
     /**
-     * @param Facade|FacadeBehavior $parentFacade
+     * @param string $className
      * @return $this
      */
-    public function setParentFacade(FacadeBehavior $parentFacade)
+    public function ____construct($className = '')
+    {
+        if($className) {
+            Mapper::map(get_called_class(), $className);
+        }
+    }
+
+    /**
+     * @param FacadeBehavior $parentFacade
+     * @return $this
+     */
+    final public function setParentFacade(FacadeBehavior $parentFacade)
     {
         $this->parentFacade = $parentFacade;
         return $this;
     }
 
     /**
-     * @return Facade|FacadeBehavior
+     * @return FacadeBehavior
      */
-    public function end() {
+    final public function end()
+    {
         return $this->parentFacade;
     }
 }

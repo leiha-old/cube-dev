@@ -2,11 +2,13 @@
 
 namespace Cube\Validator\Constraint;
 
-use Cube\Validator\Tool\PregMatchAbstract;
+use Cube\Validator\Tool\PregMatchHelper;
 
 class TimeStampConstraint
-    extends PregMatchAbstract
+    extends ConstraintWrapper
 {
+    use PregMatchHelper;
+
     public function __construct() {
         $this->setOnSuccess(function(&$value, $matches){
 

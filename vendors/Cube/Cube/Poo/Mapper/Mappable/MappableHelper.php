@@ -9,19 +9,6 @@ trait MappableHelper
 {
 	use SingleHelper;
 
-    /**
-     */
-    //private $configurator;
-
-    /**
-     * @return $this
-     */
-//    public function ____construct()
-//    {
-//        //$this->configurator = self::mapper()->getConfiguratorTo(get_called_class(), $this);
-//        return $this;
-//    }
-
 	/**
 	 * @return Mapper
 	 */

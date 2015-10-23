@@ -8,8 +8,6 @@
 
 namespace Cube\Validator\Constraint;
 
-use Cube\Validator\Tool\FilterVarAbstract;
-
 class Constraint
     implements ConstraintConstants
 {
@@ -17,44 +15,43 @@ class Constraint
      * @var array
      */
     protected static $factory = array(
-        self::CONSTRAINT_mac        => 'Cube\Validator\Constraint\MacConstraint',    // >= PHP 5.5
-        self::CONSTRAINT_email      => 'Cube\Validator\Constraint\EmailConstraint',
-        self::CONSTRAINT_float      => 'Cube\Validator\Constraint\FloatConstraint',
-        self::CONSTRAINT_int        => 'Cube\Validator\Constraint\IntConstraint',
-        self::CONSTRAINT_ip         => 'Cube\Validator\Constraint\IpConstraint',
-        self::CONSTRAINT_regexp     => 'Cube\Validator\Constraint\RegExpConstraint',
-        self::CONSTRAINT_url        => 'Cube\Validator\Constraint\UrlConstraint',
-        self::CONSTRAINT_string     => 'Cube\Validator\Constraint\StringConstraint',
-        self::CONSTRAINT_boolean    => 'Cube\Validator\Constraint\BooleanConstraint',
-        self::CONSTRAINT_timestamp  => 'Cube\Validator\Constraint\TimeStampConstraint',
-        self::CONSTRAINT_date       => 'Cube\Validator\Constraint\DateConstraint',
-        self::CONSTRAINT_restricted => 'Cube\Validator\Constraint\RestrictedValuesConstraint',
+        self::Mac        => 'Cube\Validator\Constraint\MacConstraint',    // >= PHP 5.5
+        self::Email      => 'Cube\Validator\Constraint\EmailConstraint',
+        self::Float      => 'Cube\Validator\Constraint\FloatConstraint',
+        self::Int        => 'Cube\Validator\Constraint\IntConstraint',
+        self::Ip         => 'Cube\Validator\Constraint\IpConstraint',
+        self::Regexp     => 'Cube\Validator\Constraint\RegExpConstraint',
+        self::Url        => 'Cube\Validator\Constraint\UrlConstraint',
+        self::String     => 'Cube\Validator\Constraint\StringConstraint',
+        self::Boolean    => 'Cube\Validator\Constraint\BooleanConstraint',
+        self::Timestamp  => 'Cube\Validator\Constraint\TimeStampConstraint',
+        self::Date       => 'Cube\Validator\Constraint\DateConstraint',
+        self::Restricted => 'Cube\Validator\Constraint\RestrictedValuesConstraint',
     );
 
     /**
      * @param $type
      * @param array $data
-     * @return ConstraintException
+     * @return ConstraintError
      */
-    public static function exception($type, array $data = array())
+    public static function error($type, array $data = array())
     {
-        return new ConstraintException($type, $data);
+        return ConstraintError::single($type, $data);
     }
 
     /**
      * @param array $constraints
      * @param string $value
      * @return array|null
-     * @throws ConstraintException
+     * @throws ConstraintError
      */
     public static function run(array $constraints, &$value)
     {
         /**
-         * @var string            $constraintName
-         * @var array             $options
-         * @var FilterVarAbstract $constraint
+         * @var string             $constraintName
+         * @var array              $options
+         * @var ConstraintBehavior $constraint
          */
-
         $errors = array();
         foreach($constraints as $constraintName => $options) {
             $constraint = static::get($constraintName);
@@ -70,23 +67,23 @@ class Constraint
      * @param string $constraintName
      * @param bool $silent
      * @return mixed
-     * @throws ConstraintException
+     * @throws ConstraintError
      */
     public static function has($constraintName, $silent = false) {
-        $is = isset(static::$factory[$constraintName]);
+        $is = array_key_exists($constraintName, static::$factory);
         if(!$is && !$silent) {
-            throw static::exception(self::ERROR_TYPE_404, compact('constraintName'));
+            throw static::error(self::ERROR_TYPE_404, compact('constraintName'));
         }
         return $is;
     }
 
     /**
-     * @param string $constraintName Constraint::CONSTRAINT_*
+     * @param string $constraintName Constraint::*
      * @param bool $silent
      * @return mixed
-     * @throws ConstraintException
+     * @throws ConstraintError
      */
-    public static function get($constraintName = self::CONSTRAINT_string, $silent = false)
+    public static function get($constraintName = Constraint::String, $silent = false)
     {
         $is = self::has($constraintName, $silent);
         if($is) {

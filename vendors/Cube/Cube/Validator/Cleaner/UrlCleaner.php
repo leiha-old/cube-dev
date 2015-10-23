@@ -2,11 +2,12 @@
 
 namespace Cube\Validator\Cleaner;
 
-use Cube\Validator\Tool\FilterVarAbstract;
+use Cube\Validator\Tool\FilterVarHelper;
 
 class UrlCleaner
-    extends FilterVarAbstract
 {
+    use FilterVarHelper;
+
     /**
      * @return int
      */

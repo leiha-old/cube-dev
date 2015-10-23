@@ -2,11 +2,13 @@
 
 namespace Cube\Validator\Cleaner;
 
-use Cube\Validator\Tool\FilterVarAbstract;
+use Cube\Validator\Tool\FilterVarHelper;
 
 class QuotesCleaner
-    extends FilterVarAbstract
+    extends CleanerWrapper
 {
+    use FilterVarHelper;
+
     /**
      * @return int
      */

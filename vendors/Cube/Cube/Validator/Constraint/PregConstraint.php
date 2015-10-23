@@ -8,7 +8,6 @@
 
 namespace Cube\Validator\Constraint;
 
-
 class PregConstraint
 {
 

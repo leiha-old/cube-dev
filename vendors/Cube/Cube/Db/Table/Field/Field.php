@@ -6,7 +6,7 @@ use Cube\Db\Table\Field\Joint\JointCollection;
 use Cube\Db\Table\Table;
 
 class Field
-    extends \Cube\Validator\FieldSet\Field\Field
+    extends \Cube\Validator\Field\Field
 {
     /**
      * @var JointCollection

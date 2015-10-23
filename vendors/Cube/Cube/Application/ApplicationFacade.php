@@ -9,14 +9,14 @@
 namespace Cube\Application;
 
 use Cube\CubeFacade;
-use Cube\Error\ErrorException;
 use Cube\FileSystem\FileSystemFacade;
 use Cube\Http\HttpFacade;
-use Cube\Poo\Exception\Exception;
+use Cube\Poo\Error\Error;
 
 class ApplicationFacade
     extends    CubeFacade
-    implements ApplicationFacadeBehavior
+    implements ApplicationBehavior,
+               ApplicationConstants
 {
     /**
      * @return HttpFacade
@@ -36,23 +36,10 @@ class ApplicationFacade
             ;
     }
 
-    public function setExceptionHandler ()
-    {
-        $handler = function(\Exception $exception)
-        {
-            if(!($exception instanceof Exception)) {
-                $e = Exception::instance($exception->getMessage());
-                $e->setFile($exception->getFile(), $exception->getLine());
-                $exception = $e;
-            }
-            print($exception->render());
-            exit;
-        };
-        set_exception_handler($handler);
-        return $this;
-    }
-
-    public function setErrorHandler ()
+    /**
+     * @throws Error
+     */
+    public function initError()
     {
         /**
          * @param int $code
@@ -60,15 +47,35 @@ class ApplicationFacade
          * @param string $file
          * @param int $line
          * @param array $context
-         * @throws ErrorException
+         * @throws Error
          */
         $handler = function($code, $msg, $file, $line, $context)
         {
-            throw (new ErrorException($msg))
+            throw (new Error($msg))
                 ->setFile($file, $line)
             ;
         };
         set_error_handler($handler);
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function initException()
+    {
+        $handler = function(\Exception $Error)
+        {
+            //$eClass = $this->configurator->getMapping(Cube::MAPPING_Error);
+            if(!($Error instanceof Error)) {
+                $e = Error::instance($Error->getMessage());
+                $e->setFile($Error->getFile(), $Error->getLine());
+                $Error = $e;
+            }
+            print($Error->render());
+            exit;
+        };
+        set_exception_handler($handler);
         return $this;
     }
 }

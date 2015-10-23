@@ -2,11 +2,13 @@
 
 namespace Cube\Validator\Constraint;
 
-use Cube\Validator\Tool\PregMatchAbstract;
+use Cube\Validator\Tool\PregMatchHelper;
 
 class DateConstraint
-    extends PregMatchAbstract
+    extends ConstraintWrapper
 {
+    use PregMatchHelper;
+
     /**
      * @return string
      */

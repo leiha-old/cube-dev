@@ -10,17 +10,16 @@ namespace Cube\Application;
 
 use Cube\Cube;
 use Cube\Dna\Dna;
-use Cube\Error\ErrorException;
 use Cube\FileSystem\AutoLoader\AutoLoader;
 use Cube\FileSystem\FileSystem;
 use Cube\Generator\ClassGenerator;
 use Cube\Http\Router\Router;
 use Cube\Http\Router\RouterBehavior;
-use Cube\Poo\Exception\Exception;
 use Cube\Poo\Mapper\Mapper;
 
 class Application
 	extends Cube
+    implements ApplicationConstants
 {
     /**
      * @var FileSystem
@@ -44,25 +43,33 @@ class Application
     public static function init(\Closure $cbOnStart = null)
     {
         Mapper::init();
-        return self::single($cbOnStart);
+
+        /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
+        $facade = ApplicationFacade::instance()
+            ->initError()
+            ->initException()
+        ;
+
+        if($cbOnStart) {
+            $cbOnStart($facade);
+        }
+
+
+        return self::single($facade);
     }
 
-	/**
-	 * @param \Closure $cbOnStart
-	 */
-	public function __construct(\Closure $cbOnStart = null)
+    /**
+     * @param ApplicationFacade $facade
+     * @internal param \Closure $cbOnStart
+     */
+	public function __construct(ApplicationFacade $facade)
 	{
-        $this->initException();
-        /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
-        $this->initError();
-
         $fileSystem = $this->fileSystem();
         $mapper     = self::mapper()->mapAll($fileSystem->crawler()->findClasses());
 
-        parent::__construct($cbOnStart);
+        //parent::__construct($facade);
 
-        $router     = $this->router();
-
+        $router = $this->router();
         $this->dna()
             ->injectInstance('cube.mapper'    , $mapper)
             ->injectInstance('cube.fileSystem', $fileSystem)
@@ -79,15 +86,7 @@ class Application
     }
 
     /**
-     * @return ApplicationFacade
-     */
-    public function getConfigurator()
-    {
-        return $this->configurator;
-    }
-
-    /**
-     * @return RouterBehavior
+     * @return Router
      */
     public function router()
     {
@@ -97,7 +96,7 @@ class Application
     /**
      * @return ApplicationFacade
      */
-    public static function getConfiguratorInstance()
+    public static function newFacade()
     {
         return ApplicationFacade::instance();
     }
@@ -129,46 +128,5 @@ class Application
         return AutoLoader::single();
     }
 
-    /**
-     * @throws ErrorException
-     */
-    private function initError()
-    {
-        /**
-         * @param int $code
-         * @param string $msg
-         * @param string $file
-         * @param int $line
-         * @param array $context
-         * @throws ErrorException
-         */
-        $handler = function($code, $msg, $file, $line, $context)
-        {
-            throw (new ErrorException($msg))
-                    ->setFile($file, $line)
-                    ;
-        };
-        set_error_handler($handler);
-        return $this;
-    }
 
-	/**
-	 * @return $this
-	 */
-	private function initException()
-	{
-		$handler = function(\Exception $exception)
-        {
-			//$eClass = $this->configurator->getMapping(Cube::MAPPING_EXCEPTION);
-			if(!($exception instanceof Exception)) {
-				$e = Exception::instance($exception->getMessage());
-				$e->setFile($exception->getFile(), $exception->getLine());
-				$exception = $e;
-			}
-			print($exception->render());
-			exit;
-		};
-		set_exception_handler($handler);
-		return $this;
-	}
 }
